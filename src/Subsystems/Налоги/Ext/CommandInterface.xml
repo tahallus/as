@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<CommandsVisibility>
+		<Command name="Document.ЗаписиУСН.Command.ОткрытьЗаписиУСН">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Document.ЗаписиПатент.Command.ОткрытьЗаписиПатент">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="0:9c887fec-3435-4837-a4b2-092755461ce0">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Document.УведомлениеОПеремещенииПрослеживаемыхТоваров.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ПомощникПолученияРНПТ.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Constant.ФункциональнаяОпцияВыполнятьРасчетНДФЛПоПрогрессивнойШкале.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsOrder>
+		<Command name="Document.ЗаписиУСН.Command.ОткрытьЗаписиУСН">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.ЗаписиПатент.Command.ОткрытьЗаписиПатент">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="0:9c887fec-3435-4837-a4b2-092755461ce0">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.УведомлениеОПеремещенииПрослеживаемыхТоваров.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.Налоги.Subsystem.СЧегоНачать</Subsystem>
+		<Subsystem>Subsystem.Налоги.Subsystem.УпрощеннаяСистемаНалогообложения</Subsystem>
+		<Subsystem>Subsystem.Налоги.Subsystem.ЕдиныйНалогНаВмененныйДоход</Subsystem>
+		<Subsystem>Subsystem.Налоги.Subsystem.Патент</Subsystem>
+		<Subsystem>Subsystem.Налоги.Subsystem.СтраховыеВзносы</Subsystem>
+		<Subsystem>Subsystem.Налоги.Subsystem.Сотрудники</Subsystem>
+		<Subsystem>Subsystem.Налоги.Subsystem.Росалкогольрегулирование</Subsystem>
+		<Subsystem>Subsystem.Налоги.Subsystem.ТорговыйСбор</Subsystem>
+		<Subsystem>Subsystem.Налоги.Subsystem.Отчетность1С</Subsystem>
+		<Subsystem>Subsystem.Налоги.Subsystem.Документы</Subsystem>
+		<Subsystem>Subsystem.Налоги.Subsystem.Прочее</Subsystem>
+		<Subsystem>ac34f035-cbdd-4c0c-afdb-9d3807ce62fc</Subsystem>
+	</SubsystemsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelOrdinary</Group>
+	</GroupsOrder>
+</CommandInterface>

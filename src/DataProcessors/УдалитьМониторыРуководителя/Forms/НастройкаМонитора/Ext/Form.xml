@@ -1,0 +1,1040 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Персональные настройки монитора</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Horizontal</Group>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="СписокРазделовСохранитьИЗакрыть" id="16">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СохранитьИЗакрыть</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="СписокРазделовСохранитьИЗакрытьРасширеннаяПодсказка" id="17"/>
+			</Button>
+			<Button name="СписокРазделовОтмена" id="14">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отмена</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="СписокРазделовОтменаРасширеннаяПодсказка" id="15"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="СоставВиджетов" id="65">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<Header>false</Header>
+			<HorizontalLines>false</HorizontalLines>
+			<VerticalLines>false</VerticalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>СоставВиджетов</DataPath>
+			<RowPictureDataPath>СоставВиджетов.Picture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Pickup</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<ContextMenu name="СоставВиджетовКонтекстноеМеню" id="66"/>
+			<AutoCommandBar name="СоставВиджетовКоманднаяПанель" id="67">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<ButtonGroup name="ВверхВниз" id="200">
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ВверхВнизРасширеннаяПодсказка" id="201"/>
+						<ChildItems>
+							<Button name="СписокВиджетовПереместитьВверх" id="90">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СоставВиджетов.StandardCommand.MoveUp</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СписокВиджетовПереместитьВверхРасширеннаяПодсказка" id="91"/>
+							</Button>
+							<Button name="СписокВиджетовПереместитьВниз" id="92">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СоставВиджетов.StandardCommand.MoveDown</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СписокВиджетовПереместитьВнизРасширеннаяПодсказка" id="93"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ФлагиУстановитьСнять" id="202">
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ФлагиУстановитьСнятьРасширеннаяПодсказка" id="203"/>
+						<ChildItems>
+							<Button name="СписокВиджетовУстановитьФлажки" id="94">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СоставВиджетов.StandardCommand.CheckAll</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СписокВиджетовУстановитьФлажкиРасширеннаяПодсказка" id="95"/>
+							</Button>
+							<Button name="СписокВиджетовСнятьФлажки" id="96">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СоставВиджетов.StandardCommand.UncheckAll</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СписокВиджетовСнятьФлажкиРасширеннаяПодсказка" id="97"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="СоставВиджетовУстановитьСтандартныеНастройки" id="126">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьСтандартныеНастройки</CommandName>
+						<ExtendedTooltip name="СоставВиджетовУстановитьСтандартныеНастройкиРасширеннаяПодсказка" id="127"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СоставВиджетовРасширеннаяПодсказка" id="68"/>
+			<SearchStringAddition name="СоставВиджетовСтрокаПоиска" id="69">
+				<AdditionSource>
+					<Item>СоставВиджетов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СоставВиджетовСтрокаПоискаКонтекстноеМеню" id="72"/>
+				<ExtendedTooltip name="СоставВиджетовСтрокаПоискаРасширеннаяПодсказка" id="73"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СоставВиджетовСостояниеПросмотра" id="74">
+				<AdditionSource>
+					<Item>СоставВиджетов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СоставВиджетовСостояниеПросмотраКонтекстноеМеню" id="77"/>
+				<ExtendedTooltip name="СоставВиджетовСостояниеПросмотраРасширеннаяПодсказка" id="78"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СоставВиджетовУправлениеПоиском" id="79">
+				<AdditionSource>
+					<Item>СоставВиджетов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СоставВиджетовУправлениеПоискомКонтекстноеМеню" id="82"/>
+				<ExtendedTooltip name="СоставВиджетовУправлениеПоискомРасширеннаяПодсказка" id="83"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">СоставВиджетовПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="СоставВиджетовПометка" id="120">
+					<DataPath>СоставВиджетов.Check</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СоставВиджетовПометкаКонтекстноеМеню" id="121"/>
+					<ExtendedTooltip name="СоставВиджетовПометкаРасширеннаяПодсказка" id="122"/>
+				</CheckBoxField>
+				<InputField name="СоставВиджетовЗначение" id="123">
+					<DataPath>СоставВиджетов.Value</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СоставВиджетовЗначениеКонтекстноеМеню" id="124"/>
+					<ExtendedTooltip name="СоставВиджетовЗначениеРасширеннаяПодсказка" id="125"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Pages name="СтраницыНастроек" id="101">
+			<ToolTipRepresentation>None</ToolTipRepresentation>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыНастроекРасширеннаяПодсказка" id="102"/>
+			<ChildItems>
+				<Page name="Продажи" id="160">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продажи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Деньги</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПродажиРасширеннаяПодсказка" id="161"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПродажи" id="194">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Продажи</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаПродажиРасширеннаяПодсказка" id="195"/>
+							<ChildItems>
+								<InputField name="ПродажиПериод" id="165">
+									<DataPath>ПродажиПериод</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Анализируемый период на диаграмме</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="ПродажиПериодКонтекстноеМеню" id="166"/>
+									<ExtendedTooltip name="ПродажиПериодРасширеннаяПодсказка" id="167"/>
+								</InputField>
+								<InputField name="ПродажиПериодичность" id="168">
+									<DataPath>ПродажиПериодичность</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.День</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Неделя</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Декада</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Месяц</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Квартал</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Полугодие</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ПродажиПериодичностьКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="ПродажиПериодичностьРасширеннаяПодсказка" id="170">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Интервал расчета значений для диаграммы.
+
+
+&lt;b&gt;Внимание! &lt;/&gt;Не рекомендуется задавать слишком подробный интервал при большом периоде. Это влияет на скорость формирования монитора.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</InputField>
+								<InputField name="ПродажиТипДиаграммы" id="171">
+									<DataPath>ПродажиТипДиаграммы</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выберите наиболее подходящую Вам диаграмму</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="ПродажиТипДиаграммыКонтекстноеМеню" id="172"/>
+									<ExtendedTooltip name="ПродажиТипДиаграммыРасширеннаяПодсказка" id="173"/>
+								</InputField>
+								<InputField name="ПродажиПервыеТовары" id="180">
+									<DataPath>ПродажиПервыеТовары</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество сравниваемых товаров среди наиболее продаваемых. Можно задать значение от 1 до 10.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
+									<MaxValue xsi:type="xs:decimal">10</MaxValue>
+									<ContextMenu name="ПродажиПервыеТоварыКонтекстноеМеню" id="181"/>
+									<ExtendedTooltip name="ПродажиПервыеТоварыРасширеннаяПодсказка" id="182"/>
+								</InputField>
+								<InputField name="ПродажиПервыеМенеджеры" id="186">
+									<DataPath>ПродажиПервыеМенеджеры</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество сравниваемых менеджеров среди наиболее успешных. Можно задать значение от 1 до 10.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
+									<MaxValue xsi:type="xs:decimal">10</MaxValue>
+									<ContextMenu name="ПродажиПервыеМенеджерыКонтекстноеМеню" id="187"/>
+									<ExtendedTooltip name="ПродажиПервыеМенеджерыРасширеннаяПодсказка" id="188"/>
+								</InputField>
+								<InputField name="ПродажиРасчетПрибыли" id="177">
+									<DataPath>ПродажиРасчетПрибыли</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>По отгрузке</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ПоОтгрузке</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>По оплате</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ПоОплате</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ПродажиРасчетПрибылиКонтекстноеМеню" id="178"/>
+									<ExtendedTooltip name="ПродажиРасчетПрибылиРасширеннаяПодсказка" id="179">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выберите как рассчитывать доходы и расходы:
+
+&lt;b&gt;- По отгрузке&lt;/&gt;&lt;b&gt;.&lt;/&gt; Метод начисления.
+
+&lt;b&gt;- По оплате&lt;/&gt;&lt;b&gt;.&lt;/&gt; Кассовый метод учетов доходов и расходов.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Деньги" id="103">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Деньги</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ДеньгиРасширеннаяПодсказка" id="104"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДеньги" id="196">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Деньги</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаДеньгиРасширеннаяПодсказка" id="197"/>
+							<ChildItems>
+								<InputField name="ДеньгиПериод" id="131">
+									<DataPath>ДеньгиПериод</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Анализируемый период на диаграмме</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="ДеньгиПериодКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="ДеньгиПериодРасширеннаяПодсказка" id="133"/>
+								</InputField>
+								<InputField name="ДеньгиПериодичность" id="134">
+									<DataPath>ДеньгиПериодичность</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.День</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Неделя</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Декада</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Месяц</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Квартал</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Полугодие</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ДеньгиПериодичностьКонтекстноеМеню" id="135"/>
+									<ExtendedTooltip name="ДеньгиПериодичностьРасширеннаяПодсказка" id="136">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Интервал расчета значений для диаграммы.
+
+
+&lt;b&gt;Внимание! &lt;/&gt;Не рекомендуется задавать слишком подробный интервал при большом периоде. Это влияет на скорость формирования монитора.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</InputField>
+								<InputField name="ДеньгиТипДиаграммы" id="128">
+									<DataPath>ДеньгиТипДиаграммы</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выберите наиболее подходящую Вам диаграмму</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="ДеньгиТипДиаграммыКонтекстноеМеню" id="129"/>
+									<ExtendedTooltip name="ДеньгиТипДиаграммыРасширеннаяПодсказка" id="130"/>
+								</InputField>
+								<InputField name="ДеньгиНачалоОтсчета" id="137">
+									<DataPath>ДеньгиНачалоОтсчета</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:string">От минимального значения</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:string">От нуля</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ДеньгиНачалоОтсчетаКонтекстноеМеню" id="138"/>
+									<ExtendedTooltip name="ДеньгиНачалоОтсчетаРасширеннаяПодсказка" id="139">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выберите точку отсчета диаграммы:
+
+&lt;b&gt;- От м&lt;/&gt;&lt;b&gt;инимального&lt;/&gt;&lt;b&gt; значения&lt;/&gt;&lt;b&gt;.&lt;/&gt; Отображать дельту изменений за анализируемый период.
+
+&lt;b&gt;- От нуля&lt;/&gt;&lt;b&gt;.&lt;/&gt; Отображать абсолютные значения за анализируемый период.
+
+Рекомендуется выбирать &lt;b&gt;От м&lt;/&gt;&lt;b&gt;инимального&lt;/&gt;&lt;b&gt; значения &lt;/&gt;когда изменения денежного остатка слишком малы по сравнению с минимальным остатком денег.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Долги" id="140">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Долги</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Денежные средства</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДолгиРасширеннаяПодсказка" id="141"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДолги" id="198">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Долги</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаДолгиРасширеннаяПодсказка" id="199"/>
+							<ChildItems>
+								<InputField name="ДолгиПериод" id="145">
+									<DataPath>ДолгиПериод</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Анализируемый период на диаграмме</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="ДолгиПериодКонтекстноеМеню" id="146"/>
+									<ExtendedTooltip name="ДолгиПериодРасширеннаяПодсказка" id="147"/>
+								</InputField>
+								<InputField name="ДолгиПериодичность" id="148">
+									<DataPath>ДолгиПериодичность</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.День</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Неделя</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Декада</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Месяц</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Квартал</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Полугодие</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ДолгиПериодичностьКонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="ДолгиПериодичностьРасширеннаяПодсказка" id="150">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Интервал расчета значений для диаграммы.
+
+
+&lt;b&gt;Внимание! &lt;/&gt;Не рекомендуется задавать слишком подробный интервал при большом периоде. Это влияет на скорость формирования монитора.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</InputField>
+								<InputField name="ДолгиТипДиаграммы" id="151">
+									<DataPath>ДолгиТипДиаграммы</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выберите наиболее подходящую Вам диаграмму</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="ДолгиТипДиаграммыКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="ДолгиТипДиаграммыРасширеннаяПодсказка" id="153"/>
+								</InputField>
+								<InputField name="ДолгиНачалоОтсчета" id="154">
+									<DataPath>ДолгиНачалоОтсчета</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:string">От минимального значения</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:string">От нуля</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ДолгиНачалоОтсчетаКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="ДолгиНачалоОтсчетаРасширеннаяПодсказка" id="156">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выберите точку отсчета диаграммы:
+
+&lt;b&gt;- От м&lt;/&gt;&lt;b&gt;инимального&lt;/&gt;&lt;b&gt; значения&lt;/&gt;&lt;b&gt;.&lt;/&gt; Отображать дельту изменений за анализируемый период.
+
+&lt;b&gt;- От нуля&lt;/&gt;&lt;b&gt;.&lt;/&gt; Отображать абсолютные значения за анализируемый период.
+
+Рекомендуется выбирать &lt;b&gt;От м&lt;/&gt;&lt;b&gt;инимального&lt;/&gt;&lt;b&gt; значения &lt;/&gt;когда изменения задолженности слишком малы по сравнению с минимальным значением долга.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</InputField>
+								<InputField name="ДолгиПодробноПервые" id="183">
+									<DataPath>ДолгиПодробноПервые</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
+									<MaxValue xsi:type="xs:decimal">100</MaxValue>
+									<ContextMenu name="ДолгиПодробноПервыеКонтекстноеМеню" id="184"/>
+									<ExtendedTooltip name="ДолгиПодробноПервыеРасширеннаяПодсказка" id="185">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Количество выводимых контрагентов при раскрытии &lt;b&gt;Подробнее&lt;/&gt;. Можно задать значение от 1 до 100.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</InputField>
+								<InputField name="ДолгиПоляРасшифровки" id="157">
+									<DataPath>ДолгиПоляРасшифровки</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="ДолгиПоляРасшифровкиКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="ДолгиПоляРасшифровкиРасширеннаяПодсказка" id="159">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Состав колонок,
+ выводимых при раскрытии &lt;b&gt;Подробнее&lt;/&gt;</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="StartChoice">ДолгиПоляРасшифровкиНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СоставВиджетов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав виджетов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:EnumRef.ВиджетыМонитораРуководителя</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДеньгиПериод" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыПериодовМонитораРуководителя</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДеньгиПериодичность" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.Периодичность</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДеньгиТипДиаграммы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип диаграммы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыДиаграмм</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДеньгиНачалоОтсчета" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало отсчета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДолгиНачалоОтсчета" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало отсчета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДолгиПериод" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыПериодовМонитораРуководителя</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДолгиПериодичность" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.Периодичность</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="СоответствиеВиджетовИменамМетаданных" id="11">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:EnumRef.ВиджетыМонитораРуководителя</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДолгиПоляРасшифровки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонки подробно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДолгиТипДиаграммы" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип диаграммы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыДиаграмм</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ПродажиПериод" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыПериодовМонитораРуководителя</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ПродажиПериодичность" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.Периодичность</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ПродажиТипДиаграммы" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип диаграммы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыДиаграмм</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ПродажиРасчетПрибыли" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчет прибыли</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+			<FunctionalOptions>
+				<Item>FunctionalOption.КассовыйМетодУчетаДоходовИРасходов</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ПродажиПервыеТовары" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лучших товаров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДолгиПодробноПервые" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выводить подробно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ПродажиПервыеМенеджеры" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лучших менеджеров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьИЗакрыть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьСтандартныеНастройки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить стандартные настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить стандартные настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьСтандартныеНастройки</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ТекущийВиджет">
+			<Type>
+				<v8:Type>cfg:EnumRef.ВиджетыМонитораРуководителя</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

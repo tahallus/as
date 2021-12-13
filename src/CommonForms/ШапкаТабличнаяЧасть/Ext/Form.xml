@@ -1,0 +1,1398 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Width>40</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<RadioButtonField name="ПоложениеВидаРаботВЗаказНаряде" id="15">
+			<DataPath>ПоложениеВидаРаботВЗаказНаряде</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеВидаРаботВЗаказНарядеКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ПоложениеВидаРаботВЗаказНарядеExtendedTooltip" id="70"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеВидаРаботВЗаданииНаРаботу" id="45">
+			<DataPath>ПоложениеВидаРаботВЗаданииНаРаботу</DataPath>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеВидаРаботВЗаданииНаРаботуКонтекстноеМеню" id="46"/>
+			<ExtendedTooltip name="ПоложениеВидаРаботВЗаданииНаРаботуExtendedTooltip" id="72"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеДатыОтгрузкиВЗаказеПокупателя" id="1">
+			<DataPath>ПоложениеДатыОтгрузкиВЗаказеПокупателя</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеДатыОтгрузкиВЗаказеПокупателяКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПоложениеДатыОтгрузкиВЗаказеПокупателяExtendedTooltip" id="74"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеДатыПоступленияВЗаказеПоставщику" id="17">
+			<DataPath>ПоложениеДатыПоступленияВЗаказеПоставщику</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеДатыПоступленияВЗаказеПоставщикуКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ПоложениеДатыПоступленияВЗаказеПоставщикуExtendedTooltip" id="76"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеЗаказаПокупателяВДокументахПоступления" id="135">
+			<DataPath>ПоложениеЗаказаПокупателяВДокументахПоступления</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеЗаказаПокупателяВДокументахПоступленияКонтекстноеМеню" id="136"/>
+			<ExtendedTooltip name="ПоложениеЗаказаПокупателяВДокументахПоступленияРасширеннаяПодсказка" id="137"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеЗаказаПокупателяВДокументахОтгрузки" id="19">
+			<DataPath>ПоложениеЗаказаПокупателяВДокументахОтгрузки</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеЗаказаПокупателяВДокументахОтгрузкиКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ПоложениеЗаказаПокупателяВДокументахОтгрузкиExtendedTooltip" id="78"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеЗаказаПокупателяВДокументахПроизводства" id="126">
+			<DataPath>ПоложениеЗаказаПокупателяВДокументахПроизводства</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеЗаказаПокупателяВДокументахПроизводстваКонтекстноеМеню" id="127"/>
+			<ExtendedTooltip name="ПоложениеЗаказаПокупателяВДокументахПроизводстваРасширеннаяПодсказка" id="128"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеЗаказаНаПроизводствоВДокументахОтгрузки" id="120">
+			<DataPath>ПоложениеЗаказаНаПроизводствоВДокументахОтгрузки</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеЗаказаНаПроизводствоВДокументахОтгрузкиКонтекстноеМеню" id="121"/>
+			<ExtendedTooltip name="ПоложениеЗаказаНаПроизводствоВДокументахОтгрузкиРасширеннаяПодсказка" id="122"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеЗаказаПокупателяВПеремещенииЗапасов" id="21">
+			<DataPath>ПоложениеЗаказаПокупателяВПеремещенииЗапасов</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеЗаказаПокупателяВПеремещенииЗапасовКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ПоложениеЗаказаПокупателяВПеремещенииЗапасовExtendedTooltip" id="80"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеЗаказаПоставщикуВДокументахПоступления" id="23">
+			<DataPath>ПоложениеЗаказаПоставщикуВДокументахПоступления</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеЗаказаПоставщикуВДокументахПоступленияКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ПоложениеЗаказаПоставщикуВДокументахПоступленияExtendedTooltip" id="82"/>
+		</RadioButtonField>
+		<UsualGroup name="ГруппаПоложениеСкладаВДокументах" id="109">
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПоложениеСкладаВДокументахРасширеннаяПодсказка" id="110">
+				<Title formatted="true">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Для включения опции перейдите в &lt;link e1cib/command/Обработка.НастройкаПрограммы.Команда.ЕщеБольшеВозможностей&gt;Больше возможностей - Склад&lt;/&gt;.&lt;fontsize 8&gt; Недоступна для документов с включенным режимом отображения остатков и резервов и при отключенном резервировании в заказах покупателей.&lt;/&gt;</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+			<ChildItems>
+				<RadioButtonField name="ПоложениеСкладаВДокументахПоступления" id="103">
+					<DataPath>ПоложениеСкладаВДокументахПоступления</DataPath>
+					<TitleHeight>1</TitleHeight>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ItemTitleHeight>1</ItemTitleHeight>
+					<ColumnsCount>1</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>В шапке</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>В табличной части</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ПоложениеСкладаВДокументахПоступленияКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="ПоложениеСкладаВДокументахПоступленияРасширеннаяПодсказка" id="105"/>
+				</RadioButtonField>
+				<RadioButtonField name="ПоложениеСкладаВДокументахОтгрузки" id="106">
+					<DataPath>ПоложениеСкладаВДокументахОтгрузки</DataPath>
+					<TitleHeight>1</TitleHeight>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ItemTitleHeight>1</ItemTitleHeight>
+					<ColumnsCount>1</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>В шапке</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>В табличной части</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ПоложениеСкладаВДокументахОтгрузкиКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="ПоложениеСкладаВДокументахОтгрузкиРасширеннаяПодсказка" id="108"/>
+				</RadioButtonField>
+				<RadioButtonField name="ПоложениеСкладаВДокументахПроизводства" id="123">
+					<DataPath>ПоложениеСкладаВДокументахПроизводства</DataPath>
+					<TitleHeight>1</TitleHeight>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ItemTitleHeight>1</ItemTitleHeight>
+					<ColumnsCount>1</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>В шапке</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>В табличной части</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ПоложениеСкладаВДокументахПроизводстваКонтекстноеМеню" id="124"/>
+					<ExtendedTooltip name="ПоложениеСкладаВДокументахПроизводстваРасширеннаяПодсказка" id="125"/>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИспользовать" id="101">
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИспользоватьРасширеннаяПодсказка" id="102"/>
+			<ChildItems>
+				<CheckBoxField name="ИспользоватьТоварыВЗаказНаряде" id="51">
+					<DataPath>ИспользоватьТоварыВЗаказНаряде</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<TitleHeight>1</TitleHeight>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьТоварыВЗаказНарядеКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ИспользоватьТоварыВЗаказНарядеExtendedTooltip" id="84"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИспользоватьМатериалыЗаказчикаВЗаказНаряде" id="48">
+					<DataPath>ИспользоватьМатериалыЗаказчикаВЗаказНаряде</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<TitleHeight>1</TitleHeight>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьМатериалыЗаказчикаВЗаказНарядеКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ИспользоватьМатериалыЗаказчикаВЗаказНарядеExtendedTooltip" id="86"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИспользоватьМатериалыВЗаказНаряде" id="55">
+					<DataPath>ИспользоватьМатериалыВЗаказНаряде</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<TitleHeight>1</TitleHeight>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьМатериалыВЗаказНарядеКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ИспользоватьМатериалыВЗаказНарядеExtendedTooltip" id="88"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИспользоватьЗарплатаИсполнителейВЗаказНаряде" id="57">
+					<DataPath>ИспользоватьЗарплатаИсполнителейВЗаказНаряде</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<TitleHeight>1</TitleHeight>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьЗарплатаИсполнителейВЗаказНарядеКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ИспользоватьЗарплатаИсполнителейВЗаказНарядеExtendedTooltip" id="90"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<RadioButtonField name="ПоложениеИсполнитель" id="67">
+			<DataPath>ПоложениеИсполнитель</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеИсполнительКонтекстноеМеню" id="68"/>
+			<ExtendedTooltip name="ПоложениеИсполнительExtendedTooltip" id="92"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеОтветственный" id="65">
+			<DataPath>ПоложениеОтветственный</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеОтветственныйКонтекстноеМеню" id="66"/>
+			<ExtendedTooltip name="ПоложениеОтветственныйExtendedTooltip" id="94"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеИсполнителяВСдельномНаряде" id="117">
+			<DataPath>ПоложениеИсполнителяВСдельномНаряде</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеИсполнителяВСдельномНарядеКонтекстноеМеню" id="118"/>
+			<ExtendedTooltip name="ПоложениеИсполнителяВСдельномНарядеРасширеннаяПодсказка" id="119"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеСтруктурнойЕдиницыВСдельномНаряде" id="114">
+			<DataPath>ПоложениеСтруктурнойЕдиницыВСдельномНаряде</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеСтруктурнойЕдиницыВСдельномНарядеКонтекстноеМеню" id="115"/>
+			<ExtendedTooltip name="ПоложениеСтруктурнойЕдиницыВСдельномНарядеРасширеннаяПодсказка" id="116"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеЭквайринговогоТерминалаВБанковскихДокументах" id="129">
+			<DataPath>ПоложениеЭквайринговогоТерминалаВБанковскихДокументах</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение эквайрингового терминала</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеЭквайринговогоТерминалаВБанковскихДокументахКонтекстноеМеню" id="130"/>
+			<ExtendedTooltip name="ПоложениеЭквайринговогоТерминалаВБанковскихДокументахРасширеннаяПодсказка" id="131"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеНастроекНалоговогоУчетаВБанковскихДокументах" id="132">
+			<DataPath>ПоложениеНастроекНалоговогоУчетаВБанковскихДокументах</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение настроек налогового учета</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеНастроекНалоговогоУчетаВБанковскихДокументахКонтекстноеМеню" id="133"/>
+			<ExtendedTooltip name="ПоложениеНастроекНалоговогоУчетаВБанковскихДокументахРасширеннаяПодсказка" id="134"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеРасходовВОтчетеПереработчика" id="144">
+			<DataPath>ПоложениеРасходовВОтчетеПереработчика</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение услуг в отчете переработчика</v8:content>
+				</v8:item>
+			</Title>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеРасходовВОтчетеПереработчикаКонтекстноеМеню" id="145"/>
+			<ExtendedTooltip name="ПоложениеРасходовВОтчетеПереработчикаРасширеннаяПодсказка" id="146"/>
+		</RadioButtonField>
+		<CheckBoxField name="ПроверятьРасхожденияСВходящимДокументом" id="138">
+			<DataPath>ПроверятьРасхожденияСВходящимДокументом</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выявляет расхождения документов поставщика с количеством фактически поступившего товара.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПроверятьРасхожденияСВходящимДокументомКонтекстноеМеню" id="139"/>
+			<ExtendedTooltip name="ПроверятьРасхожденияСВходящимДокументомРасширеннаяПодсказка" id="140"/>
+		</CheckBoxField>
+		<CheckBoxField name="ПроверятьРасхожденияСЗаказом" id="141">
+			<DataPath>ПроверятьРасхожденияСЗаказом</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выявляет расхождения с количеством в заказе поставщику.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="КонтекстноеМеню" id="142"/>
+			<ExtendedTooltip name="РасширеннаяПодсказка" id="143"/>
+		</CheckBoxField>
+		<RadioButtonField name="ПоложениеСтатьи" id="153">
+			<DataPath>ПоложениеСтатьи</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеСтатьиКонтекстноеМеню" id="154"/>
+			<ExtendedTooltip name="ПоложениеСтатьиРасширеннаяПодсказка" id="155"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеПроекта" id="147">
+			<DataPath>ПоложениеПроекта</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеПроектаКонтекстноеМеню" id="148"/>
+			<ExtendedTooltip name="ПоложениеПроектаРасширеннаяПодсказка" id="149"/>
+		</RadioButtonField>
+		<RadioButtonField name="ПоложениеПодразделенияВДенежныхДокументах" id="150">
+			<DataPath>ПоложениеПодразделенияВДенежныхДокументах</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<TitleHeight>1</TitleHeight>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ItemTitleHeight>1</ItemTitleHeight>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В шапке</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВШапке</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В табличной части</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ПоложениеРеквизитаНаФорме.EnumValue.ВТабличнойЧасти</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПоложениеПодразделенияВДенежныхДокументахКонтекстноеМеню" id="151"/>
+			<ExtendedTooltip name="ПоложениеПодразделенияВДенежныхДокументахРасширеннаяПодсказка" id="152"/>
+		</RadioButtonField>
+		<UsualGroup name="КоманднаяПанель" id="59">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="95"/>
+			<ChildItems>
+				<CommandBar name="КоманднаяПанельЗапомнитьВыбор" id="60">
+					<ExtendedTooltip name="КоманднаяПанельЗапомнитьВыборРасширеннаяПодсказка" id="96"/>
+					<ChildItems>
+						<Button name="ФормаЗапомнитьВыбор" id="43">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ЗапомнитьВыбор</CommandName>
+							<ExtendedTooltip name="ФормаЗапомнитьВыборExtendedTooltip" id="97"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<CommandBar name="КоманднаяПанельОкОтмена" id="61">
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="КоманднаяПанельОкОтменаРасширеннаяПодсказка" id="98"/>
+					<ChildItems>
+						<Button name="ОК" id="13">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.ОК</CommandName>
+							<ExtendedTooltip name="ОКExtendedTooltip" id="99"/>
+						</Button>
+						<Button name="Отмена" id="14">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Cancel</CommandName>
+							<ExtendedTooltip name="ОтменаExtendedTooltip" id="100"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПоложениеВидаРаботВЗаказНаряде" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение вида работ в заказ-наряде</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеДатыОтгрузкиВЗаказеПокупателя" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение даты отгрузки в заказе покупателя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеДатыПоступленияВЗаказеПоставщику" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение даты поступления в заказе поставщику</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеЗаказаПокупателяВДокументахОтгрузки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение заказа покупателя в документах отгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеЗаказаПокупателяВПеремещенииЗапасов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение заказа покупателя в перемещении запасов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеЗаказаПоставщикуВДокументахПоступления" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение заказа поставщику в документах поступления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеВидаРаботВЗаданииНаРаботу" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение вида работ в задании на работу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьТоварыВЗаказНаряде" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать товары</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьМатериалыЗаказчикаВЗаказНаряде" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать материалы заказчика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьМатериалыВЗаказНаряде" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать материалы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьЗарплатаИсполнителейВЗаказНаряде" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать зарплату исполнителей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьПодсистемуЗарплата</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ПоложениеОтветственный" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение ответственного</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеИсполнитель" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение исполнителя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначенияСвойствПриОткрытии" id="28">
+			<Type/>
+		</Attribute>
+		<Attribute name="ПоложениеСкладаВДокументахПоступления" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение склада в документах поступления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеСкладаВДокументахОтгрузки" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение склада в документах отгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеСтруктурнойЕдиницыВСдельномНаряде" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение подразделения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеИсполнителяВСдельномНаряде" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение исполнителя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеЗаказаНаПроизводствоВДокументахОтгрузки" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение заказа на производство в документах отгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеСкладаВДокументахПроизводства" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение склада в документах производства</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеЗаказаПокупателяВДокументахПроизводства" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение заказа покупателя в документах производства</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеЭквайринговогоТерминалаВБанковскихДокументах" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение эквайрингового терминала в банковских документах</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеНастроекНалоговогоУчетаВБанковскихДокументах" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение настроек налогового учета в банковских документах</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеЗаказаПокупателяВДокументахПоступления" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение заказа покупателя в документах поступления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиДоступности" id="8">
+			<Type/>
+		</Attribute>
+		<Attribute name="ПроверятьРасхожденияСВходящимДокументом" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверять расхождения с входящим документом</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроверятьРасхожденияСЗаказом" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверять расхождения с заказом</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначенияСвойствПриОткрытии1" id="12">
+			<Type/>
+		</Attribute>
+		<Attribute name="ПоложениеРасходовВОтчетеПереработчика" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение расходов в отчете переработчика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеПроекта" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение проекта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеСтатьи" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение статьи движения денег</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоложениеПодразделенияВДенежныхДокументах" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение подразделения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПоложениеРеквизитаНаФорме</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки будут применены только к текущему документу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗапомнитьВыбор" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запомнить выбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки будут применены ко всем новым документам пользователя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапомнитьВыбор</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

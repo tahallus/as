@@ -1,0 +1,1407 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Общие показатели</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаExtendedTooltip" id="65"/>
+			<ChildItems>
+				<UsualGroup name="Отборы" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отборы</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ОтборыРасширеннаяПодсказка" id="66"/>
+					<ChildItems>
+						<InputField name="Период" id="4">
+							<DataPath>Период</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По состоянию на</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>10</Width>
+							<Wrap>false</Wrap>
+							<ContextMenu name="ПериодКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="68"/>
+							<Events>
+								<Event name="OnChange">ПериодПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="8">
+							<DataPath>Организация</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>30</MaxWidth>
+							<Wrap>false</Wrap>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="70"/>
+							<Events>
+								<Event name="OnChange">ОрганизацияПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<CommandBar name="КоманднаяПанель" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<Button name="Обновить" id="723">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.Обновить</CommandName>
+							<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="724"/>
+						</Button>
+						<Button name="ИзменитьФорму" id="59">
+							<Type>CommandBarButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+							<ExtendedTooltip name="ИзменитьФормуExtendedTooltip" id="72"/>
+						</Button>
+						<Button name="Справка" id="60">
+							<Type>CommandBarButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="СправкаExtendedTooltip" id="73"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Показатели" id="74">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показатели</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПоказателиРасширеннаяПодсказка" id="75"/>
+			<ChildItems>
+				<UsualGroup name="Месяц" id="111">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месяц</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="МесяцРасширеннаяПодсказка" id="112"/>
+					<ChildItems>
+						<LabelDecoration name="МесяцЗаголовок" id="93">
+							<Width>6</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Месяц</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>web:Gainsboro</BackColor>
+							<ContextMenu name="МесяцЗаголовокКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="МесяцЗаголовокРасширеннаяПодсказка" id="95"/>
+						</LabelDecoration>
+						<LabelDecoration name="Месяц1" id="720">
+							<Width>6</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>style:FormTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Январь 2014</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="Месяц1КонтекстноеМеню" id="721"/>
+							<ExtendedTooltip name="Месяц1РасширеннаяПодсказка" id="722"/>
+						</LabelDecoration>
+						<LabelDecoration name="Месяц2" id="519">
+							<Width>6</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>style:FormTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Февраль 2014</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="Месяц2КонтекстноеМеню" id="520"/>
+							<ExtendedTooltip name="Месяц2РасширеннаяПодсказка" id="521"/>
+						</LabelDecoration>
+						<LabelDecoration name="Месяц3" id="522">
+							<Width>6</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>style:FormTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Март    2014</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="Месяц3КонтекстноеМеню" id="523"/>
+							<ExtendedTooltip name="Месяц3РасширеннаяПодсказка" id="524"/>
+						</LabelDecoration>
+						<LabelDecoration name="Месяц4" id="525">
+							<Width>6</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>style:FormTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Апрель 2014</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="Месяц4КонтекстноеМеню" id="526"/>
+							<ExtendedTooltip name="Месяц4РасширеннаяПодсказка" id="527"/>
+						</LabelDecoration>
+						<LabelDecoration name="Месяц5" id="528">
+							<Width>6</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>style:FormTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Май     2014</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="Месяц5КонтекстноеМеню" id="529"/>
+							<ExtendedTooltip name="Месяц5РасширеннаяПодсказка" id="530"/>
+						</LabelDecoration>
+						<LabelDecoration name="Месяц6" id="531">
+							<Width>6</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>style:FormTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Июнь  2014</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="Месяц6КонтекстноеМеню" id="532"/>
+							<ExtendedTooltip name="Месяц6РасширеннаяПодсказка" id="533"/>
+						</LabelDecoration>
+						<LabelDecoration name="Месяц7" id="534">
+							<Width>6</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>style:FormTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Июль  2014</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="Месяц7КонтекстноеМеню" id="535"/>
+							<ExtendedTooltip name="Месяц7РасширеннаяПодсказка" id="536"/>
+						</LabelDecoration>
+						<LabelDecoration name="Месяц8" id="537">
+							<Width>6</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>style:FormTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Август 2014</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="Месяц8КонтекстноеМеню" id="538"/>
+							<ExtendedTooltip name="Месяц8РасширеннаяПодсказка" id="539"/>
+						</LabelDecoration>
+						<LabelDecoration name="Месяц9" id="540">
+							<Width>6</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>style:FormTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сентябрь 2014</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="Месяц9КонтекстноеМеню" id="541"/>
+							<ExtendedTooltip name="Месяц9РасширеннаяПодсказка" id="542"/>
+						</LabelDecoration>
+						<LabelDecoration name="Месяц10" id="543">
+							<Width>6</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>style:FormTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Октябрь 2014</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="Месяц10КонтекстноеМеню" id="544"/>
+							<ExtendedTooltip name="Месяц10РасширеннаяПодсказка" id="545"/>
+						</LabelDecoration>
+						<LabelDecoration name="Месяц11" id="546">
+							<Width>6</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>style:FormTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ноябрь 2014</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="Месяц11КонтекстноеМеню" id="547"/>
+							<ExtendedTooltip name="Месяц11РасширеннаяПодсказка" id="548"/>
+						</LabelDecoration>
+						<LabelDecoration name="Месяц12" id="549">
+							<Width>6</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<TextColor>style:FormTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декабрь 2014</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ContextMenu name="Месяц12КонтекстноеМеню" id="550"/>
+							<ExtendedTooltip name="Месяц12РасширеннаяПодсказка" id="551"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Выручка" id="116">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выручка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ВыручкаРасширеннаяПодсказка" id="117"/>
+					<ChildItems>
+						<LabelDecoration name="ВыручкаЗаголовок" id="96">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выручка</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>web:Gainsboro</BackColor>
+							<ContextMenu name="ВыручкаЗаголовокКонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="ВыручкаЗаголовокРасширеннаяПодсказка" id="98"/>
+						</LabelDecoration>
+						<LabelDecoration name="Выручка1" id="384">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Выручка1КонтекстноеМеню" id="385"/>
+							<ExtendedTooltip name="Выручка1РасширеннаяПодсказка" id="386"/>
+						</LabelDecoration>
+						<LabelDecoration name="Выручка2" id="552">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Выручка2КонтекстноеМеню" id="553"/>
+							<ExtendedTooltip name="Выручка2РасширеннаяПодсказка" id="554"/>
+						</LabelDecoration>
+						<LabelDecoration name="Выручка3" id="555">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Выручка3КонтекстноеМеню" id="556"/>
+							<ExtendedTooltip name="Выручка3РасширеннаяПодсказка" id="557"/>
+						</LabelDecoration>
+						<LabelDecoration name="Выручка4" id="558">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Выручка4КонтекстноеМеню" id="559"/>
+							<ExtendedTooltip name="Выручка4РасширеннаяПодсказка" id="560"/>
+						</LabelDecoration>
+						<LabelDecoration name="Выручка5" id="561">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Выручка5КонтекстноеМеню" id="562"/>
+							<ExtendedTooltip name="Выручка5РасширеннаяПодсказка" id="563"/>
+						</LabelDecoration>
+						<LabelDecoration name="Выручка6" id="564">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Выручка6КонтекстноеМеню" id="565"/>
+							<ExtendedTooltip name="Выручка6РасширеннаяПодсказка" id="566"/>
+						</LabelDecoration>
+						<LabelDecoration name="Выручка7" id="567">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Выручка7КонтекстноеМеню" id="568"/>
+							<ExtendedTooltip name="Выручка7РасширеннаяПодсказка" id="569"/>
+						</LabelDecoration>
+						<LabelDecoration name="Выручка8" id="570">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Выручка8КонтекстноеМеню" id="571"/>
+							<ExtendedTooltip name="Выручка8РасширеннаяПодсказка" id="572"/>
+						</LabelDecoration>
+						<LabelDecoration name="Выручка9" id="573">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Выручка9КонтекстноеМеню" id="574"/>
+							<ExtendedTooltip name="Выручка9РасширеннаяПодсказка" id="575"/>
+						</LabelDecoration>
+						<LabelDecoration name="Выручка10" id="576">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Выручка10КонтекстноеМеню" id="577"/>
+							<ExtendedTooltip name="Выручка10РасширеннаяПодсказка" id="578"/>
+						</LabelDecoration>
+						<LabelDecoration name="Выручка11" id="579">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Выручка11КонтекстноеМеню" id="580"/>
+							<ExtendedTooltip name="Выручка11РасширеннаяПодсказка" id="581"/>
+						</LabelDecoration>
+						<LabelDecoration name="Выручка12" id="582">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color LimeGreen&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Выручка12КонтекстноеМеню" id="583"/>
+							<ExtendedTooltip name="Выручка12РасширеннаяПодсказка" id="584"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Себестоимость" id="121">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Себестоимость</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СебестоимостьРасширеннаяПодсказка" id="122"/>
+					<ChildItems>
+						<LabelDecoration name="СебестоимостьЗаголовок" id="99">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Себестоимость продаж</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>web:Gainsboro</BackColor>
+							<ContextMenu name="СебестоимостьЗаголовокКонтекстноеМеню" id="100"/>
+							<ExtendedTooltip name="СебестоимостьЗаголовокРасширеннаяПодсказка" id="101"/>
+						</LabelDecoration>
+						<LabelDecoration name="Себестоимость1" id="417">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Себестоимость1КонтекстноеМеню" id="418"/>
+							<ExtendedTooltip name="Себестоимость1РасширеннаяПодсказка" id="419"/>
+						</LabelDecoration>
+						<LabelDecoration name="Себестоимость2" id="585">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Себестоимость2КонтекстноеМеню" id="586"/>
+							<ExtendedTooltip name="Себестоимость2РасширеннаяПодсказка" id="587"/>
+						</LabelDecoration>
+						<LabelDecoration name="Себестоимость3" id="588">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Себестоимость3КонтекстноеМеню" id="589"/>
+							<ExtendedTooltip name="Себестоимость3РасширеннаяПодсказка" id="590"/>
+						</LabelDecoration>
+						<LabelDecoration name="Себестоимость4" id="591">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Себестоимость4КонтекстноеМеню" id="592"/>
+							<ExtendedTooltip name="Себестоимость4РасширеннаяПодсказка" id="593"/>
+						</LabelDecoration>
+						<LabelDecoration name="Себестоимость5" id="594">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Себестоимость5КонтекстноеМеню" id="595"/>
+							<ExtendedTooltip name="Себестоимость5РасширеннаяПодсказка" id="596"/>
+						</LabelDecoration>
+						<LabelDecoration name="Себестоимость6" id="597">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Себестоимость6КонтекстноеМеню" id="598"/>
+							<ExtendedTooltip name="Себестоимость6РасширеннаяПодсказка" id="599"/>
+						</LabelDecoration>
+						<LabelDecoration name="Себестоимость7" id="600">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Себестоимость7КонтекстноеМеню" id="601"/>
+							<ExtendedTooltip name="Себестоимость7РасширеннаяПодсказка" id="602"/>
+						</LabelDecoration>
+						<LabelDecoration name="Себестоимость8" id="603">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Себестоимость8КонтекстноеМеню" id="604"/>
+							<ExtendedTooltip name="Себестоимость8РасширеннаяПодсказка" id="605"/>
+						</LabelDecoration>
+						<LabelDecoration name="Себестоимость9" id="606">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Себестоимость9КонтекстноеМеню" id="607"/>
+							<ExtendedTooltip name="Себестоимость9РасширеннаяПодсказка" id="608"/>
+						</LabelDecoration>
+						<LabelDecoration name="Себестоимость10" id="609">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Себестоимость10КонтекстноеМеню" id="610"/>
+							<ExtendedTooltip name="Себестоимость10РасширеннаяПодсказка" id="611"/>
+						</LabelDecoration>
+						<LabelDecoration name="Себестоимость11" id="612">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Себестоимость11КонтекстноеМеню" id="613"/>
+							<ExtendedTooltip name="Себестоимость11РасширеннаяПодсказка" id="614"/>
+						</LabelDecoration>
+						<LabelDecoration name="Себестоимость12" id="615">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color DeepSkyBlue&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Себестоимость12КонтекстноеМеню" id="616"/>
+							<ExtendedTooltip name="Себестоимость12РасширеннаяПодсказка" id="617"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ВаловаяПрибыль" id="126">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валовая прибыль</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Себестоимость</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ВаловаяПрибыльРасширеннаяПодсказка" id="127"/>
+					<ChildItems>
+						<LabelDecoration name="ВаловаяПрибыльЗаголовок" id="102">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Валовая прибыль</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>web:Gainsboro</BackColor>
+							<ContextMenu name="ВаловаяПрибыльЗаголовокКонтекстноеМеню" id="103"/>
+							<ExtendedTooltip name="ВаловаяПрибыльЗаголовокРасширеннаяПодсказка" id="104"/>
+						</LabelDecoration>
+						<LabelDecoration name="ВаловаяПрибыль1" id="450">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВаловаяПрибыль1КонтекстноеМеню" id="451"/>
+							<ExtendedTooltip name="ВаловаяПрибыль1РасширеннаяПодсказка" id="452"/>
+						</LabelDecoration>
+						<LabelDecoration name="ВаловаяПрибыль2" id="618">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВаловаяПрибыль2КонтекстноеМеню" id="619"/>
+							<ExtendedTooltip name="ВаловаяПрибыль2РасширеннаяПодсказка" id="620"/>
+						</LabelDecoration>
+						<LabelDecoration name="ВаловаяПрибыль3" id="621">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВаловаяПрибыль3КонтекстноеМеню" id="622"/>
+							<ExtendedTooltip name="ВаловаяПрибыль3РасширеннаяПодсказка" id="623"/>
+						</LabelDecoration>
+						<LabelDecoration name="ВаловаяПрибыль4" id="624">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВаловаяПрибыль4КонтекстноеМеню" id="625"/>
+							<ExtendedTooltip name="ВаловаяПрибыль4РасширеннаяПодсказка" id="626"/>
+						</LabelDecoration>
+						<LabelDecoration name="ВаловаяПрибыль5" id="627">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВаловаяПрибыль5КонтекстноеМеню" id="628"/>
+							<ExtendedTooltip name="ВаловаяПрибыль5РасширеннаяПодсказка" id="629"/>
+						</LabelDecoration>
+						<LabelDecoration name="ВаловаяПрибыль6" id="630">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВаловаяПрибыль6КонтекстноеМеню" id="631"/>
+							<ExtendedTooltip name="ВаловаяПрибыль6РасширеннаяПодсказка" id="632"/>
+						</LabelDecoration>
+						<LabelDecoration name="ВаловаяПрибыль7" id="633">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВаловаяПрибыль7КонтекстноеМеню" id="634"/>
+							<ExtendedTooltip name="ВаловаяПрибыль7РасширеннаяПодсказка" id="635"/>
+						</LabelDecoration>
+						<LabelDecoration name="ВаловаяПрибыль8" id="636">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВаловаяПрибыль8КонтекстноеМеню" id="637"/>
+							<ExtendedTooltip name="ВаловаяПрибыль8РасширеннаяПодсказка" id="638"/>
+						</LabelDecoration>
+						<LabelDecoration name="ВаловаяПрибыль9" id="639">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВаловаяПрибыль9КонтекстноеМеню" id="640"/>
+							<ExtendedTooltip name="ВаловаяПрибыль9РасширеннаяПодсказка" id="641"/>
+						</LabelDecoration>
+						<LabelDecoration name="ВаловаяПрибыль10" id="642">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВаловаяПрибыль10КонтекстноеМеню" id="643"/>
+							<ExtendedTooltip name="ВаловаяПрибыль10РасширеннаяПодсказка" id="644"/>
+						</LabelDecoration>
+						<LabelDecoration name="ВаловаяПрибыль11" id="645">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВаловаяПрибыль11КонтекстноеМеню" id="646"/>
+							<ExtendedTooltip name="ВаловаяПрибыль11РасширеннаяПодсказка" id="647"/>
+						</LabelDecoration>
+						<LabelDecoration name="ВаловаяПрибыль12" id="648">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Coral&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВаловаяПрибыль12КонтекстноеМеню" id="649"/>
+							<ExtendedTooltip name="ВаловаяПрибыль12РасширеннаяПодсказка" id="650"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Расходы" id="131">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Себестоимость</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="РасходыРасширеннаяПодсказка" id="132"/>
+					<ChildItems>
+						<LabelDecoration name="РасходыЗаголовок" id="105">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расходы по продажам</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>web:Gainsboro</BackColor>
+							<ContextMenu name="РасходыЗаголовокКонтекстноеМеню" id="106"/>
+							<ExtendedTooltip name="РасходыЗаголовокРасширеннаяПодсказка" id="107"/>
+						</LabelDecoration>
+						<LabelDecoration name="Расходы1" id="483">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Расходы1КонтекстноеМеню" id="484"/>
+							<ExtendedTooltip name="Расходы1РасширеннаяПодсказка" id="485"/>
+						</LabelDecoration>
+						<LabelDecoration name="Расходы2" id="651">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Расходы2КонтекстноеМеню" id="652"/>
+							<ExtendedTooltip name="Расходы2РасширеннаяПодсказка" id="653"/>
+						</LabelDecoration>
+						<LabelDecoration name="Расходы3" id="654">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Расходы3КонтекстноеМеню" id="655"/>
+							<ExtendedTooltip name="Расходы3РасширеннаяПодсказка" id="656"/>
+						</LabelDecoration>
+						<LabelDecoration name="Расходы4" id="657">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Расходы4КонтекстноеМеню" id="658"/>
+							<ExtendedTooltip name="Расходы4РасширеннаяПодсказка" id="659"/>
+						</LabelDecoration>
+						<LabelDecoration name="Расходы5" id="660">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Расходы5КонтекстноеМеню" id="661"/>
+							<ExtendedTooltip name="Расходы5РасширеннаяПодсказка" id="662"/>
+						</LabelDecoration>
+						<LabelDecoration name="Расходы6" id="663">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Расходы6КонтекстноеМеню" id="664"/>
+							<ExtendedTooltip name="Расходы6РасширеннаяПодсказка" id="665"/>
+						</LabelDecoration>
+						<LabelDecoration name="Расходы7" id="666">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Расходы7КонтекстноеМеню" id="667"/>
+							<ExtendedTooltip name="Расходы7РасширеннаяПодсказка" id="668"/>
+						</LabelDecoration>
+						<LabelDecoration name="Расходы8" id="717">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Расходы8КонтекстноеМеню" id="718"/>
+							<ExtendedTooltip name="Расходы8РасширеннаяПодсказка" id="719"/>
+						</LabelDecoration>
+						<LabelDecoration name="Расходы9" id="672">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Расходы9КонтекстноеМеню" id="673"/>
+							<ExtendedTooltip name="Расходы9РасширеннаяПодсказка" id="674"/>
+						</LabelDecoration>
+						<LabelDecoration name="Расходы10" id="675">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Расходы10КонтекстноеМеню" id="676"/>
+							<ExtendedTooltip name="Расходы10РасширеннаяПодсказка" id="677"/>
+						</LabelDecoration>
+						<LabelDecoration name="Расходы11" id="678">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Расходы11КонтекстноеМеню" id="679"/>
+							<ExtendedTooltip name="Расходы11РасширеннаяПодсказка" id="680"/>
+						</LabelDecoration>
+						<LabelDecoration name="Расходы12" id="681">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color Orange&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Расходы12КонтекстноеМеню" id="682"/>
+							<ExtendedTooltip name="Расходы12РасширеннаяПодсказка" id="683"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Прибыль" id="136">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прибыль</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Себестоимость</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПрибыльРасширеннаяПодсказка" id="137"/>
+					<ChildItems>
+						<LabelDecoration name="ПрибыльЗаголовок" id="108">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прибыль с продаж</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<BackColor>web:Gainsboro</BackColor>
+							<ContextMenu name="ПрибыльЗаголовокКонтекстноеМеню" id="109"/>
+							<ExtendedTooltip name="ПрибыльЗаголовокРасширеннаяПодсказка" id="110"/>
+						</LabelDecoration>
+						<LabelDecoration name="Прибыль1" id="516">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Прибыль1КонтекстноеМеню" id="517"/>
+							<ExtendedTooltip name="Прибыль1РасширеннаяПодсказка" id="518"/>
+						</LabelDecoration>
+						<LabelDecoration name="Прибыль2" id="684">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Прибыль2КонтекстноеМеню" id="685"/>
+							<ExtendedTooltip name="Прибыль2РасширеннаяПодсказка" id="686"/>
+						</LabelDecoration>
+						<LabelDecoration name="Прибыль3" id="687">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Прибыль3КонтекстноеМеню" id="688"/>
+							<ExtendedTooltip name="Прибыль3РасширеннаяПодсказка" id="689"/>
+						</LabelDecoration>
+						<LabelDecoration name="Прибыль4" id="690">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Прибыль4КонтекстноеМеню" id="691"/>
+							<ExtendedTooltip name="Прибыль4РасширеннаяПодсказка" id="692"/>
+						</LabelDecoration>
+						<LabelDecoration name="Прибыль5" id="693">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Прибыль5КонтекстноеМеню" id="694"/>
+							<ExtendedTooltip name="Прибыль5РасширеннаяПодсказка" id="695"/>
+						</LabelDecoration>
+						<LabelDecoration name="Прибыль6" id="696">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Прибыль6КонтекстноеМеню" id="697"/>
+							<ExtendedTooltip name="Прибыль6РасширеннаяПодсказка" id="698"/>
+						</LabelDecoration>
+						<LabelDecoration name="Прибыль7" id="699">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Прибыль7КонтекстноеМеню" id="700"/>
+							<ExtendedTooltip name="Прибыль7РасширеннаяПодсказка" id="701"/>
+						</LabelDecoration>
+						<LabelDecoration name="Прибыль8" id="702">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Прибыль8КонтекстноеМеню" id="703"/>
+							<ExtendedTooltip name="Прибыль8РасширеннаяПодсказка" id="704"/>
+						</LabelDecoration>
+						<LabelDecoration name="Прибыль9" id="705">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Прибыль9КонтекстноеМеню" id="706"/>
+							<ExtendedTooltip name="Прибыль9РасширеннаяПодсказка" id="707"/>
+						</LabelDecoration>
+						<LabelDecoration name="Прибыль10" id="708">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Прибыль10КонтекстноеМеню" id="709"/>
+							<ExtendedTooltip name="Прибыль10РасширеннаяПодсказка" id="710"/>
+						</LabelDecoration>
+						<LabelDecoration name="Прибыль11" id="711">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Прибыль11КонтекстноеМеню" id="712"/>
+							<ExtendedTooltip name="Прибыль11РасширеннаяПодсказка" id="713"/>
+						</LabelDecoration>
+						<LabelDecoration name="Прибыль12" id="714">
+							<Width>13</Width>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color MediumPurple&gt;▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄▄▄▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;▄&lt;/&gt;&lt;/&gt;
+&lt;font @Arial Unicode MS&gt;&lt;color #C0C0C0&gt;                &lt;/&gt;&lt;/&gt;&lt;fontstyle -30&gt;&lt;color #C0C0C0&gt;1 000 000,00&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Прибыль12КонтекстноеМеню" id="715"/>
+							<ExtendedTooltip name="Прибыль12РасширеннаяПодсказка" id="716"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УдалитьМониторыРуководителя</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Организация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНесколькоОрганизаций</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="Период" id="4">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Обновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

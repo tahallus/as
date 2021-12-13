@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Медиаплан" id="7">
+			<DataPath>Объект.Медиаплан</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="МедиапланКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="МедиапланРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">МедиапланПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаСтрокиМедиаплана" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строки медиаплана</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<ExtendedTooltip name="ГруппаСтрокиМедиапланаРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<Table name="СтрокиМедиаплана" id="14">
+					<Representation>List</Representation>
+					<ReadOnly>true</ReadOnly>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.СтрокиМедиаплана</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>OutputList</ExcludedCommand>
+						<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СтрокиМедиапланаКонтекстноеМеню" id="15"/>
+					<AutoCommandBar name="СтрокиМедиапланаКоманднаяПанель" id="16"/>
+					<ExtendedTooltip name="СтрокиМедиапланаРасширеннаяПодсказка" id="17"/>
+					<SearchStringAddition name="СтрокиМедиапланаСтрокаПоиска" id="18">
+						<AdditionSource>
+							<Item>СтрокиМедиаплана</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СтрокиМедиапланаСтрокаПоискаКонтекстноеМеню" id="19"/>
+						<ExtendedTooltip name="СтрокиМедиапланаСтрокаПоискаРасширеннаяПодсказка" id="20"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СтрокиМедиапланаСостояниеПросмотра" id="21">
+						<AdditionSource>
+							<Item>СтрокиМедиаплана</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СтрокиМедиапланаСостояниеПросмотраКонтекстноеМеню" id="22"/>
+						<ExtendedTooltip name="СтрокиМедиапланаСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СтрокиМедиапланаУправлениеПоиском" id="24">
+						<AdditionSource>
+							<Item>СтрокиМедиаплана</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СтрокиМедиапланаУправлениеПоискомКонтекстноеМеню" id="25"/>
+						<ExtendedTooltip name="СтрокиМедиапланаУправлениеПоискомРасширеннаяПодсказка" id="26"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnActivateRow">СтрокиМедиапланаПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="СтрокиМедиапланаНомерСтроки" id="27">
+							<DataPath>Объект.СтрокиМедиаплана.LineNumber</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтрокиМедиапланаНомерСтрокиКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="СтрокиМедиапланаНомерСтрокиРасширеннаяПодсказка" id="29"/>
+						</LabelField>
+						<InputField name="СтрокиМедиапланаНоменклатура" id="30">
+							<DataPath>Объект.СтрокиМедиаплана.Номенклатура</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтрокиМедиапланаНоменклатураКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="СтрокиМедиапланаНоменклатураРасширеннаяПодсказка" id="32"/>
+						</InputField>
+						<InputField name="СтрокиМедиапланаКоличество" id="33">
+							<DataPath>Объект.СтрокиМедиаплана.Количество</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтрокиМедиапланаКоличествоКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="СтрокиМедиапланаКоличествоРасширеннаяПодсказка" id="35"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="СтрокиМедиапланаРазмещение" id="38">
+					<Representation>List</Representation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.СтрокиМедиапланаРазмещение</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>OutputList</ExcludedCommand>
+						<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СтрокиМедиапланаРазмещениеКонтекстноеМеню" id="39"/>
+					<AutoCommandBar name="СтрокиМедиапланаРазмещениеКоманднаяПанель" id="40"/>
+					<ExtendedTooltip name="СтрокиМедиапланаРазмещениеРасширеннаяПодсказка" id="41"/>
+					<SearchStringAddition name="СтрокиМедиапланаРазмещениеСтрокаПоиска" id="42">
+						<AdditionSource>
+							<Item>СтрокиМедиапланаРазмещение</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СтрокиМедиапланаРазмещениеСтрокаПоискаКонтекстноеМеню" id="43"/>
+						<ExtendedTooltip name="СтрокиМедиапланаРазмещениеСтрокаПоискаРасширеннаяПодсказка" id="44"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СтрокиМедиапланаРазмещениеСостояниеПросмотра" id="45">
+						<AdditionSource>
+							<Item>СтрокиМедиапланаРазмещение</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СтрокиМедиапланаРазмещениеСостояниеПросмотраКонтекстноеМеню" id="46"/>
+						<ExtendedTooltip name="СтрокиМедиапланаРазмещениеСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СтрокиМедиапланаРазмещениеУправлениеПоиском" id="48">
+						<AdditionSource>
+							<Item>СтрокиМедиапланаРазмещение</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СтрокиМедиапланаРазмещениеУправлениеПоискомКонтекстноеМеню" id="49"/>
+						<ExtendedTooltip name="СтрокиМедиапланаРазмещениеУправлениеПоискомРасширеннаяПодсказка" id="50"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnChange">СтрокиМедиапланаРазмещениеПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="СтрокиМедиапланаРазмещениеНоменклатура" id="54">
+							<DataPath>Объект.СтрокиМедиапланаРазмещение.Номенклатура</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтрокиМедиапланаРазмещениеНоменклатураКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="СтрокиМедиапланаРазмещениеНоменклатураРасширеннаяПодсказка" id="56"/>
+						</InputField>
+						<InputField name="СтрокиМедиапланаРазмещениеПлощадка" id="57">
+							<DataPath>Объект.СтрокиМедиапланаРазмещение.Площадка</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтрокиМедиапланаРазмещениеПлощадкаКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="СтрокиМедиапланаРазмещениеПлощадкаРасширеннаяПодсказка" id="59"/>
+						</InputField>
+						<CheckBoxField name="СтрокиМедиапланаРазмещениеНеУчитыватьФакт" id="60">
+							<DataPath>Объект.СтрокиМедиапланаРазмещение.НеУчитыватьФакт</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СтрокиМедиапланаРазмещениеНеУчитыватьФактКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="СтрокиМедиапланаРазмещениеНеУчитыватьФактРасширеннаяПодсказка" id="62"/>
+						</CheckBoxField>
+						<InputField name="СтрокиМедиапланаРазмещениеБаннер" id="63">
+							<DataPath>Объект.СтрокиМедиапланаРазмещение.Баннер</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтрокиМедиапланаРазмещениеБаннерКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="СтрокиМедиапланаРазмещениеБаннерРасширеннаяПодсказка" id="65"/>
+						</InputField>
+						<InputField name="СтрокиМедиапланаРазмещениеКоличество" id="66">
+							<DataPath>Объект.СтрокиМедиапланаРазмещение.Количество</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтрокиМедиапланаРазмещениеКоличествоКонтекстноеМеню" id="67"/>
+							<ExtendedTooltip name="СтрокиМедиапланаРазмещениеКоличествоРасширеннаяПодсказка" id="68"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="СтрокиМедиапланаРасшифровка" id="71">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СтрокиМедиапланаРасшифровка</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СтрокиМедиапланаРасшифровкаКонтекстноеМеню" id="72"/>
+			<AutoCommandBar name="СтрокиМедиапланаРасшифровкаКоманднаяПанель" id="73"/>
+			<ExtendedTooltip name="СтрокиМедиапланаРасшифровкаРасширеннаяПодсказка" id="74"/>
+			<SearchStringAddition name="СтрокиМедиапланаРасшифровкаСтрокаПоиска" id="75">
+				<AdditionSource>
+					<Item>СтрокиМедиапланаРасшифровка</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СтрокиМедиапланаРасшифровкаСтрокаПоискаКонтекстноеМеню" id="76"/>
+				<ExtendedTooltip name="СтрокиМедиапланаРасшифровкаСтрокаПоискаРасширеннаяПодсказка" id="77"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СтрокиМедиапланаРасшифровкаСостояниеПросмотра" id="78">
+				<AdditionSource>
+					<Item>СтрокиМедиапланаРасшифровка</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СтрокиМедиапланаРасшифровкаСостояниеПросмотраКонтекстноеМеню" id="79"/>
+				<ExtendedTooltip name="СтрокиМедиапланаРасшифровкаСостояниеПросмотраРасширеннаяПодсказка" id="80"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СтрокиМедиапланаРасшифровкаУправлениеПоиском" id="81">
+				<AdditionSource>
+					<Item>СтрокиМедиапланаРасшифровка</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СтрокиМедиапланаРасшифровкаУправлениеПоискомКонтекстноеМеню" id="82"/>
+				<ExtendedTooltip name="СтрокиМедиапланаРасшифровкаУправлениеПоискомРасширеннаяПодсказка" id="83"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">СтрокиМедиапланаРасшифровкаПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="СтрокиМедиапланаРасшифровкаДатаНачала" id="87">
+					<DataPath>Объект.СтрокиМедиапланаРасшифровка.ДатаНачала</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СтрокиМедиапланаРасшифровкаДатаНачалаКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="СтрокиМедиапланаРасшифровкаДатаНачалаРасширеннаяПодсказка" id="89"/>
+				</InputField>
+				<InputField name="СтрокиМедиапланаРасшифровкаДатаОкончания" id="90">
+					<DataPath>Объект.СтрокиМедиапланаРасшифровка.ДатаОкончания</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СтрокиМедиапланаРасшифровкаДатаОкончанияКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="СтрокиМедиапланаРасшифровкаДатаОкончанияРасширеннаяПодсказка" id="92"/>
+				</InputField>
+				<InputField name="СтрокиМедиапланаРасшифровкаКоличествоПлановое" id="93">
+					<DataPath>Объект.СтрокиМедиапланаРасшифровка.КоличествоПлановое</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СтрокиМедиапланаРасшифровкаКоличествоПлановоеКонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="СтрокиМедиапланаРасшифровкаКоличествоПлановоеРасширеннаяПодсказка" id="95"/>
+				</InputField>
+				<InputField name="СтрокиМедиапланаРасшифровкаКоличествоОтраженноеРанее" id="96">
+					<DataPath>Объект.СтрокиМедиапланаРасшифровка.КоличествоОтраженноеРанее</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СтрокиМедиапланаРасшифровкаКоличествоОтраженноеРанееКонтекстноеМеню" id="97"/>
+					<ExtendedTooltip name="СтрокиМедиапланаРасшифровкаКоличествоОтраженноеРанееРасширеннаяПодсказка" id="98"/>
+				</InputField>
+				<InputField name="СтрокиМедиапланаРасшифровкаКоличество" id="99">
+					<DataPath>Объект.СтрокиМедиапланаРасшифровка.Количество</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СтрокиМедиапланаРасшифровкаКоличествоКонтекстноеМеню" id="100"/>
+					<ExtendedTooltip name="СтрокиМедиапланаРасшифровкаКоличествоРасширеннаяПодсказка" id="101"/>
+				</InputField>
+				<InputField name="СтрокиМедиапланаРасшифровкаОстаток" id="107">
+					<DataPath>Объект.СтрокиМедиапланаРасшифровка.Остаток</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="СтрокиМедиапланаРасшифровкаОстатокКонтекстноеМеню" id="108"/>
+					<ExtendedTooltip name="СтрокиМедиапланаРасшифровкаОстатокРасширеннаяПодсказка" id="109"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject._МедиапланФактическиеДанные</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.СтрокиМедиапланаРасшифровка"/>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Организация" id="1">
+			<DataPath>Запись.Организация</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="КатегорияОнлайнРеклама" id="4">
+			<DataPath>Запись.КатегорияОнлайнРеклама</DataPath>
+			<ContextMenu name="КатегорияОнлайнРекламаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="КатегорияОнлайнРекламаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="КатегорияПечатнаяРеклама" id="31">
+			<DataPath>Запись.КатегорияПечатнаяРеклама</DataPath>
+			<ContextMenu name="КатегорияПечатнаяРекламаКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="КатегорияПечатнаяРекламаРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="КатегорияРаботы" id="19">
+			<DataPath>Запись.КатегорияРаботы</DataPath>
+			<ContextMenu name="КатегорияРаботыКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="КатегорияРаботыРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="КатегорияЖурналы" id="7">
+			<DataPath>Запись.КатегорияЖурналы</DataPath>
+			<ContextMenu name="КатегорияЖурналыКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КатегорияЖурналыРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="КатегорияМероприятия" id="25">
+			<DataPath>Запись.КатегорияМероприятия</DataPath>
+			<ContextMenu name="КатегорияМероприятияКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="КатегорияМероприятияРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="КатегорияКонференции" id="28">
+			<DataPath>Запись.КатегорияКонференции</DataPath>
+			<ContextMenu name="КатегорияКонференцииКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="КатегорияКонференцииРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="ЕдИзмПоказ" id="10">
+			<DataPath>Запись.ЕдИзмПоказ</DataPath>
+			<ContextMenu name="ЕдИзмПоказКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ЕдИзмПоказРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ЕдИзм1000Показов" id="13">
+			<DataPath>Запись.ЕдИзм1000Показов</DataPath>
+			<ContextMenu name="ЕдИзм1000ПоказовКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ЕдИзм1000ПоказовРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ТипСоглашения" id="22">
+			<DataPath>Запись.ТипСоглашения</DataPath>
+			<ContextMenu name="ТипСоглашенияКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ТипСоглашенияРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ПутьДоШаблонов" id="16">
+			<DataPath>Запись.ПутьДоШаблонов</DataPath>
+			<ContextMenu name="ПутьДоШаблоновКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ПутьДоШаблоновРасширеннаяПодсказка" id="18"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager._НастройкиСистемы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

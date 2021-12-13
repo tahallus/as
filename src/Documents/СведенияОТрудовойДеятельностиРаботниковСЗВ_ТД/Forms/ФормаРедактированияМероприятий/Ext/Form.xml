@@ -1,0 +1,1091 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Мероприятия</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОК" id="47">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="48"/>
+			</Button>
+			<Button name="ФормаОтмена" id="49">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отмена</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="50"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ИнфонадписьЗаголовокКарточкиГруппа" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инфонадпись заголовок карточки группа</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ИнфонадписьЗаголовокКарточкиГруппаРасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<LabelField name="ИнфонадписьЗаголовокКарточки" id="53">
+					<DataPath>ИнфонадписьЗаголовокКарточки</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>22</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ИнфонадписьЗаголовокКарточкиКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ИнфонадписьЗаголовокКарточкиРасширеннаяПодсказка" id="55"/>
+				</LabelField>
+				<Button name="РедактироватьДанныеФизическогоЛица" id="56">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.РедактироватьДанныеФизическогоЛица</CommandName>
+					<ExtendedTooltip name="РедактироватьДанныеФизическогоЛицаРасширеннаяПодсказка" id="57"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ФИОГруппа" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО группа</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ФИОГруппаРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<InputField name="Фамилия" id="60">
+					<DataPath>Фамилия</DataPath>
+					<Width>16</Width>
+					<ContextMenu name="ФамилияКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ФамилияРасширеннаяПодсказка" id="62"/>
+				</InputField>
+				<InputField name="Имя" id="63">
+					<DataPath>Имя</DataPath>
+					<Width>15</Width>
+					<ContextMenu name="ИмяКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ИмяРасширеннаяПодсказка" id="65"/>
+				</InputField>
+				<InputField name="Отчество" id="66">
+					<DataPath>Отчество</DataPath>
+					<Width>15</Width>
+					<ContextMenu name="ОтчествоКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ОтчествоРасширеннаяПодсказка" id="68"/>
+				</InputField>
+				<InputField name="СтраховойНомерПФР" id="69">
+					<DataPath>СтраховойНомерПФР</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СНИЛС</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="СтраховойНомерПФРКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="СтраховойНомерПФРРасширеннаяПодсказка" id="71"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ДанныеСотрудникаГруппа" id="124">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные сотрудника группа</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ДанныеСотрудникаГруппаРасширеннаяПодсказка" id="125"/>
+			<ChildItems>
+				<UsualGroup name="ДатаРожденияСовместительГруппа" id="122">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата рождения совместитель группа</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>DontUse</ThroughAlign>
+					<ExtendedTooltip name="ДатаРожденияСовместительГруппаРасширеннаяПодсказка" id="123"/>
+					<ChildItems>
+						<InputField name="ДатаРождения" id="119">
+							<DataPath>ДатаРождения</DataPath>
+							<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="120"/>
+							<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="121"/>
+						</InputField>
+						<CheckBoxField name="ЯвляетсяСовместителем" id="72">
+							<DataPath>ЯвляетсяСовместителем</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЯвляетсяСовместителемКонтекстноеМеню" id="73"/>
+							<ExtendedTooltip name="ЯвляетсяСовместителемРасширеннаяПодсказка" id="74"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ЗаявленияГруппа" id="81">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заявления группа</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>DontUse</ThroughAlign>
+					<ExtendedTooltip name="ЗаявленияГруппаРасширеннаяПодсказка" id="82"/>
+					<ChildItems>
+						<UsualGroup name="ЗаявлениеОПродолженииГруппа" id="126">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заявление о продолжении группа</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ЗаявлениеОПродолженииГруппаРасширеннаяПодсказка" id="127"/>
+							<ChildItems>
+								<InputField name="ЗаявлениеОПродолжении" id="83">
+									<DataPath>ЗаявлениеОПродолжении</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ведение бумажной трудовой книжки (заявление)</v8:content>
+										</v8:item>
+									</Title>
+									<Width>25</Width>
+									<ContextMenu name="ЗаявлениеОПродолженииКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="ЗаявлениеОПродолженииРасширеннаяПодсказка" id="85"/>
+									<Events>
+										<Event name="OnChange">ЗаявлениеОПродолженииПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="ЗаявлениеОПродолженииОтмена" id="133">
+									<DataPath>ЗаявлениеОПродолженииОтмена</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отмена</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗаявлениеОПродолженииОтменаКонтекстноеМеню" id="134"/>
+									<ExtendedTooltip name="ЗаявлениеОПродолженииОтменаРасширеннаяПодсказка" id="135"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ЗаявлениеОПредоставленииГруппа" id="128">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заявление о предоставлении группа</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ЗаявлениеОПредоставленииГруппаРасширеннаяПодсказка" id="129"/>
+							<ChildItems>
+								<InputField name="ЗаявлениеОПредоставлении" id="86">
+									<DataPath>ЗаявлениеОПредоставлении</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сведения в электронной форме (заявление)</v8:content>
+										</v8:item>
+									</Title>
+									<Width>25</Width>
+									<ContextMenu name="ЗаявлениеОПредоставленииКонтекстноеМеню" id="87"/>
+									<ExtendedTooltip name="ЗаявлениеОПредоставленииРасширеннаяПодсказка" id="88"/>
+									<Events>
+										<Event name="OnChange">ЗаявлениеОПредоставленииПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="ЗаявлениеОПредоставленииОтмена" id="130">
+									<DataPath>ЗаявлениеОПредоставленииОтмена</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отмена</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗаявлениеОПредоставленииОтменаКонтекстноеМеню" id="131"/>
+									<ExtendedTooltip name="ЗаявлениеОПредоставленииОтменаРасширеннаяПодсказка" id="132"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Мероприятия" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Мероприятия</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мероприятия</v8:content>
+				</v8:item>
+			</Title>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="МероприятияКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="МероприятияКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="МероприятияРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="МероприятияСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Мероприятия</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МероприятияСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="МероприятияСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="МероприятияСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>Мероприятия</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МероприятияСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="МероприятияСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="МероприятияУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>Мероприятия</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="МероприятияУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="МероприятияУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnStartEdit">МероприятияПриНачалеРедактирования</Event>
+				<Event name="AfterDeleteRow">МероприятияПослеУдаления</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="МероприятияДатаМероприятия" id="14">
+					<DataPath>Мероприятия.ДатаМероприятия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="МероприятияДатаМероприятияКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="МероприятияДатаМероприятияРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="МероприятияВидМероприятия" id="17">
+					<DataPath>Мероприятия.ВидМероприятия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="МероприятияВидМероприятияКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="МероприятияВидМероприятияРасширеннаяПодсказка" id="19"/>
+					<Events>
+						<Event name="OnChange">МероприятияВидМероприятияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="МероприятияСведения" id="75">
+					<DataPath>Мероприятия.Сведения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МероприятияСведенияКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="МероприятияСведенияРасширеннаяПодсказка" id="77"/>
+				</InputField>
+				<InputField name="МероприятияТерриториальныеУсловия" id="136">
+					<DataPath>Мероприятия.ТерриториальныеУсловия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тер. условия</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МероприятияТерриториальныеУсловияКонтекстноеМеню" id="137"/>
+					<ExtendedTooltip name="МероприятияТерриториальныеУсловияРасширеннаяПодсказка" id="138"/>
+				</InputField>
+				<InputField name="МероприятияДолжность" id="20">
+					<DataPath>Мероприятия.Должность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МероприятияДолжностьКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="МероприятияДолжностьРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="МероприятияКодПоРееструДолжностей" id="101">
+					<DataPath>Мероприятия.КодПоРееструДолжностей</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МероприятияКодПоРееструДолжностейКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="МероприятияКодПоРееструДолжностейРасширеннаяПодсказка" id="103"/>
+				</InputField>
+				<InputField name="МероприятияРазрядКатегория" id="116">
+					<DataPath>Мероприятия.РазрядКатегория</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МероприятияРазрядКатегорияКонтекстноеМеню" id="117"/>
+					<ExtendedTooltip name="МероприятияРазрядКатегорияРасширеннаяПодсказка" id="118"/>
+				</InputField>
+				<InputField name="МероприятияПодразделение" id="23">
+					<DataPath>Мероприятия.Подразделение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МероприятияПодразделениеКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="МероприятияПодразделениеРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="МероприятияТрудоваяФункция" id="78">
+					<DataPath>Мероприятия.ТрудоваяФункция</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МероприятияТрудоваяФункцияКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="МероприятияТрудоваяФункцияРасширеннаяПодсказка" id="80"/>
+				</InputField>
+				<InputField name="МероприятияКодПоОКЗ" id="139">
+					<DataPath>Мероприятия.КодПоОКЗ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ОКЗ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МероприятияКодПоОКЗКонтекстноеМеню" id="140"/>
+					<ExtendedTooltip name="МероприятияКодПоОКЗРасширеннаяПодсказка" id="141"/>
+				</InputField>
+				<InputField name="МероприятияНаименованиеДокументаОснования" id="26">
+					<DataPath>Мероприятия.НаименованиеДокументаОснования</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование документа</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="МероприятияНаименованиеДокументаОснованияКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="МероприятияНаименованиеДокументаОснованияРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="МероприятияДатаДокументаОснования" id="29">
+					<DataPath>Мероприятия.ДатаДокументаОснования</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата документа</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="МероприятияДатаДокументаОснованияКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="МероприятияДатаДокументаОснованияРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="МероприятияНомерДокументаОснования" id="32">
+					<DataPath>Мероприятия.НомерДокументаОснования</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер документа</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="МероприятияНомерДокументаОснованияКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="МероприятияНомерДокументаОснованияРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="МероприятияСерияДокументаОснования" id="35">
+					<DataPath>Мероприятия.СерияДокументаОснования</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Серия документа</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МероприятияСерияДокументаОснованияКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="МероприятияСерияДокументаОснованияРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="МероприятияОснованиеУвольнения" id="113">
+					<DataPath>Мероприятия.ОснованиеУвольнения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>10</Width>
+					<ContextMenu name="МероприятияОснованиеУвольненияКонтекстноеМеню" id="114"/>
+					<ExtendedTooltip name="МероприятияОснованиеУвольненияРасширеннаяПодсказка" id="115"/>
+				</InputField>
+				<InputField name="МероприятияДатаС" id="104">
+					<DataPath>Мероприятия.ДатаС</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МероприятияДатаСКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="МероприятияДатаСРасширеннаяПодсказка" id="106"/>
+				</InputField>
+				<InputField name="МероприятияДатаПо" id="107">
+					<DataPath>Мероприятия.ДатаПо</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МероприятияДатаПоКонтекстноеМеню" id="108"/>
+					<ExtendedTooltip name="МероприятияДатаПоРасширеннаяПодсказка" id="109"/>
+				</InputField>
+				<InputField name="МероприятияДатаОтмены" id="95">
+					<DataPath>Мероприятия.ДатаОтмены</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МероприятияДатаОтменыКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="МероприятияДатаОтменыРасширеннаяПодсказка" id="97"/>
+					<Events>
+						<Event name="OnChange">МероприятияДатаОтменыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="МероприятияИдентификатор" id="110">
+					<DataPath>Мероприятия.Идентификатор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>18</Width>
+					<ContextMenu name="МероприятияИдентификаторКонтекстноеМеню" id="111"/>
+					<ExtendedTooltip name="МероприятияИдентификаторРасширеннаяПодсказка" id="112"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Мероприятия" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мероприятия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="ДатаМероприятия" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата мероприятия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидМероприятия" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид мероприятия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыМероприятийТрудовойДеятельности</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Должность" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Должность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Должности</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Подразделение" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтруктурныеЕдиницы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НаименованиеДокументаОснования" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование документа основания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаДокументаОснования" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата документа основания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерДокументаОснования" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер документа основания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СерияДокументаОснования" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Серия документа основания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Идентификатор" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сведения" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сведения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТрудоваяФункция" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Трудовая функция</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТрудовыеФункции</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаС" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>С</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаПо" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаОтмены" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата отмены</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодПоРееструДолжностей" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код по реестру должностей</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОснованиеУвольнения" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание увольнения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ОснованияУвольнения</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="РазрядКатегория" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разряд категория</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СотрудникЗаписи" id="11">
+					<Type>
+						<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТерриториальныеУсловия" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Территориальные условия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТерриториальныеУсловияПФР</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КодПоОКЗ" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код по ОКЗ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КлассификаторЗанятий</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ОснованиеУвольненияТекстОснования" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание увольнения текст основания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1000</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОснованиеУвольненияСтатья" id="22">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОснованиеУвольненияЧасть" id="23">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОснованиеУвольненияПункт" id="24">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОснованиеУвольненияПодпункт" id="25">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФиксСтрока" id="26">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ОснованиеУвольненияАбзац" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание увольнения абзац</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдМероприятия" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ид мероприятия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РедактируемыйДокументСсылка" id="2">
+			<Type>
+				<v8:Type>cfg:DocumentRef.СведенияОТрудовойДеятельностиРаботниковСЗВ_ТД</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Имя" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>40</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Отчество" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчество</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>40</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Фамилия" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фамилия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>40</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтраховойНомерПФР" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страховой номер ПФР</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>14</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзменилисьДанныеФизическогоЛица" id="7">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнфонадписьЗаголовокКарточки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инфонадпись заголовок карточки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Сотрудник" id="9">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизическоеЛицо" id="10">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЯвляетсяСовместителем" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Является совместителем</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаявлениеОПродолжении" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление о продолжении</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ЗаявлениеОПредоставленииСведенийОТрудовойДеятельности</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаявлениеОПредоставлении" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление о предоставлении</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ЗаявлениеОПредоставленииСведенийОТрудовойДеятельности</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьЗамещение" id="14">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаРождения" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата рождения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаявлениеОПредоставленииОтмена" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление о предоставлении отмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаявлениеОПродолженииОтмена" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление о продолжении отмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>МероприятияСтатьяНормативногоАкта</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>МероприятияПунктНормативногоАкта</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>МероприятияПричинаУвольнения</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Мероприятия.ВидМероприятия</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыМероприятийТрудовойДеятельности.Увольнение</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+		</Command>
+		<Command name="РедактироватьДанныеФизическогоЛица" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать карточку сотрудника</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать данные физического лица</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РедактироватьДанныеФизическогоЛица</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="РедактируемыйДокументСсылка">
+			<Type>
+				<v8:Type>cfg:DocumentRef.СведенияОТрудовойДеятельностиРаботниковСЗВ_ТД</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Сотрудник">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="АдресВоВременномХранилище">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ИспользоватьЗамещение">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.11">
+	<Item id="1d2e8fa6-08ac-4947-a0f6-33a7aaa53f54">
+		<Name>УдалитьЗаказыПокупателей</Name>
+		<Code/>
+		<Description>Заказы покупателей</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCharacteristicTypesRef.РазделыДатЗапретаИзменения</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СостоянияЗаказовПокупателей</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d305f1ef-3a38-49ed-a5dd-94b28d8fb32c">
+		<Name>УдалитьЗаказыПоставщиков</Name>
+		<Code/>
+		<Description>Заказы поставщикам</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СостоянияЗаказовПоставщикам</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCharacteristicTypesRef.РазделыДатЗапретаИзменения</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c8925d78-4344-4cc7-8d59-1aedeb659b4e">
+		<Name>УдалитьОбработкаПерсональныхДанных</Name>
+		<Code/>
+		<Description>Обработка персональных данных</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCharacteristicTypesRef.РазделыДатЗапретаИзменения</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="482c72cb-8577-4a26-81bd-76fc1a2af321">
+		<Name>УдалитьУправленческийУчет</Name>
+		<Code/>
+		<Description>Организации</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCharacteristicTypesRef.РазделыДатЗапретаИзменения</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="11">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="12"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСправочники" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочники</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справочники</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаСправочникиРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Button name="Справочник_ТипыСоглашенийОткрытьСписок" id="1">
+							<Type>Hyperlink</Type>
+							<CommandName>Catalog._ТипыСоглашений.StandardCommand.OpenList</CommandName>
+							<ExtendedTooltip name="Справочник_ТипыСоглашенийОткрытьСписокРасширеннаяПодсказка" id="2"/>
+						</Button>
+						<Button name="Справочник_Договоры_ВидыПредставленияОткрытьСписок" id="5">
+							<Type>Hyperlink</Type>
+							<CommandName>Catalog._Договоры_ВидыПредставления.StandardCommand.OpenList</CommandName>
+							<ExtendedTooltip name="Справочник_Договоры_ВидыПредставленияОткрытьСписокРасширеннаяПодсказка" id="6"/>
+						</Button>
+						<Button name="Обработка_Данные_adfox_Данные_adfox" id="21">
+							<Type>Hyperlink</Type>
+							<CommandName>DataProcessor._Данные_adfox.Command._Данные_adfox</CommandName>
+							<ExtendedTooltip name="Обработка_Данные_adfox_Данные_adfoxРасширеннаяПодсказка" id="22"/>
+						</Button>
+						<Button name="РегистрСведений_ШаблоныДокументовОткрытьСписок" id="23">
+							<Type>Hyperlink</Type>
+							<CommandName>InformationRegister._ШаблоныДокументов.StandardCommand.OpenList</CommandName>
+							<ExtendedTooltip name="РегистрСведений_ШаблоныДокументовОткрытьСписокРасширеннаяПодсказка" id="24"/>
+						</Button>
+						<Button name="РегистрСведений_ШаблоныСодержанияУслугиОткрытьСписок" id="25">
+							<Type>Hyperlink</Type>
+							<CommandName>InformationRegister._ШаблоныСодержанияУслуги.StandardCommand.OpenList</CommandName>
+							<ExtendedTooltip name="РегистрСведений_ШаблоныСодержанияУслугиОткрытьСписокРасширеннаяПодсказка" id="26"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКоэффициенты" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Коэффициенты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа коэффициенты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаКоэффициентыРасширеннаяПодсказка" id="14"/>
+					<ChildItems>
+						<Button name="Документ_УстановкаКоэффициентовТаргетингаОткрытьСписок" id="15">
+							<Type>Hyperlink</Type>
+							<CommandName>0:edd42335-73fd-4560-b985-6fe0f3d3daaf</CommandName>
+							<ExtendedTooltip name="Документ_УстановкаКоэффициентовТаргетингаОткрытьСписокРасширеннаяПодсказка" id="16"/>
+						</Button>
+						<Button name="Документ_УстановкаСезонногоКоэффициентаОткрытьСписок" id="17">
+							<Type>Hyperlink</Type>
+							<CommandName>Document._УстановкаСезонногоКоэффициента.StandardCommand.OpenList</CommandName>
+							<ExtendedTooltip name="Документ_УстановкаСезонногоКоэффициентаОткрытьСписокРасширеннаяПодсказка" id="18"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНастройки" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<Button name="РегистрСведений_НастройкиСистемыОткрытьСписок" id="9">
+							<Type>Hyperlink</Type>
+							<CommandName>InformationRegister._НастройкиСистемы.Command.НастройкиСистемы</CommandName>
+							<ExtendedTooltip name="РегистрСведений_НастройкиСистемыОткрытьСписокРасширеннаяПодсказка" id="10"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="19">
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="20"/>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject._СправочникиНастройки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+</Form>

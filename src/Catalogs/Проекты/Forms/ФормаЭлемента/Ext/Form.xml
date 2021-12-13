@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ГруппаГлобальныеКоманды" id="59">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Глобальные команды</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ГруппаГлобальныеКомандыРасширеннаяПодсказка" id="60"/>
+				<ChildItems>
+					<Button name="ФормаОбщаяКомандаДополнительныеСведенияКоманднаяПанель" id="71">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.ДополнительныеСведенияКоманднаяПанель</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ФормаОбщаяКомандаДополнительныеСведенияКоманднаяПанельРасширеннаяПодсказка" id="72"/>
+					</Button>
+					<Button name="ОбщаяКомандаИсторияИзменений" id="63">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.ИсторияИзменений</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ОбщаяКомандаИсторияИзмененийРасширеннаяПодсказка" id="64"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаExtendedTooltip" id="45"/>
+			<ChildItems>
+				<InputField name="Наименование" id="5">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Wrap>false</Wrap>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="48"/>
+				</InputField>
+				<InputField name="Код" id="3">
+					<DataPath>Объект.Code</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<SkipOnInput>true</SkipOnInput>
+					<EditMode>EnterOnInput</EditMode>
+					<Wrap>false</Wrap>
+					<ContextMenu name="КодКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="47"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Реквизиты" id="69">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="РеквизитыРасширеннаяПодсказка" id="70"/>
+			<ChildItems>
+				<InputField name="Родитель" id="7">
+					<DataPath>Объект.Parent</DataPath>
+					<SkipOnInput>true</SkipOnInput>
+					<EditMode>EnterOnInput</EditMode>
+					<Wrap>false</Wrap>
+					<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="РодительExtendedTooltip" id="46"/>
+				</InputField>
+				<InputField name="Контрагент" id="37">
+					<DataPath>Объект.Контрагент</DataPath>
+					<Wrap>false</Wrap>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="КонтрагентExtendedTooltip" id="49"/>
+					<Events>
+						<Event name="OnChange">КонтрагентПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Договор" id="39">
+					<DataPath>Объект.Договор</DataPath>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ДоговорКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ДоговорExtendedTooltip" id="50"/>
+				</InputField>
+				<InputField name="Комментарий" id="18">
+					<DataPath>Объект.Комментарий</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<Height>3</Height>
+					<VerticalStretch>false</VerticalStretch>
+					<MultiLine>true</MultiLine>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="КомментарийExtendedTooltip" id="53"/>
+				</InputField>
+				<UsualGroup name="ГруппаПериод" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<Group>Horizontal</Group>
+					<HorizontalSpacing>Double</HorizontalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<InputField name="ДатаНачала" id="41">
+							<DataPath>Объект.ДатаНачала</DataPath>
+							<Wrap>false</Wrap>
+							<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ДатаНачалаExtendedTooltip" id="51"/>
+						</InputField>
+						<InputField name="ДатаОкончания" id="43">
+							<DataPath>Объект.ДатаОкончания</DataPath>
+							<Wrap>false</Wrap>
+							<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ДатаОкончанияExtendedTooltip" id="52"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДополнительныеРеквизиты" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительные реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<United>false</United>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаДополнительныеРеквизитыРасширеннаяПодсказка" id="66"/>
+		</UsualGroup>
+		<Button name="СоздатьНовыйДопРеквизит" id="73">
+			<Type>UsualButton</Type>
+			<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+			<CommandName>Form.Command.ДобавитьДополнительныйРеквизит</CommandName>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="СоздатьНовыйДопРеквизитРасширеннаяПодсказка" id="74"/>
+		</Button>
+		<UsualGroup name="НедействительнаРастяжение" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Недействительна</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<Group>Horizontal</Group>
+			<HorizontalAlign>Right</HorizontalAlign>
+			<VerticalAlign>Bottom</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НедействительнаРастяжениеРасширеннаяПодсказка" id="76"/>
+			<ChildItems>
+				<CheckBoxField name="Недействителен" id="77">
+					<DataPath>Объект.Недействителен</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НедействителенКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="НедействителенРасширеннаяПодсказка" id="79">
+						<Title formatted="true">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Элемент, отмеченный как недействительный, скрывается из всех списков программы, но сведения о нем остаются.
+Для отображения недействительных, следует установить флаг &lt;b&gt;"Показывать недействительных&lt;/&gt;&lt;b&gt;"&lt;/&gt; в подменю &lt;b&gt;"Еще"&lt;/&gt; в списке справочника.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Проекты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПараметрыПодключаемыхКоманд" id="2">
+			<Type/>
+		</Attribute>
+		<Attribute name="МожноЗакрытьФормуСФайлами" id="3">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьДополнительныйРеквизит" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>+ Свой реквизит</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить дополнительный реквизит для контрагентов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьДополнительныйРеквизит</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДополнительныеРеквизитыИСведения</Item>
+			</FunctionalOptions>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

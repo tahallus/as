@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСинхронизировать" id="13">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Синхронизировать</CommandName>
+				<ExtendedTooltip name="ФормаСинхронизироватьРасширеннаяПодсказка" id="14"/>
+			</Button>
+			<Button name="ФормаСинхронизироватьКампании" id="21">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СинхронизироватьКампании</CommandName>
+				<ExtendedTooltip name="ФормаСинхронизироватьКампанииРасширеннаяПодсказка" id="22"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeLoadDataFromSettingsAtServer">ПередЗагрузкойДанныхИзНастроекНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="10">
+			<DataPath>Объект.Description</DataPath>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="X_Yandex_API_Key" id="7">
+			<DataPath>Объект.X_Yandex_API_Key</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<PasswordMode>true</PasswordMode>
+			<ContextMenu name="X_Yandex_API_KeyКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="X_Yandex_API_KeyРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="dateAddedFrom" id="15">
+			<DataPath>Объект.dateAddedFrom</DataPath>
+			<ContextMenu name="dateAddedFromКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="dateAddedFromРасширеннаяПодсказка" id="17"/>
+		</InputField>
+		<InputField name="dateAddedTo" id="18">
+			<DataPath>Объект.dateAddedTo</DataPath>
+			<ContextMenu name="dateAddedToКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="dateAddedToРасширеннаяПодсказка" id="20"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject._adfox_account</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Синхронизировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Синхронизировать</Action>
+		</Command>
+		<Command name="СинхронизироватьКампании" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать кампании</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать кампании</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СинхронизироватьКампании</Action>
+		</Command>
+	</Commands>
+</Form>

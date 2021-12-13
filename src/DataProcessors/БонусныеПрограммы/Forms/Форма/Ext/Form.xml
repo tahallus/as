@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<MobileDeviceCommandBarContent>
+		<xr:Item>
+			<xr:Presentation/>
+			<xr:CheckState>0</xr:CheckState>
+			<xr:Value xsi:type="xs:string">БонусныеПрограммыКоманднаяПанель</xr:Value>
+		</xr:Item>
+		<xr:Item>
+			<xr:Presentation/>
+			<xr:CheckState>0</xr:CheckState>
+			<xr:Value xsi:type="xs:string">ПравилаНачисленияБонусовКоманднаяПанель</xr:Value>
+		</xr:Item>
+		<xr:Item>
+			<xr:Presentation/>
+			<xr:CheckState>0</xr:CheckState>
+			<xr:Value xsi:type="xs:string">НачисленияИСписанияКоманднаяПанель</xr:Value>
+		</xr:Item>
+	</MobileDeviceCommandBarContent>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="ГруппаБонусныеПрограммы" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бонусные программы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаБонусныеПрограммыРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Table name="БонусныеПрограммы" id="89">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>БонусныеПрограммы</DataPath>
+							<RowPictureDataPath>БонусныеПрограммы.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Бонусные программы</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="БонусныеПрограммыКонтекстноеМеню" id="90"/>
+							<AutoCommandBar name="БонусныеПрограммыКоманднаяПанель" id="91"/>
+							<ExtendedTooltip name="БонусныеПрограммыРасширеннаяПодсказка" id="92"/>
+							<SearchStringAddition name="БонусныеПрограммыСтрокаПоиска" id="93">
+								<AdditionSource>
+									<Item>БонусныеПрограммы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="БонусныеПрограммыСтрокаПоискаКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="БонусныеПрограммыСтрокаПоискаРасширеннаяПодсказка" id="95"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="БонусныеПрограммыСостояниеПросмотра" id="96">
+								<AdditionSource>
+									<Item>БонусныеПрограммы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="БонусныеПрограммыСостояниеПросмотраКонтекстноеМеню" id="97"/>
+								<ExtendedTooltip name="БонусныеПрограммыСостояниеПросмотраРасширеннаяПодсказка" id="98"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="БонусныеПрограммыУправлениеПоиском" id="99">
+								<AdditionSource>
+									<Item>БонусныеПрограммы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="БонусныеПрограммыУправлениеПоискомКонтекстноеМеню" id="100"/>
+								<ExtendedTooltip name="БонусныеПрограммыУправлениеПоискомРасширеннаяПодсказка" id="101"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="БонусныеПрограммыНаименование" id="102">
+									<DataPath>БонусныеПрограммы.Description</DataPath>
+									<ContextMenu name="БонусныеПрограммыНаименованиеКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="БонусныеПрограммыНаименованиеРасширеннаяПодсказка" id="104"/>
+								</LabelField>
+								<LabelField name="БонусныеПрограммыМаксимальныйПроцентОплаты" id="108">
+									<DataPath>БонусныеПрограммы.МаксимальныйПроцентОплаты</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Макс. % оплаты</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="БонусныеПрограммыМаксимальныйПроцентОплатыКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="БонусныеПрограммыМаксимальныйПроцентОплатыРасширеннаяПодсказка" id="110"/>
+								</LabelField>
+								<CheckBoxField name="БонусныеПрограммыНачислятьБонусыНаДеньРождения" id="123">
+									<DataPath>БонусныеПрограммы.НачислятьБонусыНаДеньРождения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Бонусы на день рождения</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="БонусныеПрограммыНачислятьБонусыНаДеньРожденияКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="БонусныеПрограммыНачислятьБонусыНаДеньРожденияРасширеннаяПодсказка" id="125"/>
+								</CheckBoxField>
+								<LabelField name="БонусныеПрограммыКоличествоБонусовНаДеньРождения" id="132">
+									<DataPath>БонусныеПрограммы.КоличествоБонусовНаДеньРождения</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество баллов на день рождения</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="БонусныеПрограммыКоличествоБонусовНаДеньРожденияКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="БонусныеПрограммыКоличествоБонусовНаДеньРожденияРасширеннаяПодсказка" id="134"/>
+								</LabelField>
+								<LabelField name="БонусныеПрограммыКод" id="105">
+									<DataPath>БонусныеПрограммы.Code</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="БонусныеПрограммыКодКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="БонусныеПрограммыКодРасширеннаяПодсказка" id="107"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПравилаНачисления" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правила начисления бонусов</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПравилаНачисленияРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<Table name="ПравилаНачисленияБонусов" id="9">
+							<Representation>List</Representation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ПравилаНачисленияБонусов</DataPath>
+							<RowPictureDataPath>ПравилаНачисленияБонусов.DefaultPicture</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.СостояниеСкидкиНаценки</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правила начисления бонусов</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>CreateFolder</ExcludedCommand>
+								<ExcludedCommand>LevelDown</ExcludedCommand>
+								<ExcludedCommand>LevelUp</ExcludedCommand>
+								<ExcludedCommand>MoveItem</ExcludedCommand>
+							</CommandSet>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ПравилаНачисленияБонусовКонтекстноеМеню" id="10">
+								<ChildItems>
+									<Button name="ПравилаНачисленияБонусовКонтекстноеМенюУстановитьФлагДействует" id="40">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьФлагДействует</CommandName>
+										<ExtendedTooltip name="ПравилаНачисленияБонусовКонтекстноеМенюУстановитьФлагДействуетРасширеннаяПодсказка" id="41"/>
+									</Button>
+									<Button name="ПравилаНачисленияБонусовКонтекстноеМенюСброситьФлагДействует" id="42">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СброситьФлагДействует</CommandName>
+										<ExtendedTooltip name="ПравилаНачисленияБонусовКонтекстноеМенюСброситьФлагДействуетРасширеннаяПодсказка" id="43"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ПравилаНачисленияБонусовКоманднаяПанель" id="11"/>
+							<ExtendedTooltip name="ПравилаНачисленияБонусовРасширеннаяПодсказка" id="12"/>
+							<SearchStringAddition name="ПравилаНачисленияБонусовСтрокаПоиска" id="13">
+								<AdditionSource>
+									<Item>ПравилаНачисленияБонусов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПравилаНачисленияБонусовСтрокаПоискаКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="ПравилаНачисленияБонусовСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПравилаНачисленияБонусовСостояниеПросмотра" id="16">
+								<AdditionSource>
+									<Item>ПравилаНачисленияБонусов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПравилаНачисленияБонусовСостояниеПросмотраКонтекстноеМеню" id="17"/>
+								<ExtendedTooltip name="ПравилаНачисленияБонусовСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПравилаНачисленияБонусовУправлениеПоиском" id="19">
+								<AdditionSource>
+									<Item>ПравилаНачисленияБонусов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПравилаНачисленияБонусовУправлениеПоискомКонтекстноеМеню" id="20"/>
+								<ExtendedTooltip name="ПравилаНачисленияБонусовУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ПравилаНачисленияБонусовПередНачаломДобавления</Event>
+								<Event name="OnChange">ПравилаНачисленияБонусовПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ПравилаНачисленияБонусовНаименование" id="65">
+									<DataPath>ПравилаНачисленияБонусов.Наименование</DataPath>
+									<ContextMenu name="ПравилаНачисленияБонусовНаименованиеКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ПравилаНачисленияБонусовНаименованиеРасширеннаяПодсказка" id="67"/>
+								</LabelField>
+								<CheckBoxField name="ПравилаНачисленияБонусовДействует" id="44">
+									<DataPath>ПравилаНачисленияБонусов.Действует</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПравилаНачисленияБонусовДействуетКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ПравилаНачисленияБонусовДействуетРасширеннаяПодсказка" id="46"/>
+								</CheckBoxField>
+								<LabelField name="ПравилаНачисленияБонусовБонуснаяПрограмма" id="163">
+									<DataPath>ПравилаНачисленияБонусов.БонуснаяПрограмма</DataPath>
+									<ContextMenu name="ПравилаНачисленияБонусовБонуснаяПрограммаКонтекстноеМеню" id="164"/>
+									<ExtendedTooltip name="ПравилаНачисленияБонусовБонуснаяПрограммаРасширеннаяПодсказка" id="165"/>
+								</LabelField>
+								<LabelField name="ПравилаНачисленияБонусовНазначение" id="62">
+									<DataPath>ПравилаНачисленияБонусов.Назначение</DataPath>
+									<ContextMenu name="ПравилаНачисленияБонусовНазначениеКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="ПравилаНачисленияБонусовНазначениеРасширеннаяПодсказка" id="64"/>
+								</LabelField>
+								<LabelField name="ПравилаНачисленияБонусовКод" id="56">
+									<DataPath>ПравилаНачисленияБонусов.Код</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="ПравилаНачисленияБонусовКодКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ПравилаНачисленияБонусовКодРасширеннаяПодсказка" id="58"/>
+								</LabelField>
+								<LabelField name="ПравилаНачисленияБонусовСсылка" id="86">
+									<DataPath>ПравилаНачисленияБонусов.Ссылка</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="ПравилаНачисленияБонусовСсылкаКонтекстноеМеню" id="87"/>
+									<ExtendedTooltip name="ПравилаНачисленияБонусовСсылкаРасширеннаяПодсказка" id="88"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНачисленияИСписания" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начисления и списания бонусов</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаНачисленияИСписанияРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<Table name="НачисленияИСписания" id="135">
+							<Representation>List</Representation>
+							<AutoMaxRowsCount>false</AutoMaxRowsCount>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>НачисленияИСписания</DataPath>
+							<RowPictureDataPath>НачисленияИСписания.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Начисления и списания</v8:content>
+								</v8:item>
+							</Title>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="НачисленияИСписанияКонтекстноеМеню" id="136"/>
+							<AutoCommandBar name="НачисленияИСписанияКоманднаяПанель" id="137"/>
+							<ExtendedTooltip name="НачисленияИСписанияРасширеннаяПодсказка" id="138"/>
+							<SearchStringAddition name="НачисленияИСписанияСтрокаПоиска" id="139">
+								<AdditionSource>
+									<Item>НачисленияИСписания</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НачисленияИСписанияСтрокаПоискаКонтекстноеМеню" id="140"/>
+								<ExtendedTooltip name="НачисленияИСписанияСтрокаПоискаРасширеннаяПодсказка" id="141"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НачисленияИСписанияСостояниеПросмотра" id="142">
+								<AdditionSource>
+									<Item>НачисленияИСписания</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НачисленияИСписанияСостояниеПросмотраКонтекстноеМеню" id="143"/>
+								<ExtendedTooltip name="НачисленияИСписанияСостояниеПросмотраРасширеннаяПодсказка" id="144"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НачисленияИСписанияУправлениеПоиском" id="145">
+								<AdditionSource>
+									<Item>НачисленияИСписания</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НачисленияИСписанияУправлениеПоискомКонтекстноеМеню" id="146"/>
+								<ExtendedTooltip name="НачисленияИСписанияУправлениеПоискомРасширеннаяПодсказка" id="147"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НачисленияИСписанияДата" id="148">
+									<DataPath>НачисленияИСписания.Date</DataPath>
+									<ContextMenu name="НачисленияИСписанияДатаКонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="НачисленияИСписанияДатаРасширеннаяПодсказка" id="150"/>
+								</LabelField>
+								<LabelField name="НачисленияИСписанияНомер" id="151">
+									<DataPath>НачисленияИСписания.Number</DataPath>
+									<ContextMenu name="НачисленияИСписанияНомерКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="НачисленияИСписанияНомерРасширеннаяПодсказка" id="153"/>
+								</LabelField>
+								<LabelField name="НачисленияИСписанияБонуснаяПрограмма" id="154">
+									<DataPath>НачисленияИСписания.БонуснаяПрограмма</DataPath>
+									<ContextMenu name="НачисленияИСписанияБонуснаяПрограммаКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="НачисленияИСписанияБонуснаяПрограммаРасширеннаяПодсказка" id="156"/>
+								</LabelField>
+								<LabelField name="НачисленияИСписанияКомментарий" id="157">
+									<DataPath>НачисленияИСписания.Комментарий</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="НачисленияИСписанияКомментарийКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="НачисленияИСписанияКомментарийРасширеннаяПодсказка" id="159"/>
+								</LabelField>
+								<LabelField name="НачисленияИСписанияАвтор" id="160">
+									<DataPath>НачисленияИСписания.Автор</DataPath>
+									<ContextMenu name="НачисленияИСписанияАвторКонтекстноеМеню" id="161"/>
+									<ExtendedTooltip name="НачисленияИСписанияАвторРасширеннаяПодсказка" id="162"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.БонусныеПрограммы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПравилаНачисленияБонусов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила начисления бонусов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ПравилаНачисленияБонусов.Ссылка</Field>
+			</UseAlways>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьБонусныеПрограммы</Item>
+			</FunctionalOptions>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникАвтоматическиеСкидки.Наименование КАК Наименование,
+	ВЫБОР
+		КОГДА СправочникАвтоматическиеСкидки.СпособПредоставления = ЗНАЧЕНИЕ(Перечисление.СпособыПредоставленияСкидокНаценок.ПроцентОтСуммыВВидеБонусныхБаллов)
+			ТОГДА ВЫБОР
+					КОГДА СправочникАвтоматическиеСкидки.ЗначениеСкидкиНаценки &lt; 0
+						ТОГДА 32
+					ИНАЧЕ 28
+				КОНЕЦ + ВЫБОР
+					КОГДА СправочникАвтоматическиеСкидки.ЕстьУсловияПоДК
+						ТОГДА 0
+					ИНАЧЕ 40
+				КОНЕЦ
+		КОГДА СправочникАвтоматическиеСкидки.СпособПредоставления = ЗНАЧЕНИЕ(Перечисление.СпособыПредоставленияСкидокНаценок.КоличествоБонусныхБаллов)
+			ТОГДА ВЫБОР
+					КОГДА СправочникАвтоматическиеСкидки.ЗначениеСкидкиНаценки &lt; 0
+						ТОГДА 40
+					ИНАЧЕ 44
+				КОНЕЦ + ВЫБОР
+					КОГДА СправочникАвтоматическиеСкидки.ЕстьУсловияПоДК
+						ТОГДА 0
+					ИНАЧЕ 36
+				КОНЕЦ
+	КОНЕЦ + ВЫБОР
+		КОГДА СправочникАвтоматическиеСкидки.ПометкаУдаления
+			ТОГДА 3
+		ИНАЧЕ 0
+	КОНЕЦ КАК Картинка,
+	СправочникАвтоматическиеСкидки.УдалитьРеквизитДопУпорядочивания КАК РеквизитДопУпорядочивания,
+	СправочникАвтоматическиеСкидки.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникАвтоматическиеСкидки.Действует КАК Действует,
+	СправочникАвтоматическиеСкидки.Ссылка КАК Ссылка,
+	СправочникАвтоматическиеСкидки.Родитель КАК Родитель,
+	СправочникАвтоматическиеСкидки.СпособПредоставления КАК СпособПредоставления,
+	СправочникАвтоматическиеСкидки.Назначение КАК Назначение,
+	СправочникАвтоматическиеСкидки.ОбластьПредоставления КАК ОбластьПредоставления,
+	СправочникАвтоматическиеСкидки.Код КАК Код,
+	СправочникАвтоматическиеСкидки.ЕстьГруппыВУточненииПоНоменклатуре КАК ЕстьГруппыВУточненииПоНоменклатуре,
+	ВЫБОР
+		КОГДА СправочникАвтоматическиеСкидки.Родитель.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Вытеснение)
+				ИЛИ СправочникАвтоматическиеСкидки.Родитель.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Умножение)
+				ИЛИ СправочникАвтоматическиеСкидки.Родитель = ЗНАЧЕНИЕ(Справочник.АвтоматическиеСкидки.ПустаяСсылка)
+					И (ВариантыСовместногоПримененияСкидокНаценок.Значение = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Вытеснение)
+						ИЛИ ВариантыСовместногоПримененияСкидокНаценок.Значение = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Умножение))
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК РаскрашиватьЖелтым,
+	СправочникАвтоматическиеСкидки.Комментарий КАК Комментарий,
+	СправочникАвтоматическиеСкидки.ЕстьУсловияПоДК КАК ЕстьУсловияПоДК,
+	СправочникАвтоматическиеСкидки.БонуснаяПрограмма КАК БонуснаяПрограмма
+ИЗ
+	Справочник.АвтоматическиеСкидки КАК СправочникАвтоматическиеСкидки,
+	Константа.ВариантыСовместногоПримененияСкидокНаценок КАК ВариантыСовместногоПримененияСкидокНаценок
+ГДЕ
+	НЕ СправочникАвтоматическиеСкидки.ЭтоГруппа
+	И СправочникАвтоматическиеСкидки.ЭтоПравилоНачисленияБонусов</QueryText>
+				<MainTable>Catalog.АвтоматическиеСкидки</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="БонусныеПрограммы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бонусные программы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.БонусныеПрограммы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="НачисленияИСписания" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начисления и списания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Document.НачислениеСписаниеБонусныхБаллов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьФлагДействует" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг "Действует"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг действует</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьФлагДействует</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СброситьФлагДействует" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить флаг "Действует"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить флаг действует</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СброситьФлагДействует</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

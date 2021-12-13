@@ -1,0 +1,8 @@
+*.cf
+*.png
+*.bmp
+*.bin
+Picture.xml
+Template.xml
+src/ConfigDumpInfo.xml
+out1c.txt

@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<CheckBoxField name="Агентство" id="4">
+			<DataPath>Объект.Агентство</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="АгентствоКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="АгентствоРасширеннаяПодсказка" id="6"/>
+		</CheckBoxField>
+		<InputField name="ТипПартнера" id="7">
+			<DataPath>Объект.ТипПартнера</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТипПартнераКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ТипПартнераРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ВидСкидки" id="10">
+			<DataPath>Объект.ВидСкидки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидСкидкиКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ВидСкидкиРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="КатегорияКлиента" id="13">
+			<DataPath>Объект.КатегорияКлиента</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КатегорияКлиентаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КатегорияКлиентаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Календарь" id="16">
+			<DataPath>Объект.Календарь</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КалендарьКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="КалендарьРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Скидка" id="19">
+			<DataPath>Объект.Скидка</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СкидкаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="СкидкаРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<UsualGroup name="ГруппаРежимУчетаОтсрочкиУпрощенная" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет отсрочки по:</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа режим учета отсрочки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаРежимУчетаОтсрочкиУпрощеннаяРасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<RadioButtonField name="УчетОтсрочкиПоКалендарнымДням" id="52">
+					<DataPath>РежимУчетаОтсрочки</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Режим учета отсрочки в графике оплат.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>календарным дням</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="УчетОтсрочкиПоКалендарнымДнямКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="УчетОтсрочкиПоКалендарнымДнямРасширеннаяПодсказка" id="54"/>
+					<Events>
+						<Event name="OnChange">РежимУчетаОтсрочкиПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<RadioButtonField name="УчетОтсрочкиПоПроизводственномуКалендарю" id="55">
+					<DataPath>РежимУчетаОтсрочки</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Режим учета отсрочки в графике оплат.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>рабочим дням</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="УчетОтсрочкиПоПроизводственномуКалендарюКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="УчетОтсрочкиПоПроизводственномуКалендарюРасширеннаяПодсказка" id="57"/>
+					<Events>
+						<Event name="OnChange">РежимУчетаОтсрочкиПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ЭтапыГрафикаОплаты" id="25">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ЭтапыГрафикаОплаты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЭтапыГрафикаОплатыКонтекстноеМеню" id="26"/>
+			<AutoCommandBar name="ЭтапыГрафикаОплатыКоманднаяПанель" id="27">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ЭтапыГрафикаОплатыДобавить" id="58">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ЭтапыГрафикаОплаты.StandardCommand.Add</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ЭтапыГрафикаОплатыДобавитьРасширеннаяПодсказка" id="59"/>
+					</Button>
+					<Button name="ЭтапыГрафикаОплатыСкопировать" id="60">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ЭтапыГрафикаОплаты.StandardCommand.Copy</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ЭтапыГрафикаОплатыСкопироватьРасширеннаяПодсказка" id="61"/>
+					</Button>
+					<Button name="ЭтапыГрафикаОплатыИзменить" id="62">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ЭтапыГрафикаОплаты.StandardCommand.Change</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ЭтапыГрафикаОплатыИзменитьРасширеннаяПодсказка" id="63"/>
+					</Button>
+					<Button name="ЭтапыГрафикаОплатыУдалить" id="64">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ЭтапыГрафикаОплаты.StandardCommand.Delete</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ЭтапыГрафикаОплатыУдалитьРасширеннаяПодсказка" id="65"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ЭтапыГрафикаОплатыРасширеннаяПодсказка" id="28"/>
+			<SearchStringAddition name="ЭтапыГрафикаОплатыСтрокаПоиска" id="29">
+				<AdditionSource>
+					<Item>ЭтапыГрафикаОплаты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЭтапыГрафикаОплатыСтрокаПоискаКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="ЭтапыГрафикаОплатыСтрокаПоискаРасширеннаяПодсказка" id="31"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЭтапыГрафикаОплатыСостояниеПросмотра" id="32">
+				<AdditionSource>
+					<Item>ЭтапыГрафикаОплаты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЭтапыГрафикаОплатыСостояниеПросмотраКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="ЭтапыГрафикаОплатыСостояниеПросмотраРасширеннаяПодсказка" id="34"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЭтапыГрафикаОплатыУправлениеПоиском" id="35">
+				<AdditionSource>
+					<Item>ЭтапыГрафикаОплаты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЭтапыГрафикаОплатыУправлениеПоискомКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="ЭтапыГрафикаОплатыУправлениеПоискомРасширеннаяПодсказка" id="37"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnEditEnd">ЭтапыГрафикаОплатыПриОкончанииРедактирования</Event>
+				<Event name="AfterDeleteRow">ЭтапыГрафикаОплатыПослеУдаления</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ЭтапыГрафикаОплатыНомерСтроки" id="38">
+					<DataPath>Объект.ЭтапыГрафикаОплаты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЭтапыГрафикаОплатыНомерСтрокиКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ЭтапыГрафикаОплатыНомерСтрокиРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<InputField name="ЭтапыГрафикаОплатыВариантОплаты" id="41">
+					<DataPath>Объект.ЭтапыГрафикаОплаты.ВариантОплаты</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЭтапыГрафикаОплатыВариантОплатыКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ЭтапыГрафикаОплатыВариантОплатыРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ЭтапыГрафикаОплатыСдвиг" id="44">
+					<DataPath>Объект.ЭтапыГрафикаОплаты.Сдвиг</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЭтапыГрафикаОплатыСдвигКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ЭтапыГрафикаОплатыСдвигРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="ЭтапыГрафикаОплатыПроцентПлатежа" id="47">
+					<DataPath>Объект.ЭтапыГрафикаОплаты.ПроцентПлатежа</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЭтапыГрафикаОплатыПроцентПлатежаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ЭтапыГрафикаОплатыПроцентПлатежаРасширеннаяПодсказка" id="49"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject._Партнеры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.ЭтапыГрафикаОплаты">
+					<Column name="ПроцентЗаполненНеВерно" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Процент заполнен не верно</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="СдвигЗаполненНеВерно" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сдвиг заполнен не верно</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="РежимУчетаОтсрочки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим учета отсрочки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПроцентПлатежейОбщий" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>% платежей общий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерСтрокиПолнойОплаты" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер строки полной оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

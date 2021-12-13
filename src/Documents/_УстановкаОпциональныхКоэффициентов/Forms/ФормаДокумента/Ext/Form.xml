@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомерДата" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер дата</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер дата</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Коэффициенты" id="37">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Коэффициенты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КоэффициентыКонтекстноеМеню" id="38"/>
+			<AutoCommandBar name="КоэффициентыКоманднаяПанель" id="39"/>
+			<ExtendedTooltip name="КоэффициентыРасширеннаяПодсказка" id="40"/>
+			<SearchStringAddition name="КоэффициентыСтрокаПоиска" id="41">
+				<AdditionSource>
+					<Item>Коэффициенты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КоэффициентыСтрокаПоискаКонтекстноеМеню" id="42"/>
+				<ExtendedTooltip name="КоэффициентыСтрокаПоискаРасширеннаяПодсказка" id="43"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КоэффициентыСостояниеПросмотра" id="44">
+				<AdditionSource>
+					<Item>Коэффициенты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КоэффициентыСостояниеПросмотраКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="КоэффициентыСостояниеПросмотраРасширеннаяПодсказка" id="46"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КоэффициентыУправлениеПоиском" id="47">
+				<AdditionSource>
+					<Item>Коэффициенты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КоэффициентыУправлениеПоискомКонтекстноеМеню" id="48"/>
+				<ExtendedTooltip name="КоэффициентыУправлениеПоискомРасширеннаяПодсказка" id="49"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="КоэффициентыНомерСтроки" id="50">
+					<DataPath>Объект.Коэффициенты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КоэффициентыНомерСтрокиКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="КоэффициентыНомерСтрокиРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<InputField name="КоэффициентыОпцияМедиаплана" id="53">
+					<DataPath>Объект.Коэффициенты.ОпцияМедиаплана</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КоэффициентыОпцияМедиапланаКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="КоэффициентыОпцияМедиапланаРасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="КоэффициентыКоэффициент" id="56">
+					<DataPath>Объект.Коэффициенты.Коэффициент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КоэффициентыКоэффициентКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="КоэффициентыКоэффициентРасширеннаяПодсказка" id="58"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject._УстановкаОпциональныхКоэффициентов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

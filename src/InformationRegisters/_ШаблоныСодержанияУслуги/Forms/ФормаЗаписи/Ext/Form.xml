@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Pages name="Группа1" id="13">
+			<HorizontalStretch>true</HorizontalStretch>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<Page name="ГруппаОсновное" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа основное</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ExtendedTooltip name="ГруппаОсновноеРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<InputField name="Организация" id="1">
+							<DataPath>Запись.Организация</DataPath>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Продукт" id="4">
+							<DataPath>Запись.Продукт</DataPath>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ПродуктКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ПродуктРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Партнер" id="7">
+							<DataPath>Запись.Партнер</DataPath>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ПартнерКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПартнерРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="Содержание" id="10">
+							<DataPath>Запись.Содержание</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="СодержаниеКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="СодержаниеРасширеннаяПодсказка" id="12"/>
+							<Events>
+								<Event name="StartChoice">СчетНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="СодержаниеАнг" id="22">
+							<DataPath>Запись.СодержаниеАнг</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<MultiLine>true</MultiLine>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="СодержаниеАнгКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="СодержаниеАнгРасширеннаяПодсказка" id="24"/>
+							<Events>
+								<Event name="StartChoice">СодержаниеАнгНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="Соглашение" id="31">
+							<DataPath>Запись.Соглашение</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<MultiLine>true</MultiLine>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="СоглашениеКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="СоглашениеРасширеннаяПодсказка" id="33"/>
+							<Events>
+								<Event name="StartChoice">СоглашениеНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="СоглашениеАнг" id="34">
+							<DataPath>Запись.СоглашениеАнг</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<MultiLine>true</MultiLine>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="СоглашениеАнгКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="СоглашениеАнгРасширеннаяПодсказка" id="36"/>
+							<Events>
+								<Event name="StartChoice">СоглашениеАнгНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОписание" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа описание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="19">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;b&gt;&lt;fontsize 10&gt;Описание переменны:
+&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;НоменклатураНаименование
+НоменклатураНаименованиеПолное
+НоменклатураНаименованиеАнг
+ЖурналНаименование
+ЖурналНаименованиеПолное
+ЖурналНаименованиеАнг
+ЖурналДатаВыпуска
+Бренд
+Объем
+РазмерРекламы
+ДатаНачалаРекламы
+ДатаОкончанияРекламы
+РекламнаяКомпания
+&lt;/&gt;&lt;fontsize 10&gt;ДоговорНаименование
+ДоговорНаименованиеАнг
+&lt;/&gt;&lt;fontsize 10&gt;ДоговорНомер
+&lt;/&gt;&lt;fontsize 10&gt;ДоговорДата
+&lt;/&gt;&lt;fontsize 10&gt;СоглашениеНаименование
+СоглашениеНаименованиеАнг
+&lt;/&gt;&lt;fontsize 10&gt;Соглашение&lt;/&gt;&lt;fontsize 10&gt;Номер
+&lt;/&gt;&lt;fontsize 10&gt;Соглашение&lt;/&gt;&lt;fontsize 10&gt;Дата
+&lt;/&gt;&lt;fontsize 10&gt;ОбъемРекламы&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="21"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager._ШаблоныСодержанияУслуги</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ОбъектЗагрузки" id="10">
+			<DataPath>Объект.ОбъектЗагрузки</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<OpenButton>false</OpenButton>
+			<TextEdit>false</TextEdit>
+			<ContextMenu name="ОбъектЗагрузкиКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ОбъектЗагрузкиРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">ОбъектЗагрузкиПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ИмяТабличнойЧасти" id="56">
+			<DataPath>Объект.ИмяТабличнойЧасти</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ИмяТабличнойЧастиКонтекстноеМеню" id="57"/>
+			<ExtendedTooltip name="ИмяТабличнойЧастиРасширеннаяПодсказка" id="58"/>
+		</InputField>
+		<Table name="МаппингПолей" id="13">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Объект.СоответствияПолей</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маппинг полей</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="МаппингПолейКонтекстноеМеню" id="14"/>
+			<AutoCommandBar name="МаппингПолейКоманднаяПанель" id="15">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<ButtonGroup name="МаппингПолейГруппа1" id="52">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Маппинг полей группа 1</v8:content>
+							</v8:item>
+						</Title>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="МаппингПолейГруппа1РасширеннаяПодсказка" id="53"/>
+						<ChildItems>
+							<Button name="МаппингПолейДобавитьПоле" id="44">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ДобавитьПоле</CommandName>
+								<ExtendedTooltip name="МаппингПолейДобавитьПолеРасширеннаяПодсказка" id="45"/>
+							</Button>
+							<Button name="МаппингПолейДобавитьПустую" id="54">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ДобавитьПустую</CommandName>
+								<ExtendedTooltip name="МаппингПолейДобавитьПустуюРасширеннаяПодсказка" id="55"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="МаппингПолейЗаполнитьПоля" id="42">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьПоля</CommandName>
+						<ExtendedTooltip name="МаппингПолейЗаполнитьПоляРасширеннаяПодсказка" id="43"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="МаппингПолейРасширеннаяПодсказка" id="16"/>
+			<SearchStringAddition name="МаппингПолейСтрокаПоиска" id="17">
+				<AdditionSource>
+					<Item>МаппингПолей</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МаппингПолейСтрокаПоискаКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="МаппингПолейСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="МаппингПолейСостояниеПросмотра" id="20">
+				<AdditionSource>
+					<Item>МаппингПолей</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МаппингПолейСостояниеПросмотраКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="МаппингПолейСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="МаппингПолейУправлениеПоиском" id="23">
+				<AdditionSource>
+					<Item>МаппингПолей</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="МаппингПолейУправлениеПоискомКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="МаппингПолейУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="МаппингПолейНомерКолонки" id="29">
+					<DataPath>Объект.СоответствияПолей.НомерКолонки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонка</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МаппингПолейНомерКолонкиКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="МаппингПолейНомерКолонкиРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="МаппингПолейПредставлениеПоля" id="35">
+					<DataPath>Объект.СоответствияПолей.ПредставлениеПоля</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>25</MaxWidth>
+					<ListChoiceMode>true</ListChoiceMode>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="МаппингПолейПредставлениеПоляКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="МаппингПолейПредставлениеПоляРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="МаппингПолейИмяПоля" id="32">
+					<DataPath>Объект.СоответствияПолей.ИмяПоля</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>19</MaxWidth>
+					<ContextMenu name="МаппингПолейИмяПоляКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="МаппингПолейИмяПоляРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Пользователь" id="7">
+			<DataPath>Объект.Пользователь</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="9"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СоответствиеПолейЗагрузкиДанныхИзВнешнегоИсточника</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьПоля" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить поля</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоля</Action>
+		</Command>
+		<Command name="ДобавитьПоле" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить поле</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionNewTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьПоле</Action>
+		</Command>
+		<Command name="ДобавитьПустую" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить пустую</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить пустую</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.QueryWizardCreateTempTableDropQuery</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьПустую</Action>
+		</Command>
+	</Commands>
+</Form>

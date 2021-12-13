@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.11">
+	<Item id="0a7f8aa5-c949-423b-869d-0d2a7748a6c6">
+		<Name>АвансовыйПлатежПриУСН</Name>
+		<Code>00-000001</Code>
+		<Description>Авансовый платеж (УСН)</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="a7e1f50b-5b8d-464b-a773-bfc1a9de3838">
+		<Name>ПФРСвыше300тр</Name>
+		<Code>00-000014</Code>
+		<Description>Взносы в ПФР при доходах свыше 300 тысяч руб.(ИП)</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="bc3a3df7-f770-492a-92b1-de86ad2cbee0">
+		<Name>ЕНВД</Name>
+		<Code>00-000007</Code>
+		<Description>Единый налог(ЕНВД)</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="ab5ce3c3-0129-4a8e-9a03-ed4439bf2222">
+		<Name>ЕдиныйНалогПриУСН</Name>
+		<Code>00-000002</Code>
+		<Description>Единый налог(УСН)</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="a1f536c1-bb10-4852-9e61-e7945a41a32e">
+		<Name>Патент</Name>
+		<Code>01-000015</Code>
+		<Description>Налог с патента</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="91004e58-30f7-43f0-8d6a-08b9a0b9a20e">
+		<Name>НДФЛСотрудники</Name>
+		<Code>00-000008</Code>
+		<Description>НДФЛ исчисленный налоговым агентом</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="1dcba1f0-ab9c-484c-b7af-e25b2e9f1b6e">
+		<Name>НДФЛДоходыСвышеПредельнойВеличины</Name>
+		<Code>00-000017</Code>
+		<Description>НДФЛ с доходов свыше предельной величины, исчисленный налоговым агентом</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="3a09f2ec-9a2e-4465-9984-2e80cc1332f2">
+		<Name>ПФРСтраховаяСотрудники</Name>
+		<Code>00-000010</Code>
+		<Description>Страховые взносы в ПФР по сотрудникам</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="4c59d476-1162-4cd7-be35-71b2a6cc594b">
+		<Name>ПФРНакопительнаяСотрудники</Name>
+		<Code>00-000009</Code>
+		<Description>Страховые взносы в ПФР, накопительная часть по сотрудникам (до 2014 г)</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="53105362-216f-4ea7-bd5b-a85d1005152b">
+		<Name>ФСССотрудники</Name>
+		<Code>00-000011</Code>
+		<Description>Страховые взносы в ФСС</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d3fb49d5-8ba2-4db9-b3de-9ee64254e1ee">
+		<Name>ФССТравматизмСотрудники</Name>
+		<Code>00-000012</Code>
+		<Description>Страховые взносы в ФСС от несчастных случаев</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="e68cced5-802a-4413-bf1b-ad64aeb60d9c">
+		<Name>ФОМССотрудники</Name>
+		<Code>00-000013</Code>
+		<Description>Страховые взносы в ФФОМС</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="cb02aee8-ed3d-4f8a-ba15-c95eb986803b">
+		<Name>ТорговыйСбор</Name>
+		<Code>01-000016</Code>
+		<Description>Торговый сбор</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="e2d9ea16-374d-4883-bb23-a2cf39a38c37">
+		<Name>ПФРСтраховая</Name>
+		<Code>00-000004</Code>
+		<Description>Фиксированные взносы в ПФР</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="b340f634-7cd5-4b36-924d-7f9be1209522">
+		<Name>ПФРНакопительная</Name>
+		<Code>00-000003</Code>
+		<Description>Фиксированные взносы в ПФР, накопительная часть (до 2014 г)</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8938ceea-9ad0-423c-881d-57a4aa6d97d8">
+		<Name>ТФОМС</Name>
+		<Code>00-000005</Code>
+		<Description>Фиксированные взносы в ТФОМС</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="4ec6723b-a28c-4276-8716-0887ec27c0d2">
+		<Name>ФФОМС</Name>
+		<Code>00-000006</Code>
+		<Description>Фиксированные взносы в ФФОМС</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

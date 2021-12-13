@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.11">
+	<Item id="26bc55b8-d0ec-4e5c-a1ab-d34b709c0f6e">
+		<Name>Справочник_КомплектацииНоменклатуры</Name>
+		<Code/>
+		<Description>Комплектации номенклатуры</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="ce7782c1-d82a-4ee7-b7ac-9563abf4ce86">
+				<Name>Справочник_КомплектацииНоменклатуры_Общие</Name>
+				<Code/>
+				<Description>"Общие"</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="ad168c1c-c6dd-4359-bad8-308373e51217">
+		<Name>Справочник_Номенклатура</Name>
+		<Code/>
+		<Description>Номенклатура</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="b2682022-3485-4dbe-9a6c-bdddcb8513b2">
+				<Name>Справочник_Номенклатура_Общие</Name>
+				<Code/>
+				<Description>"Общие"</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="01571015-5ca8-40d6-b753-c1517c84ee16">
+		<Name>Справочник_Спецификации</Name>
+		<Code/>
+		<Description>Спецификации</Description>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="ba974bd1-d52d-4c19-ac2b-c7bf90306a55">
+				<Name>Справочник_Спецификации_Общие</Name>
+				<Code/>
+				<Description>"Общие"</Description>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="b8d4dd08-f12e-4cee-8997-3648482af6a0">
+		<Name>Справочник_ХарактеристикиНоменклатуры</Name>
+		<Code/>
+		<Description>Характеристики номенклатуры</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="1bd3c332-8cc6-4020-9424-0f5d5c98ea0d">
+		<Name>УдалитьСправочник_ВнешниеПользователи</Name>
+		<Code/>
+		<Description>(не используется) Внешние пользователи</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="4b1f6bdf-16e9-480e-8012-6474f53e56ac">
+		<Name>УдалитьСправочник_ПапкиФайлов</Name>
+		<Code/>
+		<Description>(не используется) Папки файлов</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="883c54cf-18d8-4741-b4c8-275c1daf346b">
+		<Name>УдалитьСправочник_Пользователи</Name>
+		<Code/>
+		<Description>(не используется) Пользователи</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="00e33f58-9a02-471c-968b-22cb087ac0f8">
+		<Name>УдалитьСправочник_Файлы</Name>
+		<Code/>
+		<Description>(не используется) Файлы</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="bc060715-193b-402f-a09c-c3e74ef85d52">
+		<Name>Документ_АвансовыйОтчет</Name>
+		<Code/>
+		<Description>Авансовый отчет</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="40e63a50-94ef-4ff6-9e87-e1d3bd80d687">
+		<Name>Документ_АктВыполненныхРабот</Name>
+		<Code/>
+		<Description>Акт выполненных работ</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="e748eca4-7f12-40aa-a2bd-4723f5173c4f">
+		<Name>Документ_ДоговорКредитаИЗайма</Name>
+		<Code/>
+		<Description>Договор кредита и займа</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="18b57b35-69ed-49c6-8296-91c959d3c3d6">
+		<Name>Справочник_ДоговорыКонтрагентов</Name>
+		<Code/>
+		<Description>Договоры контрагентов</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="3bc38eb5-2499-400b-8522-1c5b1c09bfd5">
+		<Name>Документ_ОтчетКомиссионераОСписании</Name>
+		<Code/>
+		<Description>Документ отчет комиссионера о списании</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="298e5222-094b-4121-b30f-e781c715527e">
+		<Name>Документ_ПриемИПередачаВРемонт</Name>
+		<Code/>
+		<Description>Документ прием и передача в ремонт</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="817b29de-3ae4-4a45-b67d-77ff3b080564">
+		<Name>Документ_ЗаданиеНаРаботу</Name>
+		<Code/>
+		<Description>Задание на работу</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="3e76da1c-8080-4b22-804c-869445c8784c">
+		<Name>Документ_ЗадачаСотрудника</Name>
+		<Code/>
+		<Description>Задача</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="82d0b494-c90d-4a62-a680-b1c920a5de1d">
+		<Name>Документ_ЗаказНаПеремещение</Name>
+		<Code/>
+		<Description>Заказ на перемещение</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="62e74b63-5c0d-44b5-be7a-f4b6427a675b">
+		<Name>Документ_ЗаказНаПроизводство</Name>
+		<Code/>
+		<Description>Заказ на производство</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="ce88d337-019f-4c5e-babb-0b3801e4ff04">
+		<Name>Документ_ЗаказПокупателя</Name>
+		<Code/>
+		<Description>Заказ покупателя</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="b6bf7c23-b5e6-4699-97cf-803ed908c3ff">
+		<Name>Документ_ЗаказПоставщику</Name>
+		<Code/>
+		<Description>Заказ поставщику</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="5a5656ee-d9fc-4bbf-81b4-9553813b1e3f">
+		<Name>Документ_РасходДСПлан</Name>
+		<Code/>
+		<Description>Заявка на расход денег</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="a0547c8b-398f-4d53-b21d-135f749111f9">
+		<Name>Документ_ЗаявлениеОПредоставленииСведенийОТрудовойДеятельности</Name>
+		<Code/>
+		<Description>Заявление о предоставлении сведений о трудовой деятельности</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="828ae226-f62f-4f2b-bb8a-cbed42bc3e0a">
+		<Name>Справочник_ВнеоборотныеАктивы</Name>
+		<Code/>
+		<Description>Имущество</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d474a7ba-29a2-4855-96b0-2547c8e541ac">
+		<Name>Документ_КомплектацияЗапасов</Name>
+		<Code/>
+		<Description>Комплектация запасов</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c4be472d-83f9-4e8b-bcc5-19fe75a0ff4f">
+		<Name>Справочник_КонтактныеЛица</Name>
+		<Code/>
+		<Description>Контактные лица</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="7dbf0eb7-6360-4a32-91b3-85698ca935cf">
+		<Name>Справочник_Контрагенты</Name>
+		<Code/>
+		<Description>Контрагенты</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="264a8454-4a23-431d-98f4-ef686bba78fd">
+		<Name>Документ_КорректировкаПоступления</Name>
+		<Code/>
+		<Description>Корректировка поступления</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="dad30948-7c2d-4939-82e7-e7e4e66e666d">
+		<Name>Документ_КорректировкаРеализации</Name>
+		<Code/>
+		<Description>Корректировка реализации</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="fce99f6b-88e5-4e7f-89a6-8cca3883d8aa">
+		<Name>Справочник_Лиды</Name>
+		<Code/>
+		<Description>Лиды</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="64fd56f9-2b03-4f4d-9f9c-bd278c0b7edd">
+		<Name>Документ_НачисленияПоКредитамИЗаймам</Name>
+		<Code/>
+		<Description>Начисления по кредитам и займам</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8a5978ac-fabc-451b-9401-4e59cdbab377">
+		<Name>Справочник_НоменклатураПоставщиков</Name>
+		<Code/>
+		<Description>Номенклатура поставщиков</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="7ec82df6-b95c-4a7d-8a7e-e252bcf35432">
+		<Name>Документ_ОперацияПоПлатежнымКартам</Name>
+		<Code/>
+		<Description>Операция по платежным картам</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="4967f6f0-9755-4ff8-baec-96ba75c441bd">
+		<Name>Справочник_Организации</Name>
+		<Code/>
+		<Description>Организации</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6da7ad09-221c-4707-9afb-19641dea73ab">
+		<Name>Справочник_ПартииНоменклатуры</Name>
+		<Code/>
+		<Description>Партии номенклатуры</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="5eb7d66b-2dad-4f41-b3b6-3fb67d9b42b1">
+		<Name>Документ_ПередачаТоваровМеждуОрганизациями</Name>
+		<Code/>
+		<Description>Передача товаров между организациями</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="76df79d1-62bb-4d36-ac5f-1b1a77555f5a">
+		<Name>Документ_ПеремещениеЗапасов</Name>
+		<Code/>
+		<Description>Перемещение запасов</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8b89f444-f020-442a-83c0-404ef22a8d4c">
+		<Name>Документ_ПереоценкаТоваровНаКомиссии</Name>
+		<Code/>
+		<Description>Переоценка товаров на комиссии</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="42918a03-3b06-4b7c-94bf-5c7ee3666a3b">
+		<Name>Документ_ПоступлениеВКассу</Name>
+		<Code/>
+		<Description>Поступление в кассу</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="587bbb35-bc56-4e2c-9396-929258cf511e">
+		<Name>Документ_ПоступлениеНаСчет</Name>
+		<Code/>
+		<Description>Поступление на счет</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="4150d356-ca09-4433-a615-b8278d22abb7">
+		<Name>Документ_ПриходнаяНакладная</Name>
+		<Code/>
+		<Description>Приходная накладная</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="70ef7c0b-3c70-4106-97c7-87cdc80b8825">
+		<Name>Документ_ПриходныйОрдер</Name>
+		<Code/>
+		<Description>Приходный ордер</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="66f735b0-a8db-41c7-9923-4f16514b0a55">
+		<Name>Справочник_Проекты</Name>
+		<Code/>
+		<Description>Проекты</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2ddd96a0-9430-4527-a80a-398c025bdd6c">
+		<Name>Документ_СборкаЗапасов</Name>
+		<Code/>
+		<Description>Производство</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="96f33ca6-40a4-40db-9d49-f7632d208bb4">
+		<Name>Документ_РасходИзКассы</Name>
+		<Code/>
+		<Description>Расход из кассы</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="465fbe4e-93e1-4e95-8d8c-870f7b8ea001">
+		<Name>Документ_РасходСоСчета</Name>
+		<Code/>
+		<Description>Расход со счета</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="531607e4-34b5-42b1-918b-9935349a00af">
+		<Name>Документ_РасходнаяНакладная</Name>
+		<Code/>
+		<Description>Расходная накладная</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d6495711-407a-483e-8855-f0d470a4bdc7">
+		<Name>Документ_РасходныйОрдер</Name>
+		<Code/>
+		<Description>Расходный ордер</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="cabf0930-e844-45fe-985a-4330677da445">
+		<Name>Документ_СдельныйНаряд</Name>
+		<Code/>
+		<Description>Сдельный наряд</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="4027515c-09b4-4c3d-9c32-4c30954e7f6b">
+		<Name>Справочник_СерииНоменклатуры</Name>
+		<Code/>
+		<Description>Серии номенклатуры</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c9a817c6-9338-4b87-b1b3-b588e40a5426">
+		<Name>Документ_СведенияОТрудовойДеятельностиРаботниковСЗВ_ТД</Name>
+		<Code/>
+		<Description>СЗВ-ТД</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2b93badb-a53d-4d72-b082-35247ffb21e7">
+		<Name>Документ_Событие</Name>
+		<Code/>
+		<Description>Событие</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="66905f1c-f720-4ae7-8399-099190da465a">
+		<Name>Справочник_Сотрудники</Name>
+		<Code/>
+		<Description>Сотрудники</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="3e219d6a-48a5-42ed-b507-8f9daf7fdc58">
+		<Name>Документ_СписаниеЗапасов</Name>
+		<Code/>
+		<Description>Списание запасов</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2117d3c8-f68d-41d2-840a-58046ccbc961">
+		<Name>Документ_СписаниеПроданныхПодарочныхСертификатов</Name>
+		<Code/>
+		<Description>Списание проданных подарочных сертификатов</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="0281777a-6d57-44b3-b7e8-6e2f2fe7dda8">
+		<Name>Справочник_СтатьиДвиженияДенежныхСредств</Name>
+		<Code/>
+		<Description>Статьи движения денежных средств</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="74256f25-6fa0-408f-bf83-3a5c93a9887c">
+		<Name>Документ_СведенияОТрудовойДеятельностиРаботникаСТД_Р</Name>
+		<Code/>
+		<Description>СТД-Р</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="48ae4689-53e5-439b-853c-b9b57025bd87">
+		<Name>Справочник_СтруктурныеЕдиницы</Name>
+		<Code/>
+		<Description>Структурные единицы</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="3561379a-d6ef-4f3f-b364-ce7969d9027b">
+		<Name>Документ_СчетНаОплату</Name>
+		<Code/>
+		<Description>Счет на оплату</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="94146af4-65dd-480e-9ada-6ad2b1c29f35">
+		<Name>Документ_СчетНаОплатуПоставщика</Name>
+		<Code/>
+		<Description>Счет на оплату поставщика</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="1c8cc733-8a8a-4331-a656-0e0a8405dd3b">
+		<Name>Справочник_ТранспортныеСредства</Name>
+		<Code/>
+		<Description>Транспортные средства</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c0c3a065-2c15-4a6f-8ee4-be9e58750ce0">
+		<Name>Документ_УстановкаЦенНоменклатуры</Name>
+		<Code/>
+		<Description>Установка цен</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="b82907ac-ac93-420d-901b-92ba81cb1276">
+		<Name>Справочник_ФизическиеЛица</Name>
+		<Code/>
+		<Description>Физические лица</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

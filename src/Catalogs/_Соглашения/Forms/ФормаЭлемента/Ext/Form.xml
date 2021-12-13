@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомерДата" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер и дата</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерДатаExtendedTooltip" id="20"/>
+			<ChildItems>
+				<InputField name="Номер" id="21">
+					<DataPath>Объект.Номер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>10</MaxWidth>
+					<Wrap>false</Wrap>
+					<ContextMenu name="НомерКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="23"/>
+				</InputField>
+				<InputField name="Дата" id="24">
+					<DataPath>Объект.Дата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<Width>14</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="26"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Договор" id="7">
+			<DataPath>Объект.Договор</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДоговорКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ТипСоглашения" id="10">
+			<DataPath>Объект.ТипСоглашения</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТипСоглашенияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ТипСоглашенияРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ШаблонПечати" id="27">
+			<DataPath>Объект.ШаблонПечати</DataPath>
+			<ContextMenu name="ШаблонПечатиКонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="ШаблонПечатиРасширеннаяПодсказка" id="29"/>
+		</InputField>
+		<InputField name="СрокДействия" id="30">
+			<DataPath>Объект.СрокДействия</DataPath>
+			<ContextMenu name="СрокДействияКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="СрокДействияРасширеннаяПодсказка" id="32"/>
+		</InputField>
+		<InputField name="ПодписьРуководителя" id="33">
+			<DataPath>Объект.ПодписьРуководителя</DataPath>
+			<ContextMenu name="ПодписьРуководителяКонтекстноеМеню" id="34"/>
+			<ExtendedTooltip name="ПодписьРуководителяРасширеннаяПодсказка" id="35"/>
+		</InputField>
+		<InputField name="КонтактноеЛицоПодписант" id="36">
+			<DataPath>Объект.КонтактноеЛицоПодписант</DataPath>
+			<ContextMenu name="КонтактноеЛицоПодписантКонтекстноеМеню" id="37"/>
+			<ExtendedTooltip name="КонтактноеЛицоПодписантРасширеннаяПодсказка" id="38"/>
+			<Events>
+				<Event name="StartChoice">КонтактноеЛицоПодписантНачалоВыбора</Event>
+			</Events>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject._Соглашения</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

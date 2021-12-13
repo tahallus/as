@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выберите настройки поиска</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<RadioButtonField name="СовпадениеВсехПолей" id="20">
+			<DataPath>ВариантПоиска</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ColumnsCount>2</ColumnsCount>
+			<EqualColumnsWidth>true</EqualColumnsWidth>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Искать до первого совпадения</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Искать по совпадению всех полей</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="СовпадениеВсехПолейКонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="СовпадениеВсехПолейРасширеннаяПодсказка" id="22">
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<HorizontalStretch>true</HorizontalStretch>
+			</ExtendedTooltip>
+		</RadioButtonField>
+		<CheckBoxField name="ИскатьПоКоду" id="1">
+			<DataPath>ИскатьПоКоду</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По коду номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИскатьПоКодуКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИскатьПоКодуРасширеннаяПодсказка" id="3"/>
+		</CheckBoxField>
+		<CheckBoxField name="ИскатьПоШтрихкоду" id="7">
+			<DataPath>ИскатьПоШтрихкоду</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По штрихкоду</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИскатьПоШтрихкодуКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИскатьПоШтрихкодуРасширеннаяПодсказка" id="9"/>
+		</CheckBoxField>
+		<CheckBoxField name="ИскатьПоАртикулу" id="4">
+			<DataPath>ИскатьПоАртикулу</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По артикулу</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИскатьПоАртикулуКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ИскатьПоАртикулуРасширеннаяПодсказка" id="6"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаНаименование" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По наименованию</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеРасширеннаяПодсказка" id="31"/>
+			<ChildItems>
+				<CheckBoxField name="ИскатьПоНаименованию" id="10">
+					<DataPath>ИскатьПоНаименованию</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По наименованию</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИскатьПоНаименованиюКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ИскатьПоНаименованиюРасширеннаяПодсказка" id="12"/>
+				</CheckBoxField>
+				<LabelDecoration name="Декорация1" id="40">
+					<Width>10</Width>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="42"/>
+				</LabelDecoration>
+				<CheckBoxField name="ИскатьПоНаименованиюЛевойЧасти" id="32">
+					<DataPath>ИскатьПоНаименованиюЛевойЧасти</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По левой части наименования</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИскатьПоНаименованиюЛевойЧастиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ИскатьПоНаименованиюЛевойЧастиРасширеннаяПодсказка" id="34"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНаименованиеДляПечати" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По наименованию для печати</v8:content>
+				</v8:item>
+			</Title>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеДляПечатиРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<CheckBoxField name="ИскатьПоНаименованиюПолному" id="13">
+					<DataPath>ИскатьПоНаименованиюПолному</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По наименованию для печати</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИскатьПоНаименованиюПолномуКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ИскатьПоНаименованиюПолномуРасширеннаяПодсказка" id="15"/>
+				</CheckBoxField>
+				<LabelDecoration name="Декорация2" id="43">
+					<Width>3</Width>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="45"/>
+				</LabelDecoration>
+				<CheckBoxField name="ИскатьПоНаименованиюПолномуЛевойЧасти" id="37">
+					<DataPath>ИскатьПоНаименованиюПолномуЛевойЧасти</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По левой части для печати</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИскатьПоНаименованиюПолномуЛевойЧастиКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ИскатьПоНаименованиюПолномуЛевойЧастиРасширеннаяПодсказка" id="39"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодвал" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подвал</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<LabelDecoration name="Подсказка" id="23">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Как это работает</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Как это работает</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="ПодсказкаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПодсказкаРасширеннаяПодсказка" id="25">
+						<Title formatted="true">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;fontsize 10&gt;Для каждой строки из Excel в 1С по ключевым полям ищется существующий элемент справочника, если он не найден - создается новый и заполняется по данным файла.&lt;/&gt;
+&lt;fontsize 10&gt;Поиск выполняется по полям:&lt;/&gt;
+&lt;fontsize 10&gt;- Код&lt;/&gt;
+&lt;fontsize 10&gt;- Штрихкод&lt;/&gt;
+&lt;fontsize 10&gt;- Артикул&lt;/&gt;
+&lt;fontsize 10&gt;- Наименование&lt;/&gt;
+&lt;fontsize 10&gt;- Наименование для печати&lt;/&gt;
+&lt;fontsize 10&gt;В форме настройки вы можете включить / отключить поиск по перечисленным полям. Выбор варианта поиска позволяет искать до первого совпадения по одному из полей, или требовать совпадения всех полей, которые отмечены галочкой. Для поиска по перечисленным полям, они должны быть выбраны в колонках на этапе сопоставления колонок.&lt;/&gt;
+&lt;fontsize 10&gt;Поиск по Артикулу - сквозной для Номенклатуры и Характеристики. Если найдена Характеристика по артикулу, будет выбрана и ее Номенклатура - владелец.&lt;/&gt;
+&lt;fontsize 10&gt;Примеры: &lt;/&gt;
+&lt;fontsize 10&gt;1. Нужно искать по артикулу, наименование и другие поля нужно взять из файла и записать в 1С, но искать по ним не нужно: поставьте галочку "Искать по артикулу", остальные снимите, вариант поиска: "до первого совпадения".&lt;/&gt;
+&lt;fontsize 10&gt;2. Нужно искать по штрихкоду и наименованию, оба поля должны совпадать с указанными в файле: поставьте галочку "Искать по штрихкоду" и  "Искать по наименованию", остальные снимите. Вариант поиска: "по совпадению всех полей".&lt;/&gt;</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</LabelDecoration>
+				<CommandBar name="ГруппаКнопки" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кнопки</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<Button name="ФормаОК" id="16">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.ОК</CommandName>
+							<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="17"/>
+						</Button>
+						<Button name="ФормаОтмена" id="18">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.Отмена</CommandName>
+							<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="19"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЗагрузкаДанныхИзВнешнегоИсточника</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ИскатьПоКоду" id="2">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИскатьПоАртикулу" id="3">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИскатьПоШтрихкоду" id="4">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИскатьПоНаименованию" id="5">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИскатьПоНаименованиюПолному" id="7">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантПоиска" id="6">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИскатьПоНаименованиюЛевойЧасти" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Искать по наименованию левой части</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИскатьПоНаименованиюПолномуЛевойЧасти" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Искать по наименованию полному левой части</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+		</Command>
+	</Commands>
+</Form>

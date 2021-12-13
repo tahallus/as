@@ -1,0 +1,1047 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Скидки и наценки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<MobileDeviceCommandBarContent>
+		<xr:Item>
+			<xr:Presentation/>
+			<xr:CheckState>0</xr:CheckState>
+			<xr:Value xsi:type="xs:string">ВидыСкидокНаценокКоманднаяПанель</xr:Value>
+		</xr:Item>
+		<xr:Item>
+			<xr:Presentation/>
+			<xr:CheckState>0</xr:CheckState>
+			<xr:Value xsi:type="xs:string">АвтоматическиеСкидкиКоманднаяПанель</xr:Value>
+		</xr:Item>
+		<xr:Item>
+			<xr:Presentation/>
+			<xr:CheckState>0</xr:CheckState>
+			<xr:Value xsi:type="xs:string">АвтоматическиеОкругленияКоманднаяПанель</xr:Value>
+		</xr:Item>
+	</MobileDeviceCommandBarContent>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаРучныеИАвтоматическиеСкидки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ручные и автоматические скидки</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаРучныеИАвтоматическиеСкидкиРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="ГруппаРучныеСкидки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ручные скидки</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаРучныеСкидкиРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Table name="ВидыСкидокНаценок" id="7">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ВидыСкидокНаценок</DataPath>
+							<RowPictureDataPath>ВидыСкидокНаценок.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Виды скидок наценок</v8:content>
+								</v8:item>
+							</Title>
+							<SearchStringLocation>CommandBar</SearchStringLocation>
+							<ViewStatusLocation>Top</ViewStatusLocation>
+							<SearchControlLocation>CommandBar</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ВидыСкидокНаценокКонтекстноеМеню" id="8"/>
+							<AutoCommandBar name="ВидыСкидокНаценокКоманднаяПанель" id="9">
+								<ChildItems>
+									<Button name="ВидыСкидокНаценокИзменитьФорму" id="152">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="ВидыСкидокНаценокИзменитьФормуРасширеннаяПодсказка" id="153"/>
+									</Button>
+									<Button name="ВидыСкидокНаценокСправка" id="160">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<ExtendedTooltip name="ВидыСкидокНаценокСправкаРасширеннаяПодсказка" id="161"/>
+									</Button>
+									<Popup name="СоздатьНаОсновании" id="118">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать на основании</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СоздатьНаОснованииРасширеннаяПодсказка" id="119"/>
+										<ChildItems>
+											<Button name="ВидыСкидокНаценокОбщаяКомандаСозданиеСвязанныхОбъектов" id="114">
+												<Type>CommandBarButton</Type>
+												<CommandName>CommonCommand.СозданиеСвязанныхОбъектов</CommandName>
+												<DataPath>Items.ВидыСкидокНаценок.CurrentData.Ref</DataPath>
+												<ExtendedTooltip name="ВидыСкидокНаценокОбщаяКомандаСозданиеСвязанныхОбъектовРасширеннаяПодсказка" id="115"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+									<Popup name="Печать" id="120">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Печать</v8:content>
+											</v8:item>
+										</Title>
+										<Picture>
+											<xr:Ref>StdPicture.Print</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ПечатьРасширеннаяПодсказка" id="121"/>
+									</Popup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ВидыСкидокНаценокРасширеннаяПодсказка" id="10"/>
+							<SearchStringAddition name="ВидыСкидокНаценокСтрокаПоиска" id="11">
+								<AdditionSource>
+									<Item>ВидыСкидокНаценок</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВидыСкидокНаценокСтрокаПоискаКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="ВидыСкидокНаценокСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВидыСкидокНаценокСостояниеПросмотра" id="16">
+								<AdditionSource>
+									<Item>ВидыСкидокНаценок</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВидыСкидокНаценокСостояниеПросмотраКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="ВидыСкидокНаценокСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВидыСкидокНаценокУправлениеПоиском" id="21">
+								<AdditionSource>
+									<Item>ВидыСкидокНаценок</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВидыСкидокНаценокУправлениеПоискомКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ВидыСкидокНаценокУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">ВидыСкидокНаценокПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ВидыСкидокНаценокНаименование" id="26">
+									<DataPath>ВидыСкидокНаценок.Description</DataPath>
+									<ContextMenu name="ВидыСкидокНаценокНаименованиеКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ВидыСкидокНаценокНаименованиеРасширеннаяПодсказка" id="28"/>
+								</LabelField>
+								<LabelField name="ВидыСкидокНаценокПроцент" id="32">
+									<DataPath>ВидыСкидокНаценок.Процент</DataPath>
+									<ContextMenu name="ВидыСкидокНаценокПроцентКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ВидыСкидокНаценокПроцентРасширеннаяПодсказка" id="34"/>
+								</LabelField>
+								<LabelField name="ВидыСкидокНаценокКомментарий" id="35">
+									<DataPath>ВидыСкидокНаценок.Комментарий</DataPath>
+									<ContextMenu name="ВидыСкидокНаценокКомментарийКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ВидыСкидокНаценокКомментарийРасширеннаяПодсказка" id="37"/>
+								</LabelField>
+								<LabelField name="ВидыСкидокНаценокКод" id="29">
+									<DataPath>ВидыСкидокНаценок.Code</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="ВидыСкидокНаценокКодКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ВидыСкидокНаценокКодРасширеннаяПодсказка" id="31"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<LabelField name="Комментарий" id="147">
+							<DataPath>Items.ВидыСкидокНаценок.CurrentData.Комментарий</DataPath>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="148"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="149"/>
+						</LabelField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаАвтоматическиеСкидки" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автоматические скидки</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаАвтоматическиеСкидкиРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОбщийВариантСовместногоДействияСкидок" id="122">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общий вариант совместного действия скидок</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОбщийВариантСовместногоДействияСкидокРасширеннаяПодсказка" id="123"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьВариантСовместногоПрименения" id="157">
+									<Visible>false</Visible>
+									<TextColor>style:ГруппаВариантовОтчетовЦвет</TextColor>
+									<Font ref="style:NormalTextFont" kind="StyleItem"/>
+									<ContextMenu name="НадписьВариантСовместногоПримененияКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="НадписьВариантСовместногоПримененияРасширеннаяПодсказка" id="159"/>
+								</LabelDecoration>
+								<RadioButtonField name="ВариантСовместногоПримененияСкидок" id="124">
+									<DataPath>ВариантСовместногоПримененияСкидок</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ВариантыСовместногоПримененияСкидокНаценок.EnumValue.Сложение</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ВариантыСовместногоПримененияСкидокНаценок.EnumValue.Максимум</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ВариантыСовместногоПримененияСкидокНаценок.EnumValue.Минимум</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Последовательное применение</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ВариантыСовместногоПримененияСкидокНаценок.EnumValue.Умножение</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ВариантыСовместногоПримененияСкидокНаценок.EnumValue.Вытеснение</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ВариантСовместногоПримененияСкидокКонтекстноеМеню" id="125"/>
+									<ExtendedTooltip name="ВариантСовместногоПримененияСкидокРасширеннаяПодсказка" id="126"/>
+									<Events>
+										<Event name="OnChange">ВариантСовместногоПримененияСкидокПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="АвтоматическиеСкидки" id="38">
+							<Representation>Tree</Representation>
+							<CommandBarLocation>Top</CommandBarLocation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>АвтоматическиеСкидки</DataPath>
+							<RowPictureDataPath>АвтоматическиеСкидки.Картинка</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.СостояниеСкидкиНаценки</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Автоматические скидки</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>CreateFolder</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>CommandBar</SearchStringLocation>
+							<ViewStatusLocation>Top</ViewStatusLocation>
+							<SearchControlLocation>CommandBar</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="АвтоматическиеСкидкиКонтекстноеМеню" id="39">
+								<ChildItems>
+									<Button name="АвтоматическиеСкидкиКонтекстноеМенюУстановитьФлагДействует" id="134">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьФлагДействует</CommandName>
+										<ExtendedTooltip name="АвтоматическиеСкидкиКонтекстноеМенюУстановитьФлагДействуетРасширеннаяПодсказка" id="135"/>
+									</Button>
+									<Button name="АвтоматическиеСкидкиКонтекстноеМенюСброситьФлагДействует" id="132">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СброситьФлагДействует</CommandName>
+										<ExtendedTooltip name="АвтоматическиеСкидкиКонтекстноеМенюСброситьФлагДействуетРасширеннаяПодсказка" id="133"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="АвтоматическиеСкидкиКоманднаяПанель" id="40">
+								<ChildItems>
+									<ButtonGroup name="СоздатьГруппуСовметсногоПрименения" id="142">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать группу совметсного применения</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СоздатьГруппуСовметсногоПримененияРасширеннаяПодсказка" id="143"/>
+										<ChildItems>
+											<Button name="АвтоматическиеСкидкиСоздатьГруппуСовместногоПрименения" id="127">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СоздатьГруппуСовместногоПрименения</CommandName>
+												<ExtendedTooltip name="АвтоматическиеСкидкиСоздатьГруппуСовместногоПримененияРасширеннаяПодсказка" id="128"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГрупповоеИзменениеФлагаДействует" id="136">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Групповое изменение флага действует</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГрупповоеИзменениеФлагаДействуетРасширеннаяПодсказка" id="137"/>
+										<ChildItems>
+											<Button name="АвтоматическиеСкидкиУстановитьФлагДействует" id="138">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УстановитьФлагДействует</CommandName>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="АвтоматическиеСкидкиУстановитьФлагДействуетРасширеннаяПодсказка" id="139"/>
+											</Button>
+											<Button name="АвтоматическиеСкидкиСброситьФлагДействует" id="140">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СброситьФлагДействует</CommandName>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="АвтоматическиеСкидкиСброситьФлагДействуетРасширеннаяПодсказка" id="141"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГруппаВажныеКоманды" id="172">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Важные команды</v8:content>
+											</v8:item>
+										</Title>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ГруппаВажныеКомандыРасширеннаяПодсказка" id="173"/>
+										<ChildItems>
+											<Popup name="ПодменюПечать" id="178">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Подменю печать</v8:content>
+													</v8:item>
+												</Title>
+												<Picture>
+													<xr:Ref>StdPicture.Print</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Representation>Picture</Representation>
+												<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="179"/>
+											</Popup>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="АвтоматическиеСкидкиИзменитьФорму" id="150">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="АвтоматическиеСкидкиИзменитьФормуРасширеннаяПодсказка" id="151"/>
+									</Button>
+									<Button name="АвтоматическиеСкидкиСправка" id="162">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<ExtendedTooltip name="АвтоматическиеСкидкиСправкаРасширеннаяПодсказка" id="163"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="АвтоматическиеСкидкиРасширеннаяПодсказка" id="41"/>
+							<SearchStringAddition name="АвтоматическиеСкидкиСтрокаПоиска" id="42">
+								<AdditionSource>
+									<Item>АвтоматическиеСкидки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АвтоматическиеСкидкиСтрокаПоискаКонтекстноеМеню" id="45"/>
+								<ExtendedTooltip name="АвтоматическиеСкидкиСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="АвтоматическиеСкидкиСостояниеПросмотра" id="47">
+								<AdditionSource>
+									<Item>АвтоматическиеСкидки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АвтоматическиеСкидкиСостояниеПросмотраКонтекстноеМеню" id="50"/>
+								<ExtendedTooltip name="АвтоматическиеСкидкиСостояниеПросмотраРасширеннаяПодсказка" id="51"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="АвтоматическиеСкидкиУправлениеПоиском" id="52">
+								<AdditionSource>
+									<Item>АвтоматическиеСкидки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="АвтоматическиеСкидкиУправлениеПоискомКонтекстноеМеню" id="55"/>
+								<ExtendedTooltip name="АвтоматическиеСкидкиУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">АвтоматическиеСкидкиПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="Наименование" id="57">
+									<DataPath>АвтоматическиеСкидки.Наименование</DataPath>
+									<Width>34</Width>
+									<ContextMenu name="НаименованиеКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="59"/>
+								</LabelField>
+								<CheckBoxField name="Действует" id="63">
+									<DataPath>АвтоматическиеСкидки.Действует</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Действует</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДействуетКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ДействуетРасширеннаяПодсказка" id="65"/>
+								</CheckBoxField>
+								<LabelField name="АвтоматическиеСкидкиНазначение" id="154">
+									<DataPath>АвтоматическиеСкидки.Назначение</DataPath>
+									<Width>13</Width>
+									<ContextMenu name="АвтоматическиеСкидкиНазначениеКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="АвтоматическиеСкидкиНазначениеРасширеннаяПодсказка" id="156"/>
+								</LabelField>
+								<LabelField name="РеквизитДопУпорядочивания" id="90">
+									<DataPath>АвтоматическиеСкидки.РеквизитДопУпорядочивания</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Реквизит доп упорядочивания</v8:content>
+										</v8:item>
+									</Title>
+									<Width>8</Width>
+									<ContextMenu name="РеквизитДопУпорядочиванияКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="РеквизитДопУпорядочиванияРасширеннаяПодсказка" id="92"/>
+								</LabelField>
+								<LabelField name="ОбластьПредоставления" id="72">
+									<DataPath>АвтоматическиеСкидки.ОбластьПредоставления</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Область</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ОбластьПредоставленияКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ОбластьПредоставленияРасширеннаяПодсказка" id="74"/>
+								</LabelField>
+								<CheckBoxField name="АвтоматическиеСкидкиЕстьУсловияПоДК" id="246">
+									<DataPath>АвтоматическиеСкидки.ЕстьУсловияПоДК</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="АвтоматическиеСкидкиЕстьУсловияПоДККонтекстноеМеню" id="247"/>
+									<ExtendedTooltip name="АвтоматическиеСкидкиЕстьУсловияПоДКРасширеннаяПодсказка" id="248"/>
+								</CheckBoxField>
+								<LabelField name="Код" id="60">
+									<DataPath>АвтоматическиеСкидки.Код</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="КодКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="КодРасширеннаяПодсказка" id="62"/>
+								</LabelField>
+								<LabelField name="Ссылка" id="129">
+									<DataPath>АвтоматическиеСкидки.Ссылка</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СсылкаКонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="131"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<LabelField name="АвтоматическиеСкидкиКомментарий" id="144">
+							<DataPath>Items.АвтоматическиеСкидки.CurrentData.Комментарий</DataPath>
+							<ContextMenu name="АвтоматическиеСкидкиКомментарийКонтекстноеМеню" id="145"/>
+							<ExtendedTooltip name="АвтоматическиеСкидкиКомментарийРасширеннаяПодсказка" id="146"/>
+						</LabelField>
+						<UsualGroup name="ГруппаСправочнаяИнформация" id="167">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Справочная информация</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСправочнаяИнформацияРасширеннаяПодсказка" id="168"/>
+							<ChildItems>
+								<LabelDecoration name="ГиперссылкаКакРаботатьСАвтоматическимиСкидкамиВПрограмме" id="164">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Как работать с автоматическими скидками в программе?</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="ГиперссылкаКакРаботатьСАвтоматическимиСкидкамиВПрограммеКонтекстноеМеню" id="165"/>
+									<ExtendedTooltip name="ГиперссылкаКакРаботатьСАвтоматическимиСкидкамиВПрограммеРасширеннаяПодсказка" id="166"/>
+									<Events>
+										<Event name="Click">ГиперссылкаКакРаботатьСАвтоматическимиСкидкамиВПрограммеНажатие</Event>
+									</Events>
+								</LabelDecoration>
+								<LabelDecoration name="ГиперссылкаНаВидеоурок" id="169">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Видеоурок по работе с автоматическими скидками</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="ГиперссылкаНаВидеоурокКонтекстноеМеню" id="170"/>
+									<ExtendedTooltip name="ГиперссылкаНаВидеоурокРасширеннаяПодсказка" id="171"/>
+									<Events>
+										<Event name="Click">ГиперссылкаНаВидеоурокНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПравилаНачисленияБонусов" id="249">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правила начисления бонусов</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПравилаНачисленияБонусовРасширеннаяПодсказка" id="250"/>
+				</Page>
+				<Page name="ГруппаАвтоматическоеОкругление" id="180">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Округления</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаАвтоматическоеОкруглениеРасширеннаяПодсказка" id="181"/>
+					<ChildItems>
+						<Table name="АвтоматическиеОкругления" id="182">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>АвтоматическиеОкругления</DataPath>
+							<RowPictureDataPath>АвтоматическиеОкругления.DefaultPicture</RowPictureDataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Автоматические округления</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>CreateFolder</ExcludedCommand>
+							</CommandSet>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="АвтоматическиеОкругленияКонтекстноеМеню" id="183"/>
+							<AutoCommandBar name="АвтоматическиеОкругленияКоманднаяПанель" id="184"/>
+							<ExtendedTooltip name="АвтоматическиеОкругленияРасширеннаяПодсказка" id="185"/>
+							<SearchStringAddition name="АвтоматическиеОкругленияСтрокаПоиска" id="186">
+								<AdditionSource>
+									<Item>АвтоматическиеОкругления</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АвтоматическиеОкругленияСтрокаПоискаКонтекстноеМеню" id="187"/>
+								<ExtendedTooltip name="АвтоматическиеОкругленияСтрокаПоискаРасширеннаяПодсказка" id="188"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="АвтоматическиеОкругленияСостояниеПросмотра" id="189">
+								<AdditionSource>
+									<Item>АвтоматическиеОкругления</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АвтоматическиеОкругленияСостояниеПросмотраКонтекстноеМеню" id="190"/>
+								<ExtendedTooltip name="АвтоматическиеОкругленияСостояниеПросмотраРасширеннаяПодсказка" id="191"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="АвтоматическиеОкругленияУправлениеПоиском" id="192">
+								<AdditionSource>
+									<Item>АвтоматическиеОкругления</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="АвтоматическиеОкругленияУправлениеПоискомКонтекстноеМеню" id="193"/>
+								<ExtendedTooltip name="АвтоматическиеОкругленияУправлениеПоискомРасширеннаяПодсказка" id="194"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">АвтоматическиеОкругленияПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ОкругленияНаименование" id="213">
+									<DataPath>АвтоматическиеОкругления.Наименование</DataPath>
+									<ContextMenu name="ОкругленияНаименованиеКонтекстноеМеню" id="214"/>
+									<ExtendedTooltip name="ОкругленияНаименованиеРасширеннаяПодсказка" id="215"/>
+								</LabelField>
+								<CheckBoxField name="ОкругленияДействует" id="195">
+									<DataPath>АвтоматическиеОкругления.Действует</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОкругленияДействуетКонтекстноеМеню" id="196"/>
+									<ExtendedTooltip name="ОкругленияДействуетРасширеннаяПодсказка" id="197"/>
+								</CheckBoxField>
+								<LabelField name="ОкругленияНазначение" id="210">
+									<DataPath>АвтоматическиеОкругления.Назначение</DataPath>
+									<ContextMenu name="ОкругленияНазначениеКонтекстноеМеню" id="211"/>
+									<ExtendedTooltip name="ОкругленияНазначениеРасширеннаяПодсказка" id="212"/>
+								</LabelField>
+								<LabelField name="ОкругленияОбластьПредоставления" id="216">
+									<DataPath>АвтоматическиеОкругления.ОбластьПредоставления</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Область</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ОкругленияОбластьПредоставленияКонтекстноеМеню" id="217"/>
+									<ExtendedTooltip name="ОкругленияОбластьПредоставленияРасширеннаяПодсказка" id="218"/>
+								</LabelField>
+								<LabelField name="ОкругленияСсылка" id="234">
+									<DataPath>АвтоматическиеОкругления.Ссылка</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="ОкругленияСсылкаКонтекстноеМеню" id="235"/>
+									<ExtendedTooltip name="ОкругленияСсылкаРасширеннаяПодсказка" id="236"/>
+								</LabelField>
+								<LabelField name="ОкругленияКод" id="237">
+									<DataPath>АвтоматическиеОкругления.Код</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="ОкругленияКодКонтекстноеМеню" id="238"/>
+									<ExtendedTooltip name="ОкругленияКодРасширеннаяПодсказка" id="239"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<LabelField name="АвтоматическиеОкругленияКомментарий" id="240">
+							<DataPath>Items.АвтоматическиеОкругления.CurrentData.Комментарий</DataPath>
+							<ContextMenu name="АвтоматическиеОкругленияКомментарийКонтекстноеМеню" id="241"/>
+							<ExtendedTooltip name="АвтоматическиеОкругленияКомментарийРасширеннаяПодсказка" id="242"/>
+						</LabelField>
+						<LabelDecoration name="ГиперссылкаКакРаботатьСОкруглениямиВПрограмме" id="243">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Как работать с округлениями в программе?</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="ГиперссылкаКакРаботатьСОкруглениямиВПрограммеКонтекстноеМеню" id="244"/>
+							<ExtendedTooltip name="ГиперссылкаКакРаботатьСОкруглениямиВПрограммеРасширеннаяПодсказка" id="245"/>
+							<Events>
+								<Event name="Click">ГиперссылкаКакРаботатьСОкруглениямиВПрограммеНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ВидыСкидокНаценокРучныеИАвтоматические</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидыСкидокНаценок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды скидок наценок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ВидыСкидокНаценок</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="АвтоматическиеСкидки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматические скидки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>~АвтоматическиеСкидки.Ref</Field>
+				<Field>АвтоматическиеСкидки.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникАвтоматическиеСкидки.Наименование КАК Наименование,
+	ВЫБОР
+		КОГДА СправочникАвтоматическиеСкидки.ЭтоГруппа
+			ТОГДА ВЫБОР
+					КОГДА СправочникАвтоматическиеСкидки.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Максимум)
+						ТОГДА 8
+					КОГДА СправочникАвтоматическиеСкидки.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Минимум)
+						ТОГДА 16
+					КОГДА СправочникАвтоматическиеСкидки.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Сложение)
+						ТОГДА 0
+					КОГДА СправочникАвтоматическиеСкидки.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Умножение)
+						ТОГДА 4
+					КОГДА СправочникАвтоматическиеСкидки.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Вытеснение)
+						ТОГДА 12
+				КОНЕЦ + ВЫБОР
+					КОГДА СправочникАвтоматическиеСкидки.ПометкаУдаления
+						ТОГДА 3
+					ИНАЧЕ 0
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА СправочникАвтоматическиеСкидки.СпособПредоставления = ЗНАЧЕНИЕ(Перечисление.СпособыПредоставленияСкидокНаценок.Процент)
+					ТОГДА ВЫБОР
+							КОГДА СправочникАвтоматическиеСкидки.ЗначениеСкидкиНаценки &lt; 0
+								ТОГДА 32
+							ИНАЧЕ 28
+						КОНЕЦ + ВЫБОР
+							КОГДА СправочникАвтоматическиеСкидки.ЕстьУсловияПоДК
+								ТОГДА 0
+							ИНАЧЕ 40
+						КОНЕЦ
+				КОГДА СправочникАвтоматическиеСкидки.СпособПредоставления = ЗНАЧЕНИЕ(Перечисление.СпособыПредоставленияСкидокНаценок.ВидЦен)
+					ТОГДА 
+						48
+				КОГДА СправочникАвтоматическиеСкидки.СпособПредоставления = ЗНАЧЕНИЕ(Перечисление.СпособыПредоставленияСкидокНаценок.Сумма)
+					ТОГДА ВЫБОР
+							КОГДА СправочникАвтоматическиеСкидки.ЗначениеСкидкиНаценки &lt; 0
+								ТОГДА 40
+							ИНАЧЕ 44
+						КОНЕЦ + ВЫБОР
+							КОГДА СправочникАвтоматическиеСкидки.ЕстьУсловияПоДК
+								ТОГДА 0
+							ИНАЧЕ 36
+						КОНЕЦ
+			КОНЕЦ + ВЫБОР
+				КОГДА СправочникАвтоматическиеСкидки.ПометкаУдаления
+					ТОГДА 3
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ КАК Картинка,
+	СправочникАвтоматическиеСкидки.УдалитьРеквизитДопУпорядочивания КАК РеквизитДопУпорядочивания,
+	СправочникАвтоматическиеСкидки.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникАвтоматическиеСкидки.Действует КАК Действует,
+	СправочникАвтоматическиеСкидки.Ссылка КАК Ссылка,
+	СправочникАвтоматическиеСкидки.Родитель КАК Родитель,
+	СправочникАвтоматическиеСкидки.СпособПредоставления КАК СпособПредоставления,
+	СправочникАвтоматическиеСкидки.Назначение КАК Назначение,
+	СправочникАвтоматическиеСкидки.ОбластьПредоставления КАК ОбластьПредоставления,
+	СправочникАвтоматическиеСкидки.Код КАК Код,
+	СправочникАвтоматическиеСкидки.ЕстьГруппыВУточненииПоНоменклатуре КАК ЕстьГруппыВУточненииПоНоменклатуре,
+	ВЫБОР
+		КОГДА СправочникАвтоматическиеСкидки.Родитель.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Вытеснение)
+				ИЛИ СправочникАвтоматическиеСкидки.Родитель.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Умножение)
+				ИЛИ СправочникАвтоматическиеСкидки.Родитель = ЗНАЧЕНИЕ(Справочник.АвтоматическиеСкидки.ПустаяСсылка)
+					И (ВариантыСовместногоПримененияСкидокНаценок.Значение = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Вытеснение)
+						ИЛИ ВариантыСовместногоПримененияСкидокНаценок.Значение = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Умножение))
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК РаскрашиватьЖелтым,
+	СправочникАвтоматическиеСкидки.Комментарий КАК Комментарий,
+	СправочникАвтоматическиеСкидки.ЕстьУсловияПоДК КАК ЕстьУсловияПоДК
+ИЗ
+	Справочник.АвтоматическиеСкидки КАК СправочникАвтоматическиеСкидки,
+	Константа.ВариантыСовместногоПримененияСкидокНаценок КАК ВариантыСовместногоПримененияСкидокНаценок
+ГДЕ
+	СправочникАвтоматическиеСкидки.СпособПредоставления &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СпособыПредоставленияСкидокНаценок.Округление)
+	И НЕ СправочникАвтоматическиеСкидки.ЭтоПравилоНачисленияБонусов</QueryText>
+				<MainTable>Catalog.АвтоматическиеСкидки</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВариантСовместногоПримененияСкидок" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант совместного применения скидок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВариантыСовместногоПримененияСкидокНаценок</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешеноРедактированиеЦенДокументов" id="5">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Вытеснение" id="6">
+			<Type>
+				<v8:Type>cfg:EnumRef.ВариантыСовместногоПримененияСкидокНаценок</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Умножение" id="7">
+			<Type>
+				<v8:Type>cfg:EnumRef.ВариантыСовместногоПримененияСкидокНаценок</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАвтоматическиеСкидкиНаценки" id="8">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыПодключаемыхКоманд" id="9">
+			<Type/>
+		</Attribute>
+		<Attribute name="АвтоматическиеОкругления" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматические округления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>~АвтоматическиеОкругления.Ref</Field>
+				<Field>АвтоматическиеОкругления.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникАвтоматическиеСкидки.Наименование КАК Наименование,
+	ВЫБОР
+		КОГДА СправочникАвтоматическиеСкидки.ЭтоГруппа
+			ТОГДА ВЫБОР
+					КОГДА СправочникАвтоматическиеСкидки.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Максимум)
+						ТОГДА 8
+					КОГДА СправочникАвтоматическиеСкидки.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Минимум)
+						ТОГДА 16
+					КОГДА СправочникАвтоматическиеСкидки.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Сложение)
+						ТОГДА 0
+					КОГДА СправочникАвтоматическиеСкидки.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Умножение)
+						ТОГДА 4
+					КОГДА СправочникАвтоматическиеСкидки.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Вытеснение)
+						ТОГДА 12
+				КОНЕЦ + ВЫБОР
+					КОГДА СправочникАвтоматическиеСкидки.ПометкаУдаления
+						ТОГДА 3
+					ИНАЧЕ 0
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА СправочникАвтоматическиеСкидки.СпособПредоставления = ЗНАЧЕНИЕ(Перечисление.СпособыПредоставленияСкидокНаценок.Процент)
+					ТОГДА ВЫБОР
+							КОГДА СправочникАвтоматическиеСкидки.ЗначениеСкидкиНаценки &lt; 0
+								ТОГДА 32
+							ИНАЧЕ 28
+						КОНЕЦ
+				КОГДА СправочникАвтоматическиеСкидки.СпособПредоставления = ЗНАЧЕНИЕ(Перечисление.СпособыПредоставленияСкидокНаценок.Сумма)
+					ТОГДА ВЫБОР
+							КОГДА СправочникАвтоматическиеСкидки.ЗначениеСкидкиНаценки &lt; 0
+								ТОГДА 40
+							ИНАЧЕ 44
+						КОНЕЦ
+			КОНЕЦ + ВЫБОР
+				КОГДА СправочникАвтоматическиеСкидки.ПометкаУдаления
+					ТОГДА 3
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ КАК Картинка,
+	СправочникАвтоматическиеСкидки.УдалитьРеквизитДопУпорядочивания КАК РеквизитДопУпорядочивания,
+	СправочникАвтоматическиеСкидки.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникАвтоматическиеСкидки.Действует КАК Действует,
+	СправочникАвтоматическиеСкидки.Ссылка КАК Ссылка,
+	СправочникАвтоматическиеСкидки.Родитель КАК Родитель,
+	СправочникАвтоматическиеСкидки.СпособПредоставления КАК СпособПредоставления,
+	СправочникАвтоматическиеСкидки.Назначение КАК Назначение,
+	СправочникАвтоматическиеСкидки.ОбластьПредоставления КАК ОбластьПредоставления,
+	СправочникАвтоматическиеСкидки.Код КАК Код,
+	СправочникАвтоматическиеСкидки.ЕстьГруппыВУточненииПоНоменклатуре КАК ЕстьГруппыВУточненииПоНоменклатуре,
+	ВЫБОР
+		КОГДА СправочникАвтоматическиеСкидки.Родитель.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Вытеснение)
+				ИЛИ СправочникАвтоматическиеСкидки.Родитель.ВариантСовместногоПрименения = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Умножение)
+				ИЛИ СправочникАвтоматическиеСкидки.Родитель = ЗНАЧЕНИЕ(Справочник.АвтоматическиеСкидки.ПустаяСсылка)
+					И (ВариантыСовместногоПримененияСкидокНаценок.Значение = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Вытеснение)
+						ИЛИ ВариантыСовместногоПримененияСкидокНаценок.Значение = ЗНАЧЕНИЕ(Перечисление.ВариантыСовместногоПримененияСкидокНаценок.Умножение))
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК РаскрашиватьЖелтым,
+	СправочникАвтоматическиеСкидки.Комментарий КАК Комментарий
+ИЗ
+	Справочник.АвтоматическиеСкидки КАК СправочникАвтоматическиеСкидки,
+	Константа.ВариантыСовместногоПримененияСкидокНаценок КАК ВариантыСовместногоПримененияСкидокНаценок
+ГДЕ
+	СправочникАвтоматическиеСкидки.СпособПредоставления = Значение(Перечисление.СпособыПредоставленияСкидокНаценок.Округление)
+	И НЕ СправочникАвтоматическиеСкидки.ЭтоГруппа</QueryText>
+				<MainTable>Catalog.АвтоматическиеСкидки</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьГруппуСовместногоПрименения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать группу совместного применения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать группу совместного применения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьГруппуСовместногоПрименения</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СброситьФлагДействует" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить флаг "Действует"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить флаг действует</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СброситьФлагДействует</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьФлагДействует" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг "Действует"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флаг действует</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьФлагДействует</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

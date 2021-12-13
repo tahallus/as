@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Group>AlwaysHorizontal</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаСправочникиОбщие" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочники</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа справочники общие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаСправочникиОбщиеРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Button name="Справочник_adfox_accountОткрытьСписок" id="5">
+					<Type>Hyperlink</Type>
+					<CommandName>Catalog._adfox_account.StandardCommand.OpenList</CommandName>
+					<ExtendedTooltip name="Справочник_adfox_accountОткрытьСписокРасширеннаяПодсказка" id="6"/>
+				</Button>
+				<Button name="Справочник_adfox_advertiserОткрытьСписок" id="7">
+					<Type>Hyperlink</Type>
+					<CommandName>Catalog._adfox_advertiser.StandardCommand.OpenList</CommandName>
+					<ExtendedTooltip name="Справочник_adfox_advertiserОткрытьСписокРасширеннаяПодсказка" id="8"/>
+				</Button>
+				<Button name="Справочник_adfox_categoryОткрытьСписок" id="11">
+					<Type>Hyperlink</Type>
+					<CommandName>Catalog._adfox_category.StandardCommand.OpenList</CommandName>
+					<ExtendedTooltip name="Справочник_adfox_categoryОткрытьСписокРасширеннаяПодсказка" id="12"/>
+				</Button>
+				<Button name="Справочник_adfox_bannerTypeОткрытьСписок" id="9">
+					<Type>Hyperlink</Type>
+					<CommandName>Catalog._adfox_bannerType.StandardCommand.OpenList</CommandName>
+					<ExtendedTooltip name="Справочник_adfox_bannerTypeОткрытьСписокРасширеннаяПодсказка" id="10"/>
+				</Button>
+				<Button name="Справочник_adfox_positionОткрытьСписок" id="25">
+					<Type>Hyperlink</Type>
+					<Visible>false</Visible>
+					<CommandName>Catalog._adfox_position.StandardCommand.OpenList</CommandName>
+					<ExtendedTooltip name="Справочник_adfox_positionОткрытьСписокРасширеннаяПодсказка" id="26"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРазмещение" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размещение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа размещение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаРазмещениеРасширеннаяПодсказка" id="18"/>
+			<ChildItems>
+				<Button name="Справочник_adfox_websiteОткрытьСписок" id="13">
+					<Type>Hyperlink</Type>
+					<CommandName>Catalog._adfox_website.StandardCommand.OpenList</CommandName>
+					<ExtendedTooltip name="Справочник_adfox_websiteОткрытьСписокРасширеннаяПодсказка" id="14"/>
+				</Button>
+				<Button name="Справочник_adfox_zoneОткрытьСписок" id="15">
+					<Type>Hyperlink</Type>
+					<CommandName>Catalog._adfox_zone.StandardCommand.OpenList</CommandName>
+					<ExtendedTooltip name="Справочник_adfox_zoneОткрытьСписокРасширеннаяПодсказка" id="16"/>
+				</Button>
+				<Button name="Справочник_adfox_placeОткрытьСписок" id="19">
+					<Type>Hyperlink</Type>
+					<CommandName>Catalog._adfox_place.StandardCommand.OpenList</CommandName>
+					<ExtendedTooltip name="Справочник_adfox_placeОткрытьСписокРасширеннаяПодсказка" id="20"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКампании" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кампании</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кампании</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаКампанииРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<Button name="Справочник_adfox_bannerОткрытьСписок" id="21">
+					<Type>Hyperlink</Type>
+					<CommandName>Catalog._adfox_banner.StandardCommand.OpenList</CommandName>
+					<ExtendedTooltip name="Справочник_adfox_bannerОткрытьСписокРасширеннаяПодсказка" id="22"/>
+				</Button>
+				<Button name="Справочник_adfox_campaignОткрытьСписок" id="23">
+					<Type>Hyperlink</Type>
+					<CommandName>Catalog._adfox_campaign.StandardCommand.OpenList</CommandName>
+					<ExtendedTooltip name="Справочник_adfox_campaignОткрытьСписокРасширеннаяПодсказка" id="24"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject._Данные_adfox</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+</Form>

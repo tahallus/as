@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Width>50</Width>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<Pages name="Страницы" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<Width>50</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="55"/>
+			<ChildItems>
+				<Page name="СтраницаПорядокСостояний" id="56">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядок состояний</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПорядокСостоянийРасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<Table name="ПорядокСостояний" id="10">
+							<Representation>List</Representation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<Height>10</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>15</MaxHeight>
+							<RowInputMode>BeforeCurrentRow</RowInputMode>
+							<SelectionMode>SingleRow</SelectionMode>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<AutoAddIncomplete>false</AutoAddIncomplete>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ПорядокСостояний</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Состояния</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<CurrentRowUse>Choice</CurrentRowUse>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПорядокСостоянийКонтекстноеМеню" id="11"/>
+							<AutoCommandBar name="ПорядокСостоянийКоманднаяПанель" id="12">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ПорядокСостоянийДобавить" id="44">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ПорядокСостояний.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="ПорядокСостоянийДобавитьРасширеннаяПодсказка" id="45"/>
+									</Button>
+									<Button name="ПорядокСостоянийДобавитьВсе" id="36">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ДобавитьВсе</CommandName>
+										<ExtendedTooltip name="ПорядокСостоянийДобавитьВсеРасширеннаяПодсказка" id="37"/>
+									</Button>
+									<ButtonGroup name="КнопкиВверхВниз" id="42">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Кнопки вверх вниз</v8:content>
+											</v8:item>
+										</Title>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="КнопкиВверхВнизРасширеннаяПодсказка" id="43"/>
+										<ChildItems>
+											<Button name="ПорядокСостоянийПереместитьВверх" id="38">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПереместитьВверх</CommandName>
+												<ExtendedTooltip name="ПорядокСостоянийПереместитьВверхРасширеннаяПодсказка" id="39"/>
+											</Button>
+											<Button name="ПорядокСостоянийПереместитьВниз" id="40">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПереместитьВниз</CommandName>
+												<ExtendedTooltip name="ПорядокСостоянийПереместитьВнизРасширеннаяПодсказка" id="41"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="ПорядокСостоянийИзменить" id="46">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ПорядокСостояний.StandardCommand.Change</CommandName>
+										<ExtendedTooltip name="ПорядокСостоянийИзменитьРасширеннаяПодсказка" id="47"/>
+									</Button>
+									<Button name="ПорядокСостоянийУдалить" id="48">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ПорядокСостояний.StandardCommand.Delete</CommandName>
+										<ExtendedTooltip name="ПорядокСостоянийУдалитьРасширеннаяПодсказка" id="49"/>
+									</Button>
+									<Button name="ПорядокСостоянийВывестиСписок" id="50">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ПорядокСостояний.StandardCommand.OutputList</CommandName>
+										<ExtendedTooltip name="ПорядокСостоянийВывестиСписокРасширеннаяПодсказка" id="51"/>
+									</Button>
+									<Button name="ПорядокСостоянийКопироватьВБуферОбмена" id="52">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ПорядокСостояний.StandardCommand.CopyToClipboard</CommandName>
+										<ExtendedTooltip name="ПорядокСостоянийКопироватьВБуферОбменаРасширеннаяПодсказка" id="53"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПорядокСостоянийРасширеннаяПодсказка" id="13"/>
+							<SearchStringAddition name="ПорядокСостоянийСтрокаПоиска" id="14">
+								<AdditionSource>
+									<Item>ПорядокСостояний</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПорядокСостоянийСтрокаПоискаКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="ПорядокСостоянийСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПорядокСостоянийСостояниеПросмотра" id="17">
+								<AdditionSource>
+									<Item>ПорядокСостояний</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПорядокСостоянийСостояниеПросмотраКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="ПорядокСостоянийСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПорядокСостоянийУправлениеПоиском" id="20">
+								<AdditionSource>
+									<Item>ПорядокСостояний</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПорядокСостоянийУправлениеПоискомКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="ПорядокСостоянийУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="DragCheck">ПорядокСостоянийПроверкаПеретаскивания</Event>
+								<Event name="BeforeAddRow">ПорядокСостоянийПередНачаломДобавления</Event>
+								<Event name="OnActivateRow">ПорядокСостоянийПриАктивизацииСтроки</Event>
+								<Event name="ChoiceProcessing">ПорядокСостоянийОбработкаВыбора</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ПорядокСостоянийНомерСтроки" id="23">
+									<DataPath>Объект.ПорядокСостояний.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПорядокСостоянийНомерСтрокиКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ПорядокСостоянийНомерСтрокиРасширеннаяПодсказка" id="25"/>
+								</LabelField>
+								<InputField name="ПорядокСостоянийСостояние" id="26">
+									<DataPath>Объект.ПорядокСостояний.Состояние</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="ПорядокСостоянийСостояниеКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ПорядокСостоянийСостояниеРасширеннаяПодсказка" id="28"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПредопределенныеСостояния" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фиксированные состояния</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПредопределенныеСостоянияРасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДоставкаЗаголовок" id="71">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доставка заголовок</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДоставкаЗаголовокРасширеннаяПодсказка" id="72"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияДоставкаЗаголовок" id="73">
+									<TextColor>#009646</TextColor>
+									<Font ref="style:NormalTextFont" faceName="Arial" height="12" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доставка</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияДоставкаЗаголовокКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="ДекорацияДоставкаЗаголовокРасширеннаяПодсказка" id="75"/>
+								</LabelDecoration>
+								<CheckBoxField name="НеИспользоватьДоставку" id="76">
+									<DataPath>Объект.НеИспользоватьДоставку</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеИспользоватьДоставкуКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="НеИспользоватьДоставкуРасширеннаяПодсказка" id="78"/>
+									<Events>
+										<Event name="OnChange">НеИспользоватьДоставкуПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДоставка" id="69">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доставка</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДоставкаРасширеннаяПодсказка" id="70"/>
+							<ChildItems>
+								<InputField name="СостояниеОжидаетОтгрузки" id="60">
+									<DataPath>Объект.СостояниеОжидаетОтгрузки</DataPath>
+									<ChoiceButton>false</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<OpenButton>false</OpenButton>
+									<CreateButton>false</CreateButton>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="СостояниеОжидаетОтгрузкиКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="СостояниеОжидаетОтгрузкиРасширеннаяПодсказка" id="62"/>
+									<Events>
+										<Event name="AutoComplete">СостояниеАвтоподбор</Event>
+									</Events>
+								</InputField>
+								<InputField name="СостояниеОтгружен" id="63">
+									<DataPath>Объект.СостояниеОтгружен</DataPath>
+									<ChoiceButton>false</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<OpenButton>false</OpenButton>
+									<CreateButton>false</CreateButton>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="СостояниеОтгруженКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="СостояниеОтгруженРасширеннаяПодсказка" id="65"/>
+									<Events>
+										<Event name="AutoComplete">СостояниеАвтоподбор</Event>
+									</Events>
+								</InputField>
+								<InputField name="СостояниеДоставлен" id="66">
+									<DataPath>Объект.СостояниеДоставлен</DataPath>
+									<ChoiceButton>false</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<OpenButton>false</OpenButton>
+									<CreateButton>false</CreateButton>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="СостояниеДоставленКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="СостояниеДоставленРасширеннаяПодсказка" id="68"/>
+									<Events>
+										<Event name="AutoComplete">СостояниеАвтоподбор</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Комментарий" id="29">
+			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<Height>2</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<MaxHeight>3</MaxHeight>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="31"/>
+			<Events>
+				<Event name="StartChoice">КомментарийНачалоВыбора</Event>
+			</Events>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ВидыЗаказовПокупателей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="НесколькоВидовЗаказов" id="2">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьВсе" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьВсе</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПереместитьВниз" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВниз</Action>
+			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">ПорядокСостояний</AssociatedTableElementId>
+		</Command>
+		<Command name="ПереместитьВверх" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВверх</Action>
+			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">ПорядокСостояний</AssociatedTableElementId>
+		</Command>
+	</Commands>
+</Form>
