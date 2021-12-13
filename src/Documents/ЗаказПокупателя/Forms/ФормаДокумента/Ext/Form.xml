@@ -5989,6 +5989,29 @@
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
+								<UsualGroup name="Группа1" id="3037">
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>style:ИтогиФонГруппы</BackColor>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="3038"/>
+									<ChildItems>
+										<InputField name="_ИтогСуммаБезНДС" id="3042">
+											<DataPath>_ИтогСуммаБезНДС</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма без НДС</v8:content>
+												</v8:item>
+											</Title>
+											<Width>12</Width>
+											<TextEdit>false</TextEdit>
+											<ChoiceListButton>false</ChoiceListButton>
+											<ContextMenu name="_ИтогСуммаБезНДСКонтекстноеМеню" id="3043"/>
+											<ExtendedTooltip name="_ИтогСуммаБезНДСРасширеннаяПодсказка" id="3044"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
 								<UsualGroup name="Итоги" id="2034">
 									<Title>
 										<v8:item>
@@ -8120,6 +8143,22 @@
 			</Title>
 			<Type>
 				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="_ИтогСуммаБезНДС" id="125">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма без НДС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>

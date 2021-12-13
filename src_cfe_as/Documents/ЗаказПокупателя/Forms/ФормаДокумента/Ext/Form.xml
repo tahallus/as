@@ -642,6 +642,10 @@
 							<ContextMenu name="_КлиентКонтекстноеМеню" id="2913"/>
 							<ExtendedTooltip name="_КлиентРасширеннаяПодсказка" id="2914"/>
 						</InputField>
+						<LabelField name="_КлиентКатегорияКлиента" id="3024">
+							<ContextMenu name="_КлиентКатегорияКлиентаКонтекстноеМеню" id="3025"/>
+							<ExtendedTooltip name="_КлиентКатегорияКлиентаРасширеннаяПодсказка" id="3026"/>
+						</LabelField>
 						<InputField name="_Бренд" id="2915">
 							<AutoMaxWidth>false</AutoMaxWidth>
 							<MaxWidth>29</MaxWidth>
@@ -653,6 +657,10 @@
 							<MaxWidth>29</MaxWidth>
 							<ContextMenu name="_РекламнаяКомпанияКонтекстноеМеню" id="2919"/>
 							<ExtendedTooltip name="_РекламнаяКомпанияРасширеннаяПодсказка" id="2920"/>
+						</InputField>
+						<InputField name="_ВидРазмещения" id="3031">
+							<ContextMenu name="_ВидРазмещенияКонтекстноеМеню" id="3032"/>
+							<ExtendedTooltip name="_ВидРазмещенияРасширеннаяПодсказка" id="3033"/>
 						</InputField>
 						<UsualGroup name="ГруппаЦеныИВалюта" id="1635">
 							<Title>
@@ -1226,6 +1234,21 @@
 								</LabelDecoration>
 							</ChildItems>
 						</UsualGroup>
+						<CommandBar name="_КоманднаяПанельМодули" id="3029">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель модули</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель модули</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="_КоманднаяПанельМодулиРасширеннаяПодсказка" id="3030"/>
+						</CommandBar>
 						<Table name="Запасы" id="1642" DisplayImportance="VeryHigh">
 							<Representation>List</Representation>
 							<CommandBarLocation>None</CommandBarLocation>
@@ -2235,6 +2258,11 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="Запасы_РекламнаяКомпанияКонтекстноеМеню" id="2974"/>
 									<ExtendedTooltip name="Запасы_РекламнаяКомпанияРасширеннаяПодсказка" id="2975"/>
+								</InputField>
+								<InputField name="Запасы_ВидРазмещения" id="3034">
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="Запасы_ВидРазмещенияКонтекстноеМеню" id="3035"/>
+									<ExtendedTooltip name="Запасы_ВидРазмещенияРасширеннаяПодсказка" id="3036"/>
 								</InputField>
 								<InputField name="Запасы_ДатаНачала" id="2964">
 									<EditMode>EnterOnInput</EditMode>
@@ -4371,7 +4399,15 @@
 									</Title>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="СписокПлатежныйКалендарьКонтекстноеМеню" id="1970"/>
-									<AutoCommandBar name="СписокПлатежныйКалендарьКоманднаяПанель" id="1971"/>
+									<AutoCommandBar name="СписокПлатежныйКалендарьКоманднаяПанель" id="1971">
+										<ChildItems>
+											<Button name="СписокПлатежныйКалендарь_ЗаполнитьПлатежныйКалендарь" id="3027">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="СписокПлатежныйКалендарь_ЗаполнитьПлатежныйКалендарьРасширеннаяПодсказка" id="3028"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
 									<ExtendedTooltip name="СписокПлатежныйКалендарьРасширеннаяПодсказка" id="1972"/>
 									<SearchStringAddition name="СписокПлатежныйКалендарьСтрокаПоиска" id="1973">
 										<AdditionSource>
@@ -5351,6 +5387,28 @@
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
+								<UsualGroup name="Группа1" id="3037">
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>style:ИтогиФонГруппы</BackColor>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="3038"/>
+									<ChildItems>
+										<InputField name="_ИтогСуммаБезНДС" id="3042">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма без НДС</v8:content>
+												</v8:item>
+											</Title>
+											<Width>12</Width>
+											<TextEdit>false</TextEdit>
+											<ChoiceListButton>false</ChoiceListButton>
+											<ContextMenu name="_ИтогСуммаБезНДСКонтекстноеМеню" id="3043"/>
+											<ExtendedTooltip name="_ИтогСуммаБезНДСРасширеннаяПодсказка" id="3044"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
 								<UsualGroup name="Итоги" id="2034">
 									<Title>
 										<v8:item>
@@ -6029,10 +6087,14 @@
 								<ExtendedTooltip name="_ПродуктРасширеннаяПодсказка" id="2925"/>
 							</InputField>
 							<InputField name="_Журнал" id="2940">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>29</MaxWidth>
 								<ContextMenu name="_ЖурналКонтекстноеМеню" id="2941"/>
 								<ExtendedTooltip name="_ЖурналРасширеннаяПодсказка" id="2942"/>
 							</InputField>
 							<InputField name="_Мероприятие" id="2943">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>29</MaxWidth>
 								<ContextMenu name="_МероприятиеКонтекстноеМеню" id="2944"/>
 								<ExtendedTooltip name="_МероприятиеРасширеннаяПодсказка" id="2945"/>
 							</InputField>
@@ -6048,6 +6110,10 @@
 								<ContextMenu name="_КлиентКонтекстноеМеню" id="2913"/>
 								<ExtendedTooltip name="_КлиентРасширеннаяПодсказка" id="2914"/>
 							</InputField>
+							<LabelField name="_КлиентКатегорияКлиента" id="3024">
+								<ContextMenu name="_КлиентКатегорияКлиентаКонтекстноеМеню" id="3025"/>
+								<ExtendedTooltip name="_КлиентКатегорияКлиентаРасширеннаяПодсказка" id="3026"/>
+							</LabelField>
 							<InputField name="_Бренд" id="2915">
 								<AutoMaxWidth>false</AutoMaxWidth>
 								<MaxWidth>29</MaxWidth>
@@ -6059,6 +6125,10 @@
 								<MaxWidth>29</MaxWidth>
 								<ContextMenu name="_РекламнаяКомпанияКонтекстноеМеню" id="2919"/>
 								<ExtendedTooltip name="_РекламнаяКомпанияРасширеннаяПодсказка" id="2920"/>
+							</InputField>
+							<InputField name="_ВидРазмещения" id="3031">
+								<ContextMenu name="_ВидРазмещенияКонтекстноеМеню" id="3032"/>
+								<ExtendedTooltip name="_ВидРазмещенияРасширеннаяПодсказка" id="3033"/>
 							</InputField>
 							<UsualGroup name="ГруппаЦеныИВалюта" id="1635">
 								<Title>
@@ -6632,6 +6702,21 @@
 									</LabelDecoration>
 								</ChildItems>
 							</UsualGroup>
+							<CommandBar name="_КоманднаяПанельМодули" id="3029">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Командная панель модули</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Командная панель модули</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="_КоманднаяПанельМодулиРасширеннаяПодсказка" id="3030"/>
+							</CommandBar>
 							<Table name="Запасы" id="1642" DisplayImportance="VeryHigh">
 								<Representation>List</Representation>
 								<CommandBarLocation>None</CommandBarLocation>
@@ -7623,6 +7708,11 @@
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="Запасы_РекламнаяКомпанияКонтекстноеМеню" id="2974"/>
 										<ExtendedTooltip name="Запасы_РекламнаяКомпанияРасширеннаяПодсказка" id="2975"/>
+									</InputField>
+									<InputField name="Запасы_ВидРазмещения" id="3034">
+										<EditMode>EnterOnInput</EditMode>
+										<ContextMenu name="Запасы_ВидРазмещенияКонтекстноеМеню" id="3035"/>
+										<ExtendedTooltip name="Запасы_ВидРазмещенияРасширеннаяПодсказка" id="3036"/>
 									</InputField>
 									<InputField name="Запасы_ДатаНачала" id="2964">
 										<EditMode>EnterOnInput</EditMode>
@@ -9759,7 +9849,15 @@
 										</Title>
 										<RowFilter xsi:nil="true"/>
 										<ContextMenu name="СписокПлатежныйКалендарьКонтекстноеМеню" id="1970"/>
-										<AutoCommandBar name="СписокПлатежныйКалендарьКоманднаяПанель" id="1971"/>
+										<AutoCommandBar name="СписокПлатежныйКалендарьКоманднаяПанель" id="1971">
+											<ChildItems>
+												<Button name="СписокПлатежныйКалендарь_ЗаполнитьПлатежныйКалендарь" id="3027">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="СписокПлатежныйКалендарь_ЗаполнитьПлатежныйКалендарьРасширеннаяПодсказка" id="3028"/>
+												</Button>
+											</ChildItems>
+										</AutoCommandBar>
 										<ExtendedTooltip name="СписокПлатежныйКалендарьРасширеннаяПодсказка" id="1972"/>
 										<SearchStringAddition name="СписокПлатежныйКалендарьСтрокаПоиска" id="1973">
 											<AdditionSource>
@@ -10736,6 +10834,28 @@
 												<Width>10</Width>
 												<ContextMenu name="СкидкаСуммаКонтекстноеМеню" id="2047"/>
 												<ExtendedTooltip name="СкидкаСуммаРасширеннаяПодсказка" id="2048"/>
+											</InputField>
+										</ChildItems>
+									</UsualGroup>
+									<UsualGroup name="Группа1" id="3037">
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<BackColor>style:ИтогиФонГруппы</BackColor>
+										<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="3038"/>
+										<ChildItems>
+											<InputField name="_ИтогСуммаБезНДС" id="3042">
+												<ReadOnly>true</ReadOnly>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сумма без НДС</v8:content>
+													</v8:item>
+												</Title>
+												<Width>12</Width>
+												<TextEdit>false</TextEdit>
+												<ChoiceListButton>false</ChoiceListButton>
+												<ContextMenu name="_ИтогСуммаБезНДСКонтекстноеМеню" id="3043"/>
+												<ExtendedTooltip name="_ИтогСуммаБезНДСРасширеннаяПодсказка" id="3044"/>
 											</InputField>
 										</ChildItems>
 									</UsualGroup>
